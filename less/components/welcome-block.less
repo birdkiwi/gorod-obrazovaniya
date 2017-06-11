@@ -1,0 +1,83 @@
+.welcome-block {
+  background: url("../images/bg-welcome.png") no-repeat center bottom;
+
+  & > .wrapper {
+    position: relative;
+  }
+}
+
+.welcome-block-support {
+  position: absolute;
+  right: 15px;
+  top: 30px;
+}
+
+.welcome-block-content {
+  width: 460px;
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+.welcome-block-title {
+  margin-bottom: 80px;
+
+  h1 {
+    font-size: 3.8em;
+    font-weight: bold;
+    color: #333333;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+
+.welcome-block-subtitle {
+  font-size: 1.7em;
+}
+
+.welcome-block-highlight {
+  display: flex;
+  margin-bottom: 80px;
+}
+
+.welcome-block-highlight-date,
+.welcome-block-highlight-address {
+  position: relative;
+  padding-left: 45px;
+  font-size: 1.1em;
+  font-weight: 300;
+  color: #666666;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.welcome-block-highlight-date {
+  margin-right: 40px;
+
+  &::before {
+    background: url("../images/icons/icon-calendar.svg") no-repeat;
+  }
+}
+
+.welcome-block-highlight-address {
+  &::before {
+    background: url("../images/icons/icon-map-mark.svg") no-repeat;
+  }
+}
+
+.welcome-block-highlight-value {
+  font-size: 32px;
+  color: #454545;
+  margin-bottom: 3px;
+}
+
+.welcome-block-socials {
+  margin-top: 60px;
+}

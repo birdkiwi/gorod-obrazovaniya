@@ -1,0 +1,124 @@
+.events-block {
+  background: #F7F7F7;
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+
+.events-block-filter {
+  margin-bottom: 20px;
+}
+
+.events-block-title {
+  font-size: 2.3rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 0;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.events-block-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.events-block-item {
+  flex: 0 1 calc(~"25% - 10px");
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 20px 15px;
+}
+
+.events-block-item-image {
+  margin-top: 5px;
+  margin-bottom: 12px;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.events-block-item-title {
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  margin-bottom: 12px;
+  font-weight: bold;
+
+  &::after {
+    content: '';
+    display: block;
+    background: @c-red;
+    width: 30px;
+    height: 2px;
+    margin-top: 8px;
+  }
+}
+
+.events-block-item-text {
+  left: 1.35rem;
+}
+
+.events-block-item-meta {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.events-block-item-date {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+  vertical-align: baseline;
+  color: fade(@c-main, 70%);
+}
+
+.events-block-item-date-value {
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #DEDEDE;
+  vertical-align: baseline;
+  margin-right: 4px;
+}
+
+.events-block-item-readmore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  background-color: #F7F7F7;
+  transition: background-color 200ms;
+
+  &:hover {
+    background-color: #e4e4e4;
+    transition: background-color 200ms;
+  }
+}
+
+.events-block-item-with-image {
+  text-align: center;
+
+  .events-block-item-title {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.events-block-buttons {
+  margin-top: 40px;
+  text-align: center;
+}
