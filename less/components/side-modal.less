@@ -1,0 +1,183 @@
+.side-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: -200%;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 300ms 300ms, left 0ms 600ms;
+
+  &.active {
+    left: 0;
+    opacity: 1;
+    transition: opacity 300ms;
+
+    .side-modal {
+      transform: perspective(600px) rotateY(0deg);
+      transition: all 300ms;
+      transition-delay: 300ms;
+    }
+  }
+}
+
+.side-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 370px;
+  background-color: #fff;
+  height: 100%;
+  transform: perspective(600px) rotateY(-90deg);
+  transform-origin: right center;
+  transition: all 300ms;
+}
+
+.side-modal-overflow {
+  height: 100%;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.side-modal-close {
+  position: absolute;
+  left: -40px;
+  top: 20px;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: url("../images/icons/icon-modal-close.svg") no-repeat center rgba(255, 255, 255, 0.7);
+  transition: background-color 200ms;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transition: background-color 200ms;
+  }
+}
+
+.side-modal-wide {
+  width: 670px;
+
+  .side-modal-overflow {
+    padding: 40px;
+  }
+}
+
+.side-modal-speaker {
+  background: url('../images/bg-news-block.svg') no-repeat right top #fff;
+}
+
+.side-modal-speaker-card {
+  display: flex;
+}
+
+.side-modal-speaker-card-text {
+  flex-basis: 60%;
+  padding-right: 40px;
+}
+
+.side-modal-speaker-card-photo {
+  img {
+    max-width: 100%;
+  }
+}
+
+.side-modal-speaker-name {
+  font-size: 2.3rem;
+  line-height: 2.6rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.side-modal-speaker-title {
+  color: #888888;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.side-modal-speaker-subtitle {
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.1rem;
+  color: #888888;
+}
+
+.side-modal-speaker-about {
+  color: #888888;
+  line-height: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.side-modal-speaker-about-title {
+  text-transform: uppercase;
+  color: @c-main;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.side-modal-speaker-events {
+
+}
+
+.side-modal-speaker-events-title {
+  text-transform: uppercase;
+  color: @c-main;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.side-modal-speaker-events-item {
+  display: block;
+  text-decoration: none;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #E8E8E8;
+  color: @c-main;
+
+  &:hover {
+    color: @c-main;
+
+    .side-modal-speaker-events-item-title {
+      color: @c-blue;
+    }
+  }
+}
+
+.side-modal-speaker-events-item-title {
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.side-modal-speaker-events-item-meta {
+  display: flex;
+  color: #999999;
+  font-size: 0.85rem;
+  line-height: 1.5rem;
+}
+
+.side-modal-speaker-events-item-date {
+  margin-right: 20px;
+}
+
+.side-modal-speaker-events-item-date-icon {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: text-bottom;
+}
+
+.side-modal-speaker-events-item-place {
+
+}
+
+.side-modal-speaker-events-item-place-icon {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: text-bottom;
+}

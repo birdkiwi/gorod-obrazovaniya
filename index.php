@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link rel="icon" type="image/png" href="favicon.png">
-    <title>Город образование</title>
+    <title>Город образования</title>
     <link rel="stylesheet" href="build/style.min.css">
 </head>
 <body>
@@ -14,8 +14,30 @@
         </a>
         <nav class="main-header-menu">
             <ul>
-                <li class="active">
+                <li class="parent active">
                     <a href="#">О форуме</a>
+
+                    <div class="main-header-submenu">
+                        <div class="wrapper">
+                            <ul>
+                                <li>
+                                    <a href="#">Посетителям</a>
+                                </li>
+                                <li>
+                                    <a href="#">Экспонентам</a>
+                                </li>
+                                <li>
+                                    <a href="#">Партнерам</a>
+                                </li>
+                                <li>
+                                    <a href="#">СМИ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Полезная информация</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <a href="#">Новости</a>
@@ -193,16 +215,132 @@
                 <a href="#">Новости</a> форума
             </h2>
 
-            <div class="news-block-buttons">
-                <a href="#" class="button button-blue-hollow">
-                    <?php include "images/icons/icon-pagination-prev.svg"; ?>
-                </a>
-                <a href="#" class="button button-blue-hollow">
-                    Все новости
-                </a>
-                <a href="#" class="button button-blue-hollow">
-                    <?php include "images/icons/icon-pagination-next.svg"; ?>
-                </a>
+            <div class="swiper-container js-news-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="news-block-row">
+                            <a href="#" class="news-block-row-item news-block-row-item-video news-block-row-item-wide">
+                                <div class="news-block-row-item-cover">
+                                    <img src="images/tmp/news/news-1.jpg" alt="">
+                                </div>
+
+                                <div class="news-block-row-item-meta">
+                                    <div class="news-block-row-item-title">
+                                        Массовый забег учителей и учеников
+                                    </div>
+
+                                    <div class="news-block-row-item-readmore">
+                                        <?php include "images/icons/icon-news-play.svg"; ?>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="news-block-row-item news-block-row-item-blank">
+                                <div class="news-block-row-item-title">
+                                    Международный форум «Город образования» пройдет в сентябре на ВДНХ
+                                </div>
+                                <div class="news-block-row-item-meta">
+                                    <div class="news-block-row-item-date">
+                                        <span class="news-block-row-item-date-value">7</span> сентября
+                                    </div>
+
+                                    <div class="news-block-row-item-readmore">
+                                        <?php include "images/icons/icon-arrow-right-red.svg"; ?>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="news-block-row-item news-block-row-item-video">
+                                <div class="news-block-row-item-cover">
+                                    <img src="images/tmp/news/news-2.jpg" alt="">
+                                </div>
+
+                                <div class="news-block-row-item-meta">
+                                    <div class="news-block-row-item-title">
+                                        Международный форум «Город образования» пройдет в сентябре на ВДНХ
+                                    </div>
+
+                                    <div class="news-block-row-item-readmore">
+                                        <?php include "images/icons/icon-news-play.svg"; ?>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="news-block-row-item news-block-row-item-blank">
+                                <div class="news-block-row-item-title">
+                                    Где учиться учителю? Москва примет международный форум «Город образования»
+                                </div>
+                                <div class="news-block-row-item-meta">
+                                    <div class="news-block-row-item-date">
+                                        <span class="news-block-row-item-date-value">7</span> сентября
+                                    </div>
+
+                                    <div class="news-block-row-item-readmore">
+                                        <?php include "images/icons/icon-arrow-right-red.svg"; ?>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="news-block-row-item news-block-row-item-blank">
+                                <div class="news-block-row-item-title">
+                                    Столица открылась миру. Город станет открытой площадкой по обмену...
+                                </div>
+                                <div class="news-block-row-item-meta">
+                                    <div class="news-block-row-item-date">
+                                        <span class="news-block-row-item-date-value">7</span> сентября
+                                    </div>
+
+                                    <div class="news-block-row-item-readmore">
+                                        <?php include "images/icons/icon-arrow-right-red.svg"; ?>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="news-block-row-item news-block-row-item-photo">
+                                <div class="news-block-row-item-cover">
+                                    <img src="images/tmp/news/news-2.jpg" alt="">
+                                </div>
+
+                                <div class="news-block-row-item-meta">
+                                    <div class="news-block-row-item-title">
+                                        Выставка робототехники ВДНХ 2016
+                                    </div>
+
+                                    <div class="news-block-row-item-readmore">
+                                        18
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="news-block-row-item news-block-row-item-blank">
+                                <div class="news-block-row-item-title">
+                                    Пресс-конференция о форуме «Город образования» прошла в Москве
+                                </div>
+                                <div class="news-block-row-item-meta">
+                                    <div class="news-block-row-item-date">
+                                        <span class="news-block-row-item-date-value">7</span> сентября
+                                    </div>
+
+                                    <div class="news-block-row-item-readmore">
+                                        <?php include "images/icons/icon-arrow-right-red.svg"; ?>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news-block-buttons">
+                    <a href="#" class="button button-blue-hollow news-block-button-prev js-news-block-button-prev">
+                        <?php include "images/icons/icon-pagination-prev.svg"; ?>
+                    </a>
+                    <a href="#" class="button button-blue-hollow">
+                        Все новости
+                    </a>
+                    <a href="#" class="button button-blue-hollow news-block-button-next js-news-block-button-next">
+                        <?php include "images/icons/icon-pagination-next.svg"; ?>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -214,18 +352,25 @@
             </h2>
 
             <div class="events-block-filter">
-                <a href="#" class="events-block-filter-item">
+                <a href="#" class="events-block-filter-item events-block-filter-item-top">
                     Топ
                 </a>
-
-                Деловая программа
-                Специальные мероприятия
-                Культурная программа
-                Спортивные мероприятия
+                <a href="#" class="events-block-filter-item events-block-filter-item-red">
+                    <span>Деловая программа</span>
+                </a>
+                <a href="#" class="events-block-filter-item events-block-filter-item-orange">
+                    <span>Специальные мероприятия</span>
+                </a>
+                <a href="#" class="events-block-filter-item events-block-filter-item-green">
+                    <span>Культурная программа</span>
+                </a>
+                <a href="#" class="events-block-filter-item events-block-filter-item-navy">
+                    <span>Спортивные мероприятия</span>
+                </a>
             </div>
 
             <div class="events-block-row">
-                <div class="events-block-item">
+                <a href="#" class="events-block-item">
                     <div class="events-block-item-content">
                         <div class="events-block-item-title">
                             «Система образования как инструмент консолидации городского сообщества»
@@ -240,13 +385,13 @@
                             <span class="events-block-item-date-value">7</span> сентября
                         </div>
 
-                        <a href="#" class="events-block-item-readmore">
+                        <div class="events-block-item-readmore">
                             <?php include "images/icons/icon-arrow-right-red.svg"; ?>
-                        </a>
+                        </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="events-block-item">
+                <a href="#" class="events-block-item">
                     <div class="events-block-item-content">
                         <div class="events-block-item-title">
                             «Система образования с высокими возможностями для каждого: международный опыт, оценка, внедрение»
@@ -261,13 +406,13 @@
                             <span class="events-block-item-date-value">7</span> сентября
                         </div>
 
-                        <a href="#" class="events-block-item-readmore">
+                        <div class="events-block-item-readmore">
                             <?php include "images/icons/icon-arrow-right-red.svg"; ?>
-                        </a>
+                        </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="events-block-item">
+                <a href="#" class="events-block-item">
                     <div class="events-block-item-content">
                         <div class="events-block-item-title">
                             Съезд учителей города Москвы
@@ -282,13 +427,13 @@
                             <span class="events-block-item-date-value">8</span> сентября
                         </div>
 
-                        <a href="#" class="events-block-item-readmore">
+                        <div class="events-block-item-readmore">
                             <?php include "images/icons/icon-arrow-right-red.svg"; ?>
-                        </a>
+                        </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="events-block-item">
+                <a href="#" class="events-block-item">
                     <div class="events-block-item-content">
                         <div class="events-block-item-title">
                             Дискуссии о ключевых трендах развития образования
@@ -303,13 +448,13 @@
                             <span class="events-block-item-date-value">9</span> сентября
                         </div>
 
-                        <a href="#" class="events-block-item-readmore">
+                        <div class="events-block-item-readmore">
                             <?php include "images/icons/icon-arrow-right-red.svg"; ?>
-                        </a>
+                        </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="events-block-item events-block-item-with-image">
+                <a href="#" class="events-block-item events-block-item-with-image">
                     <div class="events-block-item-content">
                         <div class="events-block-item-image">
                             <img src="images/tmp/events/events-2.svg" alt="">
@@ -327,13 +472,13 @@
                             <span class="events-block-item-date-value">9</span> сентября
                         </div>
 
-                        <a href="#" class="events-block-item-readmore">
+                        <div class="events-block-item-readmore">
                             <?php include "images/icons/icon-arrow-right-red.svg"; ?>
-                        </a>
+                        </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="events-block-item events-block-item-with-image">
+                <a href="#" class="events-block-item events-block-item-with-image">
                     <div class="events-block-item-content">
                         <div class="events-block-item-image">
                             <img src="images/tmp/events/events-2.svg" alt="">
@@ -351,13 +496,13 @@
                             <span class="events-block-item-date-value">7</span> сентября
                         </div>
 
-                        <a href="#" class="events-block-item-readmore">
+                        <div class="events-block-item-readmore">
                             <?php include "images/icons/icon-arrow-right-red.svg"; ?>
-                        </a>
+                        </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="events-block-item events-block-item-with-image">
+                <a href="#" class="events-block-item events-block-item-with-image">
                     <div class="events-block-item-content">
                         <div class="events-block-item-image">
                             <img src="images/tmp/events/events-3.svg" alt="">
@@ -375,13 +520,13 @@
                             <span class="events-block-item-date-value">9</span> сентября
                         </div>
 
-                        <a href="#" class="events-block-item-readmore">
+                        <div class="events-block-item-readmore">
                             <?php include "images/icons/icon-arrow-right-red.svg"; ?>
-                        </a>
+                        </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="events-block-item events-block-item-with-image">
+                <a href="#" class="events-block-item events-block-item-with-image">
                     <div class="events-block-item-content">
                         <div class="events-block-item-image">
                             <img src="images/tmp/events/events-4.svg" alt="">
@@ -399,11 +544,11 @@
                             <span class="events-block-item-date-value">9</span> сентября
                         </div>
 
-                        <a href="#" class="events-block-item-readmore">
+                        <div class="events-block-item-readmore">
                             <?php include "images/icons/icon-arrow-right-red.svg"; ?>
-                        </a>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="events-block-buttons">
@@ -420,7 +565,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="speakers-block-row">
-                            <div class="speakers-block-row-item">
+                            <a href="#" data-side-modal="#speaker-side-modal-1" data-side-modal-class="side-modal-wide side-modal-speaker" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/sergey-kravcov.jpg" alt="Сергей Кравцов">
                                 </div>
@@ -430,8 +575,8 @@
                                 <div class="speakers-block-row-item-title">
                                     Руководитель Федеральной службы по надзору в сфере образования и науки
                                 </div>
-                            </div>
-                            <div class="speakers-block-row-item">
+                            </a>
+                            <a href="#" data-side-modal="#speaker-side-modal-1" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/issak-kalina.jpg" alt="Исаак Калина">
                                 </div>
@@ -441,8 +586,8 @@
                                 <div class="speakers-block-row-item-title">
                                     Руководитель Департамента образования города Москвы
                                 </div>
-                            </div>
-                            <div class="speakers-block-row-item">
+                            </a>
+                            <a href="#" data-side-modal="#speaker-side-modal-1" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/andreas-shlyayher.jpg" alt="Андреас Шляйхер">
                                 </div>
@@ -452,8 +597,8 @@
                                 <div class="speakers-block-row-item-title">
                                     Руководитель Директората по образованию и  компетенциям  Организации экономич…
                                 </div>
-                            </div>
-                            <div class="speakers-block-row-item">
+                            </a>
+                            <a href="#" data-side-modal="#speaker-side-modal-1" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/peter-adams.jpg" alt="Питер Адамс">
                                 </div>
@@ -463,8 +608,8 @@
                                 <div class="speakers-block-row-item-title">
                                     Старший менеджер проект PISA  Организации  экономического  сотрудничества и развития
                                 </div>
-                            </div>
-                            <div class="speakers-block-row-item">
+                            </a>
+                            <a href="#" data-side-modal="#speaker-side-modal-1" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/dirk-hasted.jpg" alt="Дирк Хастед">
                                 </div>
@@ -474,7 +619,7 @@
                                 <div class="speakers-block-row-item-title">
                                     Директор  Международной  ассоциации по оценке  образовательных  достижений
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -547,6 +692,87 @@
 
                     <a href="#" class="button button-blue-hollow speakers-block-button-next js-speakers-block-button-next">
                         <?php include "images/icons/icon-pagination-next.svg"; ?>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="speakers-modals" style="display: none;">
+            <div id="speaker-side-modal-1">
+                <div class="side-modal-speaker-card">
+                    <div class="side-modal-speaker-card-text">
+                        <div class="side-modal-speaker-name">
+                            Андреас Шляйхер
+                        </div>
+
+                        <div class="side-modal-speaker-title">
+                            Вице-президент / Председатель рабочей группы по модернизации и инновациям
+                        </div>
+
+                        <div class="side-modal-speaker-subtitle">
+                            AББ Россия / Ассоциация
+                            Европейского Бизнеса
+                        </div>
+                    </div>
+                    <div class="side-modal-speaker-card-photo">
+                        <img src="images/tmp/speakers/andreas-shlyayher-large.jpg" alt="Андреас Шляйхер">
+                    </div>
+                </div>
+
+                <div class="side-modal-speaker-about">
+                    <div class="side-modal-speaker-about-title">
+                        О спикере
+                    </div>
+
+                    <p>
+                        В преддверии Второй международной конференции «Использование результатов исследований качества образования — проблемы и перспективы», которая пройдет в МИА «Россия сегодня» 29-30 сентября, директор Департамента по образованию Организации по экономическому сотрудничеству и развитию Андреас Шляйхер рассказал корреспонденту РИА Новости Антону Звереву о главных выводах престижного исследования за последнее десятилетие и о том, как влияет эта программа на политику образования в разных странах.
+                    </p>
+                </div>
+
+                <div class="side-modal-speaker-events">
+                    <div class="side-modal-speaker-events-title">
+                        Выступления
+                    </div>
+                    <a href="#" class="side-modal-speaker-events-item">
+                        <div class="side-modal-speaker-events-item-title">
+                            «Система образования как инструмент консолидации городского сообщества»
+                        </div>
+
+                        <div class="side-modal-speaker-events-item-meta">
+                            <div class="side-modal-speaker-events-item-date">
+                                <span class="side-modal-speaker-events-item-date-icon">
+                                    <?php include "images/icons/icon-modal-calendar.svg"; ?>
+                                </span>
+                                7 сентября, 14:00
+                            </div>
+                            <div class="side-modal-speaker-events-item-place">
+                                <span class="side-modal-speaker-events-item-place-icon">
+                                    <?php include "images/icons/icon-modal-marker.svg"; ?>
+                                </span>
+                                Основной зал 1
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="side-modal-speaker-events-item">
+                        <div class="side-modal-speaker-events-item-title">
+                            Съезд учителей города Москвы
+                        </div>
+
+                        <div class="side-modal-speaker-events-item-meta">
+                            <div class="side-modal-speaker-events-item-date">
+                                <span class="side-modal-speaker-events-item-date-icon">
+                                    <?php include "images/icons/icon-modal-calendar.svg"; ?>
+                                </span>
+                                7 сентября, 14:00
+                            </div>
+                            <div class="side-modal-speaker-events-item-place">
+                                <span class="side-modal-speaker-events-item-place-icon">
+                                    <?php include "images/icons/icon-modal-marker.svg"; ?>
+                                </span>
+                                Основной зал 2
+                            </div>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -678,32 +904,24 @@
 
                 <div class="sponsors-block-row">
                     <div class="sponsors-block-row-cell">
-                        <div class="sponsors-block-row-item">
-                            <a href="#">
+                        <a href="#" class="sponsors-block-row-item">
                                 <img src="images/tmp/sponsors/pravitelstvo-moskvy.png" alt="Правительство Москвы">
-                            </a>
-                        </div>
+                        </a>
                     </div>
                     <div class="sponsors-block-row-cell">
-                        <div class="sponsors-block-row-item">
-                            <a href="#">
-                                <img src="images/tmp/sponsors/departament-obrazovaniya-moskvi.png" alt="Департамент образования города Москвы">
-                            </a>
-                        </div>
+                        <a href="#" class="sponsors-block-row-item">
+                            <img src="images/tmp/sponsors/departament-obrazovaniya-moskvi.png" alt="Департамент образования города Москвы">
+                        </a>
                     </div>
                     <div class="sponsors-block-row-cell">
-                        <div class="sponsors-block-row-item">
-                            <a href="#">
-                                <img src="images/tmp/sponsors/departament-svyazey.png" alt="Департамент внешнеэкономических и международных связей города Москвы">
-                            </a>
-                        </div>
+                        <a href="#" class="sponsors-block-row-item">
+                            <img src="images/tmp/sponsors/departament-svyazey.png" alt="Департамент внешнеэкономических и международных связей города Москвы">
+                        </a>
                     </div>
                     <div class="sponsors-block-row-cell">
-                        <div class="sponsors-block-row-item">
-                            <a href="#">
-                                <img src="images/tmp/sponsors/departament-it.png" alt="Департамент информационных технологий города Москвы">
-                            </a>
-                        </div>
+                        <a href="#" class="sponsors-block-row-item">
+                            <img src="images/tmp/sponsors/departament-it.png" alt="Департамент информационных технологий города Москвы">
+                        </a>
                     </div>
                 </div>
             </section>
@@ -715,31 +933,25 @@
                             Соорганизаторы
                         </h3>
 
-                        <div class="sponsors-block-row-item">
-                            <a href="#">
-                                <img src="images/tmp/sponsors/organizator-1.png" alt="">
-                            </a>
-                        </div>
+                        <a href="#" class="sponsors-block-row-item">
+                            <img src="images/tmp/sponsors/organizator-1.png" alt="">
+                        </a>
                     </div>
 
                     <div class="sponsors-block-row-cell">
                         <div class="sponsors-block-subtitle">&nbsp;</div>
-                        <div class="sponsors-block-row-item">
-                            <a href="#">
-                                <img src="images/tmp/sponsors/organizator-2.png" alt="">
-                            </a>
-                        </div>
+                        <a href="#" class="sponsors-block-row-item">
+                            <img src="images/tmp/sponsors/organizator-2.png" alt="">
+                        </a>
                     </div>
 
                     <div class="sponsors-block-row-cell">
                         <div class="sponsors-block-subtitle">
                             При поддержке
                         </div>
-                        <div class="sponsors-block-row-item">
-                            <a href="#">
-                                <img src="images/tmp/sponsors/organizator-3.png" alt="">
-                            </a>
-                        </div>
+                        <a href="#" class="sponsors-block-row-item">
+                            <img src="images/tmp/sponsors/organizator-3.png" alt="">
+                        </a>
                     </div>
                 </div>
             </section>
@@ -754,273 +966,201 @@
                         <div class="swiper-slide">
                             <div class="sponsors-block-row">
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-1.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-1.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-2.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-2.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-3.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-3.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-4.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-4.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-5.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-5.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-6.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-6.png" alt="">
+                                    </a>
                                 </div>
                             </div>
 
                             <div class="sponsors-block-row">
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-7.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-7.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-8.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-8.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-9.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-9.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-10.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-10.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-11.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-11.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-12.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-12.png" alt="">
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="sponsors-block-row">
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-1.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-1.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-2.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-2.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-3.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-3.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-4.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-4.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-5.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-5.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-6.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-6.png" alt="">
+                                    </a>
                                 </div>
                             </div>
 
                             <div class="sponsors-block-row">
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-7.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-7.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-8.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-8.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-9.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-9.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-10.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-10.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-11.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-11.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-12.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-12.png" alt="">
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="sponsors-block-row">
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-1.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-1.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-2.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-2.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-3.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-3.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-4.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-4.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-5.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-5.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-6.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-6.png" alt="">
+                                    </a>
                                 </div>
                             </div>
 
                             <div class="sponsors-block-row">
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-7.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-7.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-8.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-8.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-9.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-9.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-10.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-10.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-11.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-11.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="sponsors-block-row-cell">
-                                    <div class="sponsors-block-row-item">
-                                        <a href="#">
-                                            <img src="images/tmp/sponsors/partner-12.png" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="#" class="sponsors-block-row-item">
+                                        <img src="images/tmp/sponsors/partner-12.png" alt="">
+                                    </a>
                                 </div>
                             </div>
                         </div>

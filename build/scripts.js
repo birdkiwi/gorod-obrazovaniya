@@ -14944,22 +14944,93 @@ else if (typeof define === 'function' && define.amd) {
 var contactsMap;
 
 function initContactsMap(ymaps) {
-    "use strict";
-    contactsMap = new ymaps.Map("js-contacts-map", {
+    'use strict';
+    contactsMap = new ymaps.Map('js-contacts-map', {
         center: [55.87, 37.66],
-        zoom: 10
+        zoom: 10,
+        controls: ['smallMapDefaultSet']
     });
+
+    contactsMap.behaviors.disable('scrollZoom');
+
+    $.ajax('data/contacts-map-data.json', {
+        method: 'GET',
+        cache: false,
+        data: 'json'
+    }).done(function (data) {
+        if (data.objects) {
+            data.objects.forEach(function (object) {
+                var myPlacemark = new ymaps.GeoObject({
+                    geometry: {
+                        type: "Point",
+                        coordinates: object.coords
+                    }
+                });
+
+                contactsMap.geoObjects.add(myPlacemark);
+            });
+        }
+    })
 }
 $(document).ready(function () {
-    var partnersSwipe = new Swiper('.js-partners-swiper', {
+    var partnersBlockSwipe = new Swiper('.js-partners-swiper', {
         loop: true,
         pagination: '.swiper-pagination',
         paginationClickable: true
     });
 
-    var speakersSwipe = new Swiper('.js-speakers-swiper', {
+    var speakersBlockSwipe = new Swiper('.js-speakers-swiper', {
         loop: true,
         prevButton: '.js-speakers-block-button-prev',
         nextButton: '.js-speakers-block-button-next'
+    });
+
+    var newsBlockSwipe = new Swiper('.js-news-swiper', {
+        loop: true,
+        prevButton: '.js-news-block-button-prev',
+        nextButton: '.js-news-block-button-next'
     })
+});
+function initSideModalWrapper(classNames) {
+    var $modalWrapper = $(
+        '<div class="side-modal-overlay">' +
+            '<div class="side-modal ' + classNames + '">' +
+                '<a href="#" class="side-modal-close" data-side-modal-close></a>' +
+                '<div class="side-modal-overflow">' +
+                '</div>' +
+            '</div>' +
+        '</div>'
+    );
+
+    if (!$('body').children('.side-modal-overlay').length) {
+        $('body').append($modalWrapper);
+    } else {
+        $('body').children('.side-modal-overlay').find('.side-modal-overflow').html('');
+    }
+
+    return $('body').children('.side-modal-overlay');
+}
+
+function initSideModal(content, classNames) {
+    var $wrapper = initSideModalWrapper(classNames);
+    $wrapper.find('.side-modal-overflow').html(content);
+
+    setTimeout(function () {
+        $wrapper.addClass('active');
+    }, 300);
+}
+
+$(document).on('click', '[data-side-modal]', function (e) {
+    var modalContentSelector = $(this).data('side-modal'),
+        $modalContent = $(modalContentSelector),
+        classNames = $(this).data('side-modal-class');
+
+    initSideModal($modalContent, classNames);
+
+    return false;
+});
+
+$(document).on('click', '[data-side-modal-close]', function () {
+    $(this).closest('.side-modal-overlay').removeClass('active');
+    return false;
 });

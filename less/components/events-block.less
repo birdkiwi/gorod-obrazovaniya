@@ -8,6 +8,93 @@
   margin-bottom: 20px;
 }
 
+.events-block-filter-item {
+  padding: 13px 15px;
+  color: #999999;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    background-color: gray;
+    margin-right: 5px;
+    transition: background-color 200ms;
+  }
+
+  span {
+    border-bottom: 1px dotted;
+  }
+
+  &:hover {
+    transition: color 200ms;
+
+    &::before {
+      transition: background-color 200ms;
+    }
+  }
+}
+
+.events-block-filter-item-top {
+  background-color: #FECE01;
+  color: #fff;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  &::before {
+    display: none;
+  }
+
+  &:hover {
+    background-color: #efc001;
+    color: #fff;
+  }
+}
+
+.events-block-filter-item-red {
+  &::before {
+    background-color: @c-red;
+  }
+
+  &:hover {
+    color: @c-red;
+  }
+}
+
+.events-block-filter-item-orange {
+  &::before {
+    background-color: @c-orange;
+  }
+
+  &:hover {
+    color: @c-orange;
+  }
+}
+
+.events-block-filter-item-green {
+  &::before {
+    background-color: @c-green;
+  }
+
+  &:hover {
+    color: @c-green;
+  }
+}
+
+.events-block-filter-item-navy {
+  &::before {
+    background-color: @c-navy;
+  }
+
+  &:hover {
+    color: @c-navy;
+  }
+}
+
 .events-block-title {
   font-size: 2.3rem;
   font-weight: bold;
@@ -33,10 +120,31 @@
   flex: 0 1 calc(~"25% - 10px");
   margin: 5px;
   display: flex;
+  text-decoration: none;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: @c-main;
   padding: 20px 15px;
+  border: 1px solid #fff;
+  transition: border-color 200ms, background-color 200ms;
+
+  &:hover {
+    color: @c-main;
+    border-color: @c-blue;
+    background-color: rgba(255, 255, 255, 1);
+    transition: border-color 200ms, background-color 200ms;
+
+    .events-block-item-title {
+      color: @c-blue;
+      transition: color 200ms;
+    }
+
+    .events-block-item-readmore {
+      background-color: #e4e4e4;
+      transition: background-color 200ms;
+    }
+  }
 }
 
 .events-block-item-image {
@@ -54,6 +162,7 @@
   line-height: 1.4rem;
   margin-bottom: 12px;
   font-weight: bold;
+  transition: color 200ms;
 
   &::after {
     content: '';
@@ -101,11 +210,6 @@
   height: 28px;
   background-color: #F7F7F7;
   transition: background-color 200ms;
-
-  &:hover {
-    background-color: #e4e4e4;
-    transition: background-color 200ms;
-  }
 }
 
 .events-block-item-with-image {
