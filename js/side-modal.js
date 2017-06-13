@@ -9,10 +9,13 @@ function initSideModalWrapper(classNames) {
         '</div>'
     );
 
-    if (!$('body').children('.side-modal-overlay').length) {
+    var $overlay = $('body').children('.side-modal-overlay');
+
+    if (!$overlay.length) {
         $('body').append($modalWrapper);
     } else {
-        $('body').children('.side-modal-overlay').find('.side-modal-overflow').html('');
+        $overlay.find('.side-modal').removeClass().addClass('side-modal ' + classNames);
+        $overlay.find('.side-modal-overflow').html('');
     }
 
     return $('body').children('.side-modal-overlay');
@@ -32,7 +35,7 @@ $(document).on('click', '[data-side-modal]', function (e) {
         $modalContent = $(modalContentSelector),
         classNames = $(this).data('side-modal-class');
 
-    initSideModal($modalContent, classNames);
+    initSideModal($modalContent.clone(), classNames);
 
     return false;
 });

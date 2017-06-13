@@ -2,30 +2,87 @@ var contactsMap;
 
 function initContactsMap(ymaps) {
     'use strict';
-    contactsMap = new ymaps.Map('js-contacts-map', {
-        center: [55.87, 37.66],
-        zoom: 10,
+    var mapElement = document.getElementById('js-contacts-map'),
+        mapDataUrl = mapElement.dataset.mapData;
+
+    contactsMap = new ymaps.Map(mapElement, {
+        center: mapElement.dataset.mapCoords.split(','),
+        zoom: mapElement.dataset.mapZoom,
         controls: ['smallMapDefaultSet']
     });
 
     contactsMap.behaviors.disable('scrollZoom');
 
-    $.ajax('data/contacts-map-data.json', {
+    var commonContent = ymaps.templateLayoutFactory.createClass(
+        '<div class="contacts-map-balloon {{ properties.iconClasses }} {{ properties.iconHoverClasses }}"><div class="contacts-map-balloon-content">{{ properties.iconContent }}</div></div>'
+    );
+
+    $.ajax(mapDataUrl, {
         method: 'GET',
         cache: false,
         data: 'json'
     }).done(function (data) {
         if (data.objects) {
             data.objects.forEach(function (object) {
-                var myPlacemark = new ymaps.GeoObject({
-                    geometry: {
-                        type: "Point",
-                        coordinates: object.coords
-                    }
+
+                var iconOffset = [-100, -70],
+                    iconClasses = '',
+                    iconShape = {
+                        type: 'Rectangle',
+                        // Прямоугольник описывается в виде двух точек - верхней левой и нижней правой.
+                        coordinates: [
+                            [0, 0], [200, 70]
+                        ]
+                    };
+
+                // Large blue Placemark 260x130px - type: "main"
+                if (object.type && object.type === 'main') {
+                    iconOffset = [-130, -130];
+                    iconClasses = 'contacts-map-balloon-main';
+                    iconShape = {
+                        type: 'Rectangle',
+                        coordinates: [
+                            [0, 0], [260, 130]
+                        ]
+                    };
+                }
+
+                var myPlacemark = new ymaps.Placemark(object.coords, {
+                    iconContent: object.name,
+                    hintContent: object.name
+                }, {
+                    iconHoverClasses: '',
+                    iconLayout: commonContent,
+                    iconOffset: iconOffset,
+                    hasBalloon: false,
+                    iconShape: iconShape
                 });
+
+                myPlacemark.properties.set('iconClasses', iconClasses);
+
+                myPlacemark.events.add('mouseenter', function (e) {
+                    myPlacemark.properties.set('iconHoverClasses', 'contacts-map-balloon-hover')
+                });
+
+                myPlacemark.events.add('mouseleave', function (e) {
+                    myPlacemark.properties.set('iconHoverClasses', '');
+                });
+
+                if (object.description.length) {
+                    myPlacemark.events.add('click', function (e) {
+                        initSideModal(object.description, 'side-modal-map-object');
+                        e.stopPropagation();
+                    });
+                }
 
                 contactsMap.geoObjects.add(myPlacemark);
             });
         }
-    })
+    });
+
+    contactsMap.geoObjects.events.add('click', function (e) {
+        alert('Дошло до коллекции объектов карты');
+        // Получение ссылки на дочерний объект, на котором произошло событие.
+        var object = e.get('target');
+    });
 }

@@ -576,7 +576,7 @@
                                     Руководитель Федеральной службы по надзору в сфере образования и науки
                                 </div>
                             </a>
-                            <a href="#" data-side-modal="#speaker-side-modal-1" class="speakers-block-row-item">
+                            <a href="#" data-side-modal="#speaker-side-modal-1" data-side-modal-class="side-modal-wide side-modal-speaker" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/issak-kalina.jpg" alt="Исаак Калина">
                                 </div>
@@ -587,7 +587,7 @@
                                     Руководитель Департамента образования города Москвы
                                 </div>
                             </a>
-                            <a href="#" data-side-modal="#speaker-side-modal-1" class="speakers-block-row-item">
+                            <a href="#" data-side-modal="#speaker-side-modal-1" data-side-modal-class="side-modal-wide side-modal-speaker" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/andreas-shlyayher.jpg" alt="Андреас Шляйхер">
                                 </div>
@@ -598,7 +598,7 @@
                                     Руководитель Директората по образованию и  компетенциям  Организации экономич…
                                 </div>
                             </a>
-                            <a href="#" data-side-modal="#speaker-side-modal-1" class="speakers-block-row-item">
+                            <a href="#" data-side-modal="#speaker-side-modal-1" data-side-modal-class="side-modal-wide side-modal-speaker" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/peter-adams.jpg" alt="Питер Адамс">
                                 </div>
@@ -609,7 +609,7 @@
                                     Старший менеджер проект PISA  Организации  экономического  сотрудничества и развития
                                 </div>
                             </a>
-                            <a href="#" data-side-modal="#speaker-side-modal-1" class="speakers-block-row-item">
+                            <a href="#" data-side-modal="#speaker-side-modal-1" data-side-modal-class="side-modal-wide side-modal-speaker" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/dirk-hasted.jpg" alt="Дирк Хастед">
                                 </div>
@@ -697,6 +697,7 @@
             </div>
         </div>
 
+        <?php /* SPEAKERS HIDDEN MODALS */ ?>
         <div class="speakers-modals" style="display: none;">
             <div id="speaker-side-modal-1">
                 <div class="side-modal-speaker-card">
@@ -1287,7 +1288,7 @@
 </footer>
 
 <section class="contacts-map-block">
-    <div id="js-contacts-map" class="contacts-map-block-map"></div>
+    <div id="js-contacts-map" data-map-coords="55.83110973, 37.63869129" data-map-zoom="16" data-map-data="data/contacts-map-data.json" class="contacts-map-block-map"></div>
 </section>
 
 <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initContactsMap"></script>
