@@ -14941,6 +14941,25 @@ else if (typeof define === 'function' && define.amd) {
 
 //# sourceMappingURL=maps/swiper.jquery.js.map
 
+$(document).ready(function () {
+    var partnersBlockSwipe = new Swiper('.js-partners-swiper', {
+        loop: true,
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
+
+    var speakersBlockSwipe = new Swiper('.js-speakers-swiper', {
+        loop: true,
+        prevButton: '.js-speakers-block-button-prev',
+        nextButton: '.js-speakers-block-button-next'
+    });
+
+    var newsBlockSwipe = new Swiper('.js-news-swiper', {
+        loop: true,
+        prevButton: '.js-news-block-button-prev',
+        nextButton: '.js-news-block-button-next'
+    })
+});
 var contactsMap;
 
 function initContactsMap(ymaps) {
@@ -15029,25 +15048,40 @@ function initContactsMap(ymaps) {
         var object = e.get('target');
     });
 }
-$(document).ready(function () {
-    var partnersBlockSwipe = new Swiper('.js-partners-swiper', {
-        loop: true,
-        pagination: '.swiper-pagination',
-        paginationClickable: true
-    });
+(function() {
+    function hideEvent(e, closestEl, hideFunc) {
+        if(!$(e.target).closest(closestEl).length) {
+            hideFunc();
+            $(document).off('click', 'body', hideEvent);
+        }
+    }
 
-    var speakersBlockSwipe = new Swiper('.js-speakers-swiper', {
-        loop: true,
-        prevButton: '.js-speakers-block-button-prev',
-        nextButton: '.js-speakers-block-button-next'
-    });
+    $('.js-offcanvas').click(function () {
+        var offcanvasOverlay = '#offcanvas',
+            offcanvas = '#offcanvas > .main-offcanvas';
 
-    var newsBlockSwipe = new Swiper('.js-news-swiper', {
-        loop: true,
-        prevButton: '.js-news-block-button-prev',
-        nextButton: '.js-news-block-button-next'
-    })
-});
+        function show() {
+            $('.js-offcanvas').addClass('active');
+            $(offcanvasOverlay).addClass('active');
+
+            $(document).on('click', 'body', function (e) {
+                hideEvent(e, offcanvas, hide);
+            });
+        }
+
+        function hide() {
+            $('.js-offcanvas, ' + offcanvasOverlay).removeClass('active');
+        }
+
+        if ($(this).hasClass('active')) {
+            hide();
+        } else {
+            show();
+        }
+
+        return false;
+    });
+})();
 function initSideModalWrapper(classNames) {
     var $modalWrapper = $(
         '<div class="side-modal-overlay">' +

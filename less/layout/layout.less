@@ -1,5 +1,6 @@
 @import "header";
 @import "footer";
+@import "offcanvas";
 
 * {
   box-sizing: border-box;
@@ -13,4 +14,8 @@
 
 .main-content {
   padding-top: 82px;
+
+  @media (max-width: @wrapper-width) {
+    padding-top: 60px;
+  }
 }
