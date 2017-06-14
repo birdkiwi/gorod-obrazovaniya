@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var sponsorsBlockSwipe = new Swiper('.js-sponsors-swiper', {
         loop: true,
-        pagination: '.swiper-pagination',
+        pagination: '.js-sponsors-swiper .swiper-pagination',
         paginationClickable: true
     });
 
@@ -9,7 +9,7 @@ $(document).ready(function () {
         loop: true,
         prevButton: '.js-speakers-block-button-prev',
         nextButton: '.js-speakers-block-button-next',
-        pagination: '.swiper-pagination',
+        pagination: '.js-speakers-swiper .swiper-pagination',
         paginationClickable: true
     });
 
@@ -17,7 +17,7 @@ $(document).ready(function () {
         loop: true,
         prevButton: '.js-news-block-button-prev',
         nextButton: '.js-news-block-button-next',
-        pagination: '.swiper-pagination',
+        pagination: '.js-news-swiper .swiper-pagination',
         paginationClickable: true
     });
 });
