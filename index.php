@@ -73,7 +73,7 @@
         </div>
 
         <div class="main-offcanvas-padding">
-            <div class="socials-block">
+            <div class="socials-block main-offcanvas-socials-block">
                 <div class="socials-block-items">
                     <a href="#" target="_blank" class="socials-block-item">
                         <?php include "images/icons/icon-vk.svg"; ?>
@@ -204,6 +204,8 @@
                     </div>
                 </div>
 
+                <div class="welcome-block-image"></div>
+
                 <a href="#" class="button button-red">Регистрация</a>
 
                 <div class="welcome-block-socials">
@@ -316,7 +318,7 @@
                 <a href="#">Новости</a> форума
             </h2>
 
-            <div class="swiper-container js-news-swiper">
+            <div class="swiper-container news-block-swiper-container js-news-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="news-block-row">
@@ -443,6 +445,69 @@
                     </a>
                 </div>
             </div>
+
+            <div class="swiper container news-block-swiper-container-mobile js-news-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="news-block-row-item news-block-row-item-photo">
+                            <div class="news-block-row-item-cover">
+                                <img src="images/tmp/news/news-1.jpg" alt="">
+                            </div>
+
+                            <div class="news-block-row-item-meta">
+                                <div class="news-block-row-item-title">
+                                    Выставка робототехники ВДНХ 2016
+                                </div>
+
+                                <div class="news-block-row-item-readmore">
+                                    18
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="news-block-row-item news-block-row-item-photo">
+                            <div class="news-block-row-item-cover">
+                                <img src="images/tmp/news/news-2.jpg" alt="">
+                            </div>
+
+                            <div class="news-block-row-item-meta">
+                                <div class="news-block-row-item-title">
+                                    Выставка робототехники ВДНХ 2016
+                                </div>
+
+                                <div class="news-block-row-item-readmore">
+                                    18
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="news-block-row-item news-block-row-item-blank">
+                            <div class="news-block-row-item-title">
+                                Пресс-конференция о форуме «Город образования» прошла в Москве
+                            </div>
+                            <div class="news-block-row-item-meta">
+                                <div class="news-block-row-item-date">
+                                    <span class="news-block-row-item-date-value">7</span> сентября
+                                </div>
+
+                                <div class="news-block-row-item-readmore">
+                                    <?php include "images/icons/icon-arrow-right-red.svg"; ?>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="news-block-buttons">
+                    <a href="#" class="button button-blue-hollow">
+                        Все новости
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -453,24 +518,24 @@
             </h2>
 
             <div class="events-block-filter">
-                <a href="#" class="events-block-filter-item events-block-filter-item-top">
+                <a href="data/events-filter/test-0.php" class="events-block-filter-item events-block-filter-item-top js-events-block-filter active">
                     Топ
                 </a>
-                <a href="#" class="events-block-filter-item events-block-filter-item-red">
+                <a href="data/events-filter/test-1.php" class="events-block-filter-item events-block-filter-item-red js-events-block-filter">
                     <span>Деловая программа</span>
                 </a>
-                <a href="#" class="events-block-filter-item events-block-filter-item-orange">
+                <a href="data/events-filter/test-1.php" class="events-block-filter-item events-block-filter-item-orange js-events-block-filter">
                     <span>Специальные мероприятия</span>
                 </a>
-                <a href="#" class="events-block-filter-item events-block-filter-item-green">
+                <a href="data/events-filter/test-1.php" class="events-block-filter-item events-block-filter-item-green js-events-block-filter">
                     <span>Культурная программа</span>
                 </a>
-                <a href="#" class="events-block-filter-item events-block-filter-item-navy">
+                <a href="data/events-filter/test-1.php" class="events-block-filter-item events-block-filter-item-navy js-events-block-filter">
                     <span>Спортивные мероприятия</span>
                 </a>
             </div>
 
-            <div class="events-block-row">
+            <div class="events-block-row js-events-block-content">
                 <a href="#" class="events-block-item">
                     <div class="events-block-item-content">
                         <div class="events-block-item-title">
@@ -670,119 +735,141 @@
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/sergey-kravcov.jpg" alt="Сергей Кравцов">
                                 </div>
-                                <div class="speakers-block-row-item-name">
-                                    Сергей Кравцов
-                                </div>
-                                <div class="speakers-block-row-item-title">
-                                    Руководитель Федеральной службы по надзору в сфере образования и науки
+                                <div class="speakers-block-row-item-text">
+                                    <div class="speakers-block-row-item-name">
+                                        Сергей Кравцов
+                                    </div>
+                                    <div class="speakers-block-row-item-title">
+                                        Руководитель Федеральной службы по надзору в сфере образования и науки
+                                    </div>
                                 </div>
                             </a>
                             <a href="#" data-side-modal="#speaker-side-modal-1" data-side-modal-class="side-modal-wide side-modal-speaker" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/issak-kalina.jpg" alt="Исаак Калина">
                                 </div>
-                                <div class="speakers-block-row-item-name">
-                                    Исаак Калина
-                                </div>
-                                <div class="speakers-block-row-item-title">
-                                    Руководитель Департамента образования города Москвы
+                                <div class="speakers-block-row-item-text">
+                                    <div class="speakers-block-row-item-name">
+                                        Исаак Калина
+                                    </div>
+                                    <div class="speakers-block-row-item-title">
+                                        Руководитель Департамента образования города Москвы
+                                    </div>
                                 </div>
                             </a>
                             <a href="#" data-side-modal="#speaker-side-modal-1" data-side-modal-class="side-modal-wide side-modal-speaker" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/andreas-shlyayher.jpg" alt="Андреас Шляйхер">
                                 </div>
-                                <div class="speakers-block-row-item-name">
-                                    Андреас Шляйхер
-                                </div>
-                                <div class="speakers-block-row-item-title">
-                                    Руководитель Директората по образованию и  компетенциям  Организации экономич…
+                                <div class="speakers-block-row-item-text">
+                                    <div class="speakers-block-row-item-name">
+                                        Андреас Шляйхер
+                                    </div>
+                                    <div class="speakers-block-row-item-title">
+                                        Руководитель Директората по образованию и  компетенциям  Организации экономич…
+                                    </div>
                                 </div>
                             </a>
                             <a href="#" data-side-modal="#speaker-side-modal-1" data-side-modal-class="side-modal-wide side-modal-speaker" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/peter-adams.jpg" alt="Питер Адамс">
                                 </div>
-                                <div class="speakers-block-row-item-name">
-                                    Питер Адамс
-                                </div>
-                                <div class="speakers-block-row-item-title">
-                                    Старший менеджер проект PISA  Организации  экономического  сотрудничества и развития
+                                <div class="speakers-block-row-item-text">
+                                    <div class="speakers-block-row-item-name">
+                                        Питер Адамс
+                                    </div>
+                                    <div class="speakers-block-row-item-title">
+                                        Старший менеджер проект PISA  Организации  экономического  сотрудничества и развития
+                                    </div>
                                 </div>
                             </a>
                             <a href="#" data-side-modal="#speaker-side-modal-1" data-side-modal-class="side-modal-wide side-modal-speaker" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/dirk-hasted.jpg" alt="Дирк Хастед">
                                 </div>
-                                <div class="speakers-block-row-item-name">
-                                    Дирк Хастед
-                                </div>
-                                <div class="speakers-block-row-item-title">
-                                    Директор  Международной  ассоциации по оценке  образовательных  достижений
+                                <div class="speakers-block-row-item-text">
+                                    <div class="speakers-block-row-item-name">
+                                        Дирк Хастед
+                                    </div>
+                                    <div class="speakers-block-row-item-title">
+                                        Директор  Международной  ассоциации по оценке  образовательных  достижений
+                                    </div>
                                 </div>
                             </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="speakers-block-row">
-                            <div class="speakers-block-row-item">
+                            <a href="#" data-side-modal="#speaker-side-modal-1" data-side-modal-class="side-modal-wide side-modal-speaker" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/sergey-kravcov.jpg" alt="Сергей Кравцов">
                                 </div>
-                                <div class="speakers-block-row-item-name">
-                                    Сергей Кравцов
+                                <div class="speakers-block-row-item-text">
+                                    <div class="speakers-block-row-item-name">
+                                        Сергей Кравцов
+                                    </div>
+                                    <div class="speakers-block-row-item-title">
+                                        Руководитель Федеральной службы по надзору в сфере образования и науки
+                                    </div>
                                 </div>
-                                <div class="speakers-block-row-item-title">
-                                    Руководитель Федеральной службы по надзору в сфере образования и науки
-                                </div>
-                            </div>
-                            <div class="speakers-block-row-item">
+                            </a>
+                            <a href="#" data-side-modal="#speaker-side-modal-1" data-side-modal-class="side-modal-wide side-modal-speaker" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/issak-kalina.jpg" alt="Исаак Калина">
                                 </div>
-                                <div class="speakers-block-row-item-name">
-                                    Исаак Калина
+                                <div class="speakers-block-row-item-text">
+                                    <div class="speakers-block-row-item-name">
+                                        Исаак Калина
+                                    </div>
+                                    <div class="speakers-block-row-item-title">
+                                        Руководитель Департамента образования города Москвы
+                                    </div>
                                 </div>
-                                <div class="speakers-block-row-item-title">
-                                    Руководитель Департамента образования города Москвы
-                                </div>
-                            </div>
-                            <div class="speakers-block-row-item">
+                            </a>
+                            <a href="#" data-side-modal="#speaker-side-modal-1" data-side-modal-class="side-modal-wide side-modal-speaker" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/andreas-shlyayher.jpg" alt="Андреас Шляйхер">
                                 </div>
-                                <div class="speakers-block-row-item-name">
-                                    Андреас Шляйхер
+                                <div class="speakers-block-row-item-text">
+                                    <div class="speakers-block-row-item-name">
+                                        Андреас Шляйхер
+                                    </div>
+                                    <div class="speakers-block-row-item-title">
+                                        Руководитель Директората по образованию и  компетенциям  Организации экономич…
+                                    </div>
                                 </div>
-                                <div class="speakers-block-row-item-title">
-                                    Руководитель Директората по образованию и  компетенциям  Организации экономич…
-                                </div>
-                            </div>
-                            <div class="speakers-block-row-item">
+                            </a>
+                            <a href="#" data-side-modal="#speaker-side-modal-1" data-side-modal-class="side-modal-wide side-modal-speaker" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/peter-adams.jpg" alt="Питер Адамс">
                                 </div>
-                                <div class="speakers-block-row-item-name">
-                                    Питер Адамс
+                                <div class="speakers-block-row-item-text">
+                                    <div class="speakers-block-row-item-name">
+                                        Питер Адамс
+                                    </div>
+                                    <div class="speakers-block-row-item-title">
+                                        Старший менеджер проект PISA  Организации  экономического  сотрудничества и развития
+                                    </div>
                                 </div>
-                                <div class="speakers-block-row-item-title">
-                                    Старший менеджер проект PISA  Организации  экономического  сотрудничества и развития
-                                </div>
-                            </div>
-                            <div class="speakers-block-row-item">
+                            </a>
+                            <a href="#" data-side-modal="#speaker-side-modal-1" data-side-modal-class="side-modal-wide side-modal-speaker" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/dirk-hasted.jpg" alt="Дирк Хастед">
                                 </div>
-                                <div class="speakers-block-row-item-name">
-                                    Дирк Хастед
+                                <div class="speakers-block-row-item-text">
+                                    <div class="speakers-block-row-item-name">
+                                        Дирк Хастед
+                                    </div>
+                                    <div class="speakers-block-row-item-title">
+                                        Директор  Международной  ассоциации по оценке  образовательных  достижений
+                                    </div>
                                 </div>
-                                <div class="speakers-block-row-item-title">
-                                    Директор  Международной  ассоциации по оценке  образовательных  достижений
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
+
+                <div class="swiper-pagination"></div>
 
                 <div class="speakers-block-buttons">
                     <a href="#" class="button button-blue-hollow speakers-block-button-prev js-speakers-block-button-prev">
@@ -987,8 +1074,9 @@
                         </div>
                     </div>
                 </div>
-
-                <a href="#" class="button button-red">Заявка на участие</a>
+                <div class="exhibition-block-buttons">
+                    <a href="#" class="button button-red">Заявка на участие</a>
+                </div>
             </div>
 
             <div class="exhibition-block-map"></div>
@@ -1063,7 +1151,7 @@
                     Партнеры
                 </h3>
 
-                <div class="swiper-container js-partners-swiper">
+                <div class="swiper-container sponsors-block-swiper-container js-sponsors-swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="sponsors-block-row">
@@ -1097,9 +1185,6 @@
                                         <img src="images/tmp/sponsors/partner-6.png" alt="">
                                     </a>
                                 </div>
-                            </div>
-
-                            <div class="sponsors-block-row">
                                 <div class="sponsors-block-row-cell">
                                     <a href="#" class="sponsors-block-row-item">
                                         <img src="images/tmp/sponsors/partner-7.png" alt="">
@@ -1164,9 +1249,6 @@
                                         <img src="images/tmp/sponsors/partner-6.png" alt="">
                                     </a>
                                 </div>
-                            </div>
-
-                            <div class="sponsors-block-row">
                                 <div class="sponsors-block-row-cell">
                                     <a href="#" class="sponsors-block-row-item">
                                         <img src="images/tmp/sponsors/partner-7.png" alt="">
@@ -1231,9 +1313,6 @@
                                         <img src="images/tmp/sponsors/partner-6.png" alt="">
                                     </a>
                                 </div>
-                            </div>
-
-                            <div class="sponsors-block-row">
                                 <div class="sponsors-block-row-cell">
                                     <a href="#" class="sponsors-block-row-item">
                                         <img src="images/tmp/sponsors/partner-7.png" alt="">
@@ -1384,6 +1463,74 @@
                     </li>
                 </ul>
             </div>
+        </div>
+
+        <div class="main-footer-menu-mobile">
+            <ul>
+                <li class="parent">
+                    <button class="main-footer-menu-mobile-toggle js-mobile-menu-toggle">
+                        <?php include "images/icons/icon-arrow-down.svg"; ?>
+                    </button>
+                    <a href="#">О форуме</a>
+                    <ul>
+                        <li><a href="#">Посетителям</a></li>
+                        <li><a href="#">Экспонентам</a></li>
+                        <li><a href="#">Партнерам</a></li>
+                        <li><a href="#">СМИ</a></li>
+                        <li><a href="#">Полезная информация</a></li>
+                    </ul>
+                </li>
+                <li class="parent">
+                    <button class="main-footer-menu-mobile-toggle js-mobile-menu-toggle">
+                        <?php include "images/icons/icon-arrow-down.svg"; ?>
+                    </button>
+                    <a href="#">Программа</a>
+                    <ul>
+                        <li><a href="#">Деловая программа</a></li>
+                        <li><a href="#">Специальные мероприятия</a></li>
+                        <li><a href="#">Партнерам</a></li>
+                        <li><a href="#">Культурная программа</a></li>
+                        <li><a href="#">Спортивные мероприятия</a></li>
+                    </ul>
+                </li>
+                <li class="parent">
+                    <button class="main-footer-menu-mobile-toggle js-mobile-menu-toggle">
+                        <?php include "images/icons/icon-arrow-down.svg"; ?>
+                    </button>
+                    <a href="#">Выставка</a>
+                    <ul>
+                        <li><a href="#">Каталог экспонентов</a></li>
+                        <li><a href="#">Схема выставки</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Спикеры</a>
+                </li>
+                <li>
+                    <a href="#">Новости</a>
+                </li>
+                <li class="parent">
+                    <button class="main-footer-menu-mobile-toggle js-mobile-menu-toggle">
+                        <?php include "images/icons/icon-arrow-down.svg"; ?>
+                    </button>
+                    <a href="#">Партнеры</a>
+                    <ul>
+                        <li><a href="#">Генеральные партнеры</a></li>
+                        <li><a href="#">Медиа партнеры</a></li>
+                        <li><a href="#">Партнеры выставки и деловой программы</a></li>
+                    </ul>
+                </li>
+                <li class="parent">
+                    <button class="main-footer-menu-mobile-toggle js-mobile-menu-toggle">
+                        <?php include "images/icons/icon-arrow-down.svg"; ?>
+                    </button>
+                    <a href="#">Контакты</a>
+                    <ul>
+                        <li><a href="#">Карта/схема ВДНХ</a></li>
+                        <li><a href="#">Задать вопрос</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 </footer>

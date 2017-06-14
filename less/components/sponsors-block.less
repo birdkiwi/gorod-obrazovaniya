@@ -2,6 +2,11 @@
   padding-top: 60px;
   padding-bottom: 50px;
   background-color: #F7F7F7;
+
+  @media (max-width: @breakpoint-m) {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
 }
 
 .sponsors-block-title {
@@ -13,36 +18,61 @@
   text-align: center;
   margin-top: 0;
   margin-bottom: 50px;
+
+  @media (max-width: @breakpoint-m) {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    margin-bottom: 20px;
+  }
 }
 
 .sponsors-block-subtitle {
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin-top: 0;
+  margin-top: 20px;
   margin-bottom: 5px;
   color: fade(@c-main, 40%);
+
+  @media (max-width: @breakpoint-m) {
+    text-align: center;
+  }
 }
 
 .sponsors-block-section {
   margin-bottom: 30px;
+}
 
-  .swiper-container {
-    height: 380px;
+.sponsors-block-swiper-container {
+  .swiper-pagination {
+    position: relative;
+    bottom: auto;
+    margin-top: 20px;
   }
 }
 
 .sponsors-block-row {
   display: flex;
+  flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
+
+  @media (max-width: @breakpoint-m) {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
 }
 
 .sponsors-block-row-cell {
-  flex: 0 1 25%;
+  flex: 0 1 calc(~"25% - 30px");
   display: flex;
   margin: 0 15px;
   flex-direction: column;
+
+  @media (max-width: @breakpoint-m) {
+    flex-basis: calc(~"50% - 20px");
+    margin: 0 10px;
+  }
 }
 
 .sponsors-block-row-item {
@@ -65,5 +95,9 @@
 
   img {
     max-width: 100%;
+  }
+
+  @media (max-width: @breakpoint-m) {
+    margin: 10px 0;
   }
 }

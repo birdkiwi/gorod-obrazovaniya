@@ -8,6 +8,11 @@
   & > .wrapper {
     position: relative;
   }
+
+  @media (max-width: @breakpoint-m) {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
 }
 
 .exhibition-block-title {
@@ -17,6 +22,13 @@
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 50px;
+
+  @media (max-width: @breakpoint-m) {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    line-height: 1.5rem;
+    text-align: center;
+  }
 }
 
 .exhibition-block-content {
@@ -35,6 +47,11 @@
   display: flex;
   align-items: center;
   margin-bottom: 50px;
+
+  @media (max-width: @breakpoint-m) {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
 }
 
 .exhibition-block-sections-item-icon {
@@ -59,4 +76,21 @@
   background: url("../images/exhibition-map.png") no-repeat center;
   width: 755px;
   height: 688px;
+
+  @media (max-width: @breakpoint-m) {
+    display: none;
+  }
+}
+
+.exhibition-block-buttons {
+  @media (max-width: @breakpoint-m) {
+    text-align: center;
+  }
+
+  .button {
+    @media (max-width: @breakpoint-m) {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
 }

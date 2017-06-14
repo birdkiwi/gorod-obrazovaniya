@@ -20,7 +20,7 @@ function initContactsMap(ymaps) {
     $.ajax(mapDataUrl, {
         method: 'GET',
         cache: false,
-        data: 'json'
+        dataType: 'json'
     }).done(function (data) {
         if (data.objects) {
             data.objects.forEach(function (object) {
@@ -78,11 +78,9 @@ function initContactsMap(ymaps) {
                 contactsMap.geoObjects.add(myPlacemark);
             });
         }
-    });
-
-    contactsMap.geoObjects.events.add('click', function (e) {
-        alert('Дошло до коллекции объектов карты');
-        // Получение ссылки на дочерний объект, на котором произошло событие.
-        var object = e.get('target');
+    }).fail(function(jqXHR, textStatus, errorThrown) {
+        alert('Ошибка загрузки данных. Пожалуйста, попробуйте перезагрузить страницу.');
+        console.log(jqXHR);
+        console.log(errorThrown);
     });
 }

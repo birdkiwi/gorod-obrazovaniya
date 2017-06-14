@@ -29,6 +29,8 @@ gulp.task('less', function() {
 
 var jsFiles = [
         './node_modules/jquery/dist/jquery.js',
+        './node_modules/spin.js/spin.js',
+        './node_modules/spin.js/jquery.spin.js',
         './node_modules/swiper/dist/js/swiper.jquery.js',
         './js/**/*.js'
     ],

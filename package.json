@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "animate.css": "^3.5.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-concat": "^2.6.1",
@@ -20,6 +21,7 @@
     "gulp-watch": "^4.3.11",
     "jquery": "^3.2.1",
     "normalize.css": "^7.0.0",
+    "spin.js": "^2.3.2",
     "swiper": "^3.4.2"
   }
 }

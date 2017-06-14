@@ -13,11 +13,22 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+
+    @media (max-width: @breakpoint-m) {
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
   }
 }
 
 .about-forum-block-content {
+  max-width: 760px;
+  font-size: 1.3em;
 
+  @media (max-width: @breakpoint-m) {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .about-forum-block-title {
@@ -27,18 +38,22 @@
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  max-width: 760px;
+
+  @media (max-width: @breakpoint-m) {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    text-align: center;
+  }
 }
 
 .about-forum-block-text {
   font-size: 1.3rem;
   line-height: 2rem;
   margin-bottom: 50px;
-  max-width: 760px;
-}
 
-.about-forum-block-content {
-  font-size: 1.3em;
+  @media (max-width: @breakpoint-m) {
+    display: none;
+  }
 }
 
 .about-forum-block-icons {
@@ -46,6 +61,12 @@
   flex-wrap: wrap;
   max-width: 600px;
   margin-bottom: 40px;
+
+  @media (max-width: @breakpoint-m) {
+    max-width: 100%;
+    margin-bottom: 0;
+    justify-content: center;
+  }
 }
 
 .about-forum-block-icons-item {
@@ -63,6 +84,14 @@
       opacity: 0.8;
     }
   }
+
+  @media (max-width: @breakpoint-m) {
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .about-forum-block-icons-item-icon {
@@ -75,16 +104,27 @@
   border-radius: 100%;
   background-color: #fff;
   margin-right: 12px;
+
+  @media (max-width: @breakpoint-m) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
 
 .about-forum-block-icons-item-title {
   text-decoration: underline;
   font-size: 1.28rem;
   font-weight: 500;
+
+  @media (max-width: @breakpoint-m) {
+    font-size:  1.1rem;
+  }
 }
 
 .about-forum-block-stats {
-
+  @media (max-width: @breakpoint-m) {
+    display: none;
+  }
 }
 
 .about-forum-block-stats-item {
@@ -108,8 +148,18 @@
 }
 
 .about-forum-block-button {
-  max-width: @wrapper-width;
   text-align: center;
   margin: 0 auto;
   padding-bottom: 50px;
+
+  @media (max-width: @breakpoint-m) {
+    padding-bottom: 20px;
+  }
+
+  .button {
+    @media (max-width: @breakpoint-m) {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
 }

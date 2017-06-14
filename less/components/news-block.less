@@ -7,8 +7,30 @@
     position: relative;
   }
 
-  .swiper-container {
-    max-height: 580px;
+  @media (max-width: @breakpoint-m) {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+}
+
+.news-block-swiper-container {
+  @media (max-width: @breakpoint-m) {
+    display: none;
+  }
+}
+
+.news-block-swiper-container-mobile {
+  display: none;
+  overflow-x: hidden;
+
+  .swiper-pagination {
+    position: relative;
+    bottom: 0;
+    margin-top: 20px;
+  }
+
+  @media (max-width: @breakpoint-m) {
+    display: block;
   }
 }
 
@@ -21,6 +43,11 @@
 
   a {
     text-decoration: none;
+  }
+
+  @media (max-width: @breakpoint-m) {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
   }
 }
 
@@ -222,16 +249,19 @@
 }
 
 .news-block-buttons {
-  position: absolute;
   width: 100%;
-  z-index: 100;
-  bottom: 0;
   text-align: center;
   font-size: 0;
+  margin-top: 30px;
 
   .button {
     font-size: 1rem;
     vertical-align: middle;
+
+    @media (max-width: @breakpoint-m) {
+      width: 100%;
+      max-width: 320px;
+    }
   }
 }
 
