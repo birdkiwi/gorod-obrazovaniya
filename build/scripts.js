@@ -21047,6 +21047,16 @@ function initSideModal(content, classNames) {
     setTimeout(function () {
         $wrapper.addClass('active');
     }, 300);
+
+    function hide(e) {
+        console.log(e.target);
+        if (!$(e.target).closest('.side-modal').length) {
+            $wrapper.removeClass('active');
+            $(document).off(hide);
+        }
+    }
+
+    $(document).on('click', hide);
 }
 
 $(document).on('click', '[data-side-modal]', function (e) {

@@ -13,6 +13,9 @@
 <div id="offcanvas" class="main-offcanvas-overlay">
     <nav class="main-offcanvas">
         <div class="main-offcanvas-padding">
+            <div class="main-offcanvas-logo">
+                <img src="images/logo.svg" alt="Город образования">
+            </div>
             <div class="main-offcanvas-user">
                 <a href="#" class="button button-blue-hollow">Войти</a>
             </div>
