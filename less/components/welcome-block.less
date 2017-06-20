@@ -9,15 +9,14 @@
 
   @media (max-width: @breakpoint-m) {
     background-image: none;
-    min-height: auto;
-
+    min-height: inherit;
   }
 }
 
 .welcome-block-support {
   position: absolute;
   right: 15px;
-  top: 30px;
+  top: 75px;
 
   @media (max-width: @breakpoint-m) {
     display: none;
@@ -132,6 +131,40 @@
 
   @media (max-width: @breakpoint-m) {
     display: block;
+  }
+}
+
+.welcome-block-countdown {
+  .flip-clock-wrapper {
+    margin-left: -5px;
+    transform: scale(0.7);
+    transform-origin: left top;
+
+    @media (max-width: @breakpoint-m) {
+      display: inline-block;
+      width: auto;
+      margin-left: -10px;
+      margin-right: -10px;
+      transform: scale(0.7);
+      transform-origin: center;
+    }
+  }
+
+  .flip-clock-divider .flip-clock-label {
+    top: auto;
+    bottom: -1.9rem;
+    font-size: 1.2rem;
+  }
+}
+
+.welcome-block-countdown-title {
+  color: @c-red;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+
+  @media (max-width: @breakpoint-m) {
+    margin-bottom: 0;
   }
 }
 

@@ -1,4 +1,4 @@
-<a href="#" class="events-block-item animated flipInX">
+<a href="#" class="events-block-item animated fadeIn">
     <div class="events-block-item-content">
         <div class="events-block-item-title">
             «Система образования как инструмент консолидации городского сообщества»
@@ -19,7 +19,7 @@
     </div>
 </a>
 
-<a href="#" class="events-block-item animated flipInX">
+<a href="#" class="events-block-item animated fadeIn">
     <div class="events-block-item-content">
         <div class="events-block-item-title">
             «Система образования с высокими возможностями для каждого: международный опыт, оценка, внедрение»
@@ -40,7 +40,7 @@
     </div>
 </a>
 
-<a href="#" class="events-block-item animated flipInX">
+<a href="#" class="events-block-item animated fadeIn">
     <div class="events-block-item-content">
         <div class="events-block-item-title">
             Съезд учителей города Москвы
@@ -61,7 +61,7 @@
     </div>
 </a>
 
-<a href="#" class="events-block-item animated flipInX">
+<a href="#" class="events-block-item animated fadeIn">
     <div class="events-block-item-content">
         <div class="events-block-item-title">
             Дискуссии о ключевых трендах развития образования

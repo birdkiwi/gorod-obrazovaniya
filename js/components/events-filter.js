@@ -9,22 +9,20 @@ $(document).ready(function () {
 
             $eventsContent.spin('large', '#000');
 
-            setTimeout(function () {
-                $.ajax(link, {
-                    method: 'GET',
-                    cache: false
-                }).done(function (data) {
-                    $('.js-events-block-filter').removeClass('active');
-                    $el.addClass('active');
-                    $eventsContent.html(data);
-                }).fail(function (jqXHR, textStatus, errorThrown) {
-                    alert('Ошибка загрузки данных. Пожалуйста, попробуйте ещё раз.');
-                    console.log(jqXHR);
-                    console.log(errorThrown);
-                }).always(function () {
-                    $eventsContent.spin(false);
-                });
-            }, 500);
+            $.ajax(link, {
+                method: 'GET',
+                cache: false
+            }).done(function (data) {
+                $('.js-events-block-filter').removeClass('active');
+                $el.addClass('active');
+                $eventsContent.html(data);
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                alert('Ошибка загрузки данных. Пожалуйста, попробуйте ещё раз.');
+                console.log(jqXHR);
+                console.log(errorThrown);
+            }).always(function () {
+                $eventsContent.spin(false);
+            });
 
         }
 

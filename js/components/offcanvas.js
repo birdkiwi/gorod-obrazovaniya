@@ -6,23 +6,23 @@
         }
     }
 
+    var offcanvasOverlay = '#offcanvas',
+        offcanvas = '#offcanvas > .main-offcanvas';
+
+    function show() {
+        $('.js-offcanvas').addClass('active');
+        $(offcanvasOverlay).addClass('active');
+
+        $(document).on('click', 'body', function (e) {
+            hideEvent(e, offcanvas, hide);
+        });
+    }
+
+    function hide() {
+        $('.js-offcanvas, ' + offcanvasOverlay).removeClass('active');
+    }
+
     $('.js-offcanvas').click(function () {
-        var offcanvasOverlay = '#offcanvas',
-            offcanvas = '#offcanvas > .main-offcanvas';
-
-        function show() {
-            $('.js-offcanvas').addClass('active');
-            $(offcanvasOverlay).addClass('active');
-
-            $(document).on('click', 'body', function (e) {
-                hideEvent(e, offcanvas, hide);
-            });
-        }
-
-        function hide() {
-            $('.js-offcanvas, ' + offcanvasOverlay).removeClass('active');
-        }
-
         if ($(this).hasClass('active')) {
             hide();
         } else {
@@ -30,5 +30,10 @@
         }
 
         return false;
+    });
+
+    var offcanvasHammer = new Hammer(document.querySelector(offcanvasOverlay));
+    offcanvasHammer.on("swipeleft", function(e) {
+        hide();
     });
 })();

@@ -6,6 +6,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <title>Город образования</title>
     <link rel="stylesheet" href="build/style.min.css">
+    <meta name="theme-color" content="#006A98">
 </head>
 <body>
 
@@ -200,13 +201,18 @@
 
                     <div class="welcome-block-highlight-address">
                         <div class="welcome-block-highlight-value">ВДНХ</div>
-                        75 павильон
+                        75-й павильон
                     </div>
                 </div>
 
                 <div class="welcome-block-image"></div>
 
-                <a href="#" class="button button-red">Регистрация</a>
+                <!--<a href="#" data-side-modal="#registration-modal" data-side-modal-class="registration-modal" class="button button-wide button-red">Регистрация</a>-->
+
+                <div class="welcome-block-countdown">
+                    <div class="welcome-block-countdown-title">До начала регистрации:</div>
+                    <div class="js-flip-clock" data-time-left="86400"></div>
+                </div>
 
                 <div class="welcome-block-socials">
                     <div class="socials-block">
@@ -236,7 +242,7 @@
         <div class="wrapper">
             <div class="about-forum-block-content">
                 <h2 class="about-forum-block-title">
-                    Одно из ключевых событий в сфере образования Москвы в 2017 году
+                    Одно из ключевых событий в&nbsp;сфере образования Москвы в 2017 году
                 </h2>
 
                 <div class="about-forum-block-text">
@@ -715,6 +721,223 @@
                         </div>
                     </div>
                 </a>
+            </div>
+
+
+            <div class="events-block-row-mobile swiper-container js-events-swiper">
+                <div class="events-block-row-mobile-title c-red">
+                    Деловая программа
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="events-block-item">
+                        <div class="events-block-item-content">
+                            <div class="events-block-item-title">
+                                «Система образования как инструмент консолидации городского сообщества»
+                            </div>
+                            <div class="events-block-item-text">
+                                Конференция министров образования
+                            </div>
+                        </div>
+
+                        <div class="events-block-item-meta">
+                            <div class="events-block-item-date">
+                                <span class="events-block-item-date-value">7</span> сентября
+                            </div>
+
+                            <div class="events-block-item-readmore">
+                                <?php include "images/icons/icon-arrow-right-red.svg"; ?>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="events-block-item">
+                    <div class="events-block-item-content">
+                        <div class="events-block-item-title">
+                            «Система образования с высокими возможностями для каждого: международный опыт, оценка, внедрение»
+                        </div>
+                        <div class="events-block-item-text">
+                            Международная конференция с участием руководителя Федеральной службы по надзору в сфере образования и науки
+                        </div>
+                    </div>
+
+                    <div class="events-block-item-meta">
+                        <div class="events-block-item-date">
+                            <span class="events-block-item-date-value">7</span> сентября
+                        </div>
+
+                        <div class="events-block-item-readmore">
+                            <?php include "images/icons/icon-arrow-right-red.svg"; ?>
+                        </div>
+                    </div>
+                </a>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="events-block-row-mobile swiper-container js-events-swiper">
+                <div class="events-block-row-mobile-title c-orange">
+                    Специальные мероприятия
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="events-block-item">
+                            <div class="events-block-item-content">
+                                <div class="events-block-item-title">
+                                    «Система образования как инструмент консолидации городского сообщества»
+                                </div>
+                                <div class="events-block-item-text">
+                                    Конференция министров образования
+                                </div>
+                            </div>
+
+                            <div class="events-block-item-meta">
+                                <div class="events-block-item-date">
+                                    <span class="events-block-item-date-value">7</span> сентября
+                                </div>
+
+                                <div class="events-block-item-readmore">
+                                    <?php include "images/icons/icon-arrow-right-red.svg"; ?>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="events-block-item">
+                            <div class="events-block-item-content">
+                                <div class="events-block-item-title">
+                                    «Система образования с высокими возможностями для каждого: международный опыт, оценка, внедрение»
+                                </div>
+                                <div class="events-block-item-text">
+                                    Международная конференция с участием руководителя Федеральной службы по надзору в сфере образования и науки
+                                </div>
+                            </div>
+
+                            <div class="events-block-item-meta">
+                                <div class="events-block-item-date">
+                                    <span class="events-block-item-date-value">7</span> сентября
+                                </div>
+
+                                <div class="events-block-item-readmore">
+                                    <?php include "images/icons/icon-arrow-right-red.svg"; ?>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="events-block-row-mobile swiper-container js-events-swiper">
+                <div class="events-block-row-mobile-title c-green">
+                    Культурная программа
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="events-block-item">
+                            <div class="events-block-item-content">
+                                <div class="events-block-item-title">
+                                    «Система образования как инструмент консолидации городского сообщества»
+                                </div>
+                                <div class="events-block-item-text">
+                                    Конференция министров образования
+                                </div>
+                            </div>
+
+                            <div class="events-block-item-meta">
+                                <div class="events-block-item-date">
+                                    <span class="events-block-item-date-value">7</span> сентября
+                                </div>
+
+                                <div class="events-block-item-readmore">
+                                    <?php include "images/icons/icon-arrow-right-red.svg"; ?>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="events-block-item">
+                            <div class="events-block-item-content">
+                                <div class="events-block-item-title">
+                                    «Система образования с высокими возможностями для каждого: международный опыт, оценка, внедрение»
+                                </div>
+                                <div class="events-block-item-text">
+                                    Международная конференция с участием руководителя Федеральной службы по надзору в сфере образования и науки
+                                </div>
+                            </div>
+
+                            <div class="events-block-item-meta">
+                                <div class="events-block-item-date">
+                                    <span class="events-block-item-date-value">7</span> сентября
+                                </div>
+
+                                <div class="events-block-item-readmore">
+                                    <?php include "images/icons/icon-arrow-right-red.svg"; ?>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="events-block-row-mobile swiper-container js-events-swiper">
+                <div class="events-block-row-mobile-title c-green">
+                    Спортивные мероприятия
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="events-block-item">
+                            <div class="events-block-item-content">
+                                <div class="events-block-item-title">
+                                    «Система образования как инструмент консолидации городского сообщества»
+                                </div>
+                                <div class="events-block-item-text">
+                                    Конференция министров образования
+                                </div>
+                            </div>
+
+                            <div class="events-block-item-meta">
+                                <div class="events-block-item-date">
+                                    <span class="events-block-item-date-value">7</span> сентября
+                                </div>
+
+                                <div class="events-block-item-readmore">
+                                    <?php include "images/icons/icon-arrow-right-red.svg"; ?>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="events-block-item">
+                            <div class="events-block-item-content">
+                                <div class="events-block-item-title">
+                                    «Система образования с высокими возможностями для каждого: международный опыт, оценка, внедрение»
+                                </div>
+                                <div class="events-block-item-text">
+                                    Международная конференция с участием руководителя Федеральной службы по надзору в сфере образования и науки
+                                </div>
+                            </div>
+
+                            <div class="events-block-item-meta">
+                                <div class="events-block-item-date">
+                                    <span class="events-block-item-date-value">7</span> сентября
+                                </div>
+
+                                <div class="events-block-item-readmore">
+                                    <?php include "images/icons/icon-arrow-right-red.svg"; ?>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
             </div>
 
             <div class="events-block-buttons">
@@ -1538,6 +1761,8 @@
 <section class="contacts-map-block">
     <div id="js-contacts-map" data-map-coords="55.83110973, 37.63869129" data-map-zoom="16" data-map-data="data/contacts-map-data.json" class="contacts-map-block-map"></div>
 </section>
+
+<?php include "modal-registration.php"; ?>
 
 <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initContactsMap"></script>
 <script src="build/scripts.min.js"></script>

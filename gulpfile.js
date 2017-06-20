@@ -32,6 +32,8 @@ var jsFiles = [
         './node_modules/spin.js/spin.js',
         './node_modules/spin.js/jquery.spin.js',
         './node_modules/swiper/dist/js/swiper.jquery.js',
+        './node_modules/hammerjs/hammer.js',
+        './node_modules/flipclock/compiled/flipclock.js',
         './js/**/*.js'
     ],
     jsDest = './build';

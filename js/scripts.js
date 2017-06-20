@@ -20,4 +20,31 @@ $(document).ready(function () {
         pagination: '.js-news-swiper .swiper-pagination',
         paginationClickable: true
     });
+
+    $('.js-events-swiper').each(function () {
+        $swiper = $(this);
+
+        new Swiper($swiper, {
+            loop: true,
+            pagination: $swiper.find('.swiper-pagination'),
+            paginationClickable: true
+        });
+    });
+
+    $('.js-flip-clock').each(function () {
+        var timeLeft = +$(this).data('time-left');
+
+        $(this).FlipClock(timeLeft, {
+            countdown: true,
+            clockFace: 'HourlyCounter',
+            callbacks: {
+                interval: function() {
+                    $('span.seconds').next().next().remove();
+                    $('span.seconds').next().remove();
+                    $('span.seconds').remove();
+                }
+            },
+            language: 'russian'
+        });
+    });
 });
