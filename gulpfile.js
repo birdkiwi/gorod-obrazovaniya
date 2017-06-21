@@ -34,6 +34,7 @@ var jsFiles = [
         './node_modules/swiper/dist/js/swiper.jquery.js',
         './node_modules/hammerjs/hammer.js',
         './node_modules/flipclock/compiled/flipclock.js',
+        './node_modules/jquery-mask-plugin/dist/jquery.mask.js',
         './js/**/*.js'
     ],
     jsDest = './build';

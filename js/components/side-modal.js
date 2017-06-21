@@ -27,30 +27,48 @@ function initSideModal(content, classNames) {
 
     setTimeout(function () {
         $wrapper.addClass('active');
-    }, 300);
+        $(document).on('click', 'body', hide);
+    }, 200);
 
-    function hide(e) {
-        console.log(e.target);
+    var hide = function(e) {
         if (!$(e.target).closest('.side-modal').length) {
             $wrapper.removeClass('active');
-            $(document).off(hide);
+            $(document).off('click', 'body', hide);
         }
-    }
+    };
 
-    $(document).on('click', hide);
+    $wrapper.find('[data-side-modal-close]').click(function () {
+        $(document).off('click', 'body', hide);
+        $wrapper.removeClass('active');
+        return false;
+    });
 }
 
 $(document).on('click', '[data-side-modal]', function (e) {
-    var modalContentSelector = $(this).data('side-modal'),
-        $modalContent = $(modalContentSelector),
+    var url = $(this).attr('href'),
+        modalContentSelector = $(this).data('side-modal'),
         classNames = $(this).data('side-modal-class');
 
-    initSideModal($modalContent.clone(), classNames);
+    if (modalContentSelector) {
+        $modalContent = $(modalContentSelector).clone();
+        initSideModal($modalContent, classNames);
+    } else {
+        $('body').spin('large', '#000');
 
-    return false;
-});
+        $.ajax(url, {
+            method: 'GET',
+            cache: false
+        }).done(function (data) {
+            $modalContent = data;
+            initSideModal($modalContent, classNames);
+        }).fail(function(jqXHR, textStatus, errorThrown) {
+            alert('Ошибка загрузки данных. Пожалуйста, попробуйте перезагрузить страницу.');
+            console.log(jqXHR);
+            console.log(errorThrown);
+        }).always(function () {
+            $('body').spin(false);
+        });
+    }
 
-$(document).on('click', '[data-side-modal-close]', function () {
-    $(this).closest('.side-modal-overlay').removeClass('active');
     return false;
 });

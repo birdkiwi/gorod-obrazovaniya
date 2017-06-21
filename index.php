@@ -210,7 +210,7 @@
 
                 <div class="welcome-block-image"></div>
 
-                <!--<a href="#" data-side-modal="#registration-modal" data-side-modal-class="registration-modal" class="button button-wide button-red">Регистрация</a>-->
+                <a href="#" data-side-modal="#registration-modal" data-side-modal-class="registration-modal" class="button button-wide button-red">Регистрация</a>
 
                 <div class="welcome-block-countdown">
                     <div class="welcome-block-countdown-title">До начала регистрации:</div>
@@ -331,7 +331,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="news-block-row">
-                            <a href="#" class="news-block-row-item news-block-row-item-video news-block-row-item-wide">
+                            <a href="data/news/news-1.php" data-side-modal data-side-modal-class="side-modal-wide side-modal-news" class="news-block-row-item news-block-row-item-video news-block-row-item-wide">
                                 <div class="news-block-row-item-cover">
                                     <img src="images/tmp/news/news-1.jpg" alt="">
                                 </div>
@@ -458,7 +458,7 @@
             <div class="swiper container news-block-swiper-container-mobile js-news-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href="#" class="news-block-row-item news-block-row-item-photo">
+                        <a href="data/news/news-1.php" data-side-modal data-side-modal-class="side-modal-wide side-modal-news" class="news-block-row-item news-block-row-item-photo">
                             <div class="news-block-row-item-cover">
                                 <img src="images/tmp/news/news-1.jpg" alt="">
                             </div>
@@ -545,7 +545,7 @@
             </div>
 
             <div class="events-block-row js-events-block-content">
-                <a href="#" class="events-block-item">
+                <a href="data/events-items/event-1.php" data-side-modal data-side-modal-class="side-modal-event" class="events-block-item">
                     <div class="events-block-item-content">
                         <div class="events-block-item-title">
                             «Система образования как инструмент консолидации городского сообщества»
@@ -566,7 +566,7 @@
                     </div>
                 </a>
 
-                <a href="#" class="events-block-item">
+                <a href="data/events-items/event-2.php" data-side-modal data-side-modal-class="side-modal-event" class="events-block-item">
                     <div class="events-block-item-content">
                         <div class="events-block-item-title">
                             «Система образования с высокими возможностями для каждого: международный опыт, оценка, внедрение»
@@ -726,55 +726,54 @@
                 </a>
             </div>
 
-
             <div class="events-block-row-mobile swiper-container js-events-swiper">
                 <div class="events-block-row-mobile-title c-red">
                     Деловая программа
                 </div>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href="#" class="events-block-item">
-                        <div class="events-block-item-content">
-                            <div class="events-block-item-title">
-                                «Система образования как инструмент консолидации городского сообщества»
-                            </div>
-                            <div class="events-block-item-text">
-                                Конференция министров образования
-                            </div>
-                        </div>
-
-                        <div class="events-block-item-meta">
-                            <div class="events-block-item-date">
-                                <span class="events-block-item-date-value">7</span> сентября
+                        <a href="data/events-items/event-1.php" data-side-modal data-side-modal-class="side-modal-event" class="events-block-item">
+                            <div class="events-block-item-content">
+                                <div class="events-block-item-title">
+                                    «Система образования как инструмент консолидации городского сообщества»
+                                </div>
+                                <div class="events-block-item-text">
+                                    Конференция министров образования
+                                </div>
                             </div>
 
-                            <div class="events-block-item-readmore">
-                                <?php include "images/icons/icon-arrow-right-red.svg"; ?>
+                            <div class="events-block-item-meta">
+                                <div class="events-block-item-date">
+                                    <span class="events-block-item-date-value">7</span> сентября
+                                </div>
+
+                                <div class="events-block-item-readmore">
+                                    <?php include "images/icons/icon-arrow-right-red.svg"; ?>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#" class="events-block-item">
-                    <div class="events-block-item-content">
-                        <div class="events-block-item-title">
-                            «Система образования с высокими возможностями для каждого: международный опыт, оценка, внедрение»
-                        </div>
-                        <div class="events-block-item-text">
-                            Международная конференция с участием руководителя Федеральной службы по надзору в сфере образования и науки
-                        </div>
-                    </div>
+                        <a href="data/events-items/event-2.php" data-side-modal data-side-modal-class="side-modal-event" class="events-block-item">
+                            <div class="events-block-item-content">
+                                <div class="events-block-item-title">
+                                    «Система образования с высокими возможностями для каждого: международный опыт, оценка, внедрение»
+                                </div>
+                                <div class="events-block-item-text">
+                                    Международная конференция с участием руководителя Федеральной службы по надзору в сфере образования и науки
+                                </div>
+                            </div>
 
-                    <div class="events-block-item-meta">
-                        <div class="events-block-item-date">
-                            <span class="events-block-item-date-value">7</span> сентября
-                        </div>
+                            <div class="events-block-item-meta">
+                                <div class="events-block-item-date">
+                                    <span class="events-block-item-date-value">7</span> сентября
+                                </div>
 
-                        <div class="events-block-item-readmore">
-                            <?php include "images/icons/icon-arrow-right-red.svg"; ?>
-                        </div>
-                    </div>
-                </a>
+                                <div class="events-block-item-readmore">
+                                    <?php include "images/icons/icon-arrow-right-red.svg"; ?>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
 

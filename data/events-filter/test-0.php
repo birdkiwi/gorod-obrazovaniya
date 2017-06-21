@@ -1,4 +1,4 @@
-<a href="#" class="events-block-item animated fadeIn">
+<a href="data/events-items/event-1.php" data-side-modal data-side-modal-class="side-modal-event" class="events-block-item animated fadeIn">
     <div class="events-block-item-content">
         <div class="events-block-item-title">
             «Система образования как инструмент консолидации городского сообщества»
@@ -19,7 +19,7 @@
     </div>
 </a>
 
-<a href="#" class="events-block-item animated fadeIn">
+<a href="data/events-items/event-2.php" data-side-modal data-side-modal-class="side-modal-event" class="events-block-item animated fadeIn">
     <div class="events-block-item-content">
         <div class="events-block-item-title">
             «Система образования с высокими возможностями для каждого: международный опыт, оценка, внедрение»
