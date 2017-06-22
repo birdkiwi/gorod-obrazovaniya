@@ -48,4 +48,20 @@ $(document).ready(function () {
         });
     });
 
+    $('[data-maskedinput]').maskedinput();
+    $('[data-validate]').formValidation();
+
+    $('.js-smooth-scroll').click(function() {
+        history.pushState(null, null, $(this).attr('href'));
+        var elementId = window.location.hash;
+        if ($(elementId).length > 0) {
+            $('html, body').animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top - 10
+            }, 700);
+        } else {
+            //console.log('no element!');
+        }
+        return false;
+    });
 });
+

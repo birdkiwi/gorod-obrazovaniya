@@ -210,7 +210,7 @@
 
                 <div class="welcome-block-image"></div>
 
-                <a href="#" data-side-modal="#registration-modal" data-side-modal-class="registration-modal" class="button button-wide button-red">Регистрация</a>
+                <a href="modal-registration.php" data-side-modal data-side-modal-class="registration-modal" class="button button-wide button-red">Регистрация</a>
 
                 <div class="welcome-block-countdown">
                     <div class="welcome-block-countdown-title">До начала регистрации:</div>
@@ -1300,7 +1300,7 @@
                     </div>
                 </div>
                 <div class="exhibition-block-buttons">
-                    <a href="#" class="button button-red">Заявка на участие</a>
+                    <a href="modal-exhibition-registration.php" data-side-modal data-side-modal-class="registration-modal" class="button button-red">Заявка на участие</a>
                 </div>
             </div>
 
@@ -1594,7 +1594,7 @@
                 <br>
                 <a href="mailto:info@moscowglobal.com">
                     <?php include "images/icons/icon-letter.svg"; ?>
-                    info@moscowglobal.com
+                    info@moscowglobalforum.ru
                 </a>
             </div>
             
@@ -1763,8 +1763,6 @@
 <section class="contacts-map-block">
     <div id="js-contacts-map" data-map-coords="55.83110973, 37.63869129" data-map-zoom="16" data-map-data="data/contacts-map-data.json" class="contacts-map-block-map"></div>
 </section>
-
-<?php include "modal-registration.php"; ?>
 
 <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initContactsMap"></script>
 <script src="build/scripts.min.js"></script>

@@ -24,6 +24,8 @@ function initSideModalWrapper(classNames) {
 function initSideModal(content, classNames) {
     var $wrapper = initSideModalWrapper(classNames);
     $wrapper.find('.side-modal-overflow').html(content);
+    $wrapper.find('[data-maskedinput]').maskedinput();
+    $wrapper.find('[data-validate]').formValidation();
 
     setTimeout(function () {
         $wrapper.addClass('active');
@@ -31,7 +33,7 @@ function initSideModal(content, classNames) {
     }, 200);
 
     var hide = function(e) {
-        if (!$(e.target).closest('.side-modal').length) {
+        if ( !$(e.target).closest('.side-modal').length && !$(e.target).is('input, label') ) {
             $wrapper.removeClass('active');
             $(document).off('click', 'body', hide);
         }
