@@ -6,7 +6,7 @@
     Заявка на участие в выставке
 </div>
 
-<form action="#" method="POST" class="registration-form registration-modal-form" data-validate>
+<form action="data/form-response-error.json" method="POST" enctype="multipart/form-data" class="registration-form registration-modal-form" data-validate data-form-ajax>
     <div class="form-group">
         <label class="form-label" for="registration-form-name">Название компании-участника выставки *</label>
         <input id="registration-form-name" type="text" name="name" class="form-input" required>

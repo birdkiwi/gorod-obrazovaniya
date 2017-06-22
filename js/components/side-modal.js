@@ -11,12 +11,11 @@ function initSideModalWrapper(classNames) {
 
     var $overlay = $('body').children('.side-modal-overlay');
 
-    if (!$overlay.length) {
-        $('body').append($modalWrapper);
-    } else {
-        $overlay.find('.side-modal').removeClass().addClass('side-modal ' + classNames);
-        $overlay.find('.side-modal-overflow').html('');
+    if ($overlay.length) {
+        $overlay.remove();
     }
+
+    $('body').append($modalWrapper);
 
     return $('body').children('.side-modal-overlay');
 }
@@ -30,6 +29,7 @@ function initSideModal(content, classNames, preventOverlayClose, preventEscClose
     $wrapper.find('.js-input-photo').inputPhoto();
     $wrapper.find('.js-datepicker').datePicker();
     $wrapper.find('.js-input-region-city').inputRegionCity();
+    $wrapper.find('[data-form-ajax]').formAjax();
 
     setTimeout(function () {
         $wrapper.addClass('active');

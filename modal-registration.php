@@ -6,7 +6,7 @@
     Регистрация
 </div>
 
-<form action="#" method="POST" class="registration-form registration-modal-form" data-validate>
+<form action="data/form-response.json" method="POST" enctype="multipart/form-data" class="registration-form registration-modal-form" data-validate data-form-ajax>
     <div class="row">
         <div class="col-xs-12 col-sm-7">
             <div class="form-group">
