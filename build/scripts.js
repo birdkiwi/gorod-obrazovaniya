@@ -22873,6 +22873,8 @@ $(document).ready(function () {
 
     $('[data-maskedinput]').maskedinput();
     $('[data-validate]').formValidation();
+    $('.js-input-file').inputFile();
+    $('.js-input-photo').inputPhoto();
 
     $('.js-smooth-scroll').click(function() {
         history.pushState(null, null, $(this).attr('href'));
@@ -22940,6 +22942,37 @@ $(document).ready(function () {
     };
 }( jQuery ));
 (function( $ ) {
+    $.fn.inputFile = function() {
+        return this.each(function() {
+            $(this).on('focus blur change', function() {
+                var filename = $(this).val();
+                var title = $(this).siblings('.js-input-file-title').data('input-file-default-title');
+                var subtitle = $(this).siblings('.js-input-file-subtitle');
+
+                if (filename != '') {
+                    if (filename.length > 10) {
+                        filename = filename.substr(0, 10) + '...';
+                    }
+                    $(this).siblings('.js-input-file-title').html(filename);
+                    subtitle.animate({opacity: 0}, 300);
+                } else {
+                    $(this).siblings('.js-input-file-title').html(title);
+                    subtitle.animate({opacity: 1}, 300);
+                }
+            });
+
+            $(this).on('focus', function () {
+                $(this).closest('.form-control').addClass('is-focus');
+            });
+
+            $(this).on('blur', function () {
+                $(this).closest('.form-control').removeClass('is-focus');
+            });
+        });
+    };
+}( jQuery ));
+
+(function( $ ) {
     $.fn.maskedinput = function() {
         this.each(function() {
             var mask = $(this).data('maskedinput');
@@ -22947,6 +22980,43 @@ $(document).ready(function () {
         });
     };
 }( jQuery ));
+(function( $ ) {
+    $.fn.inputPhoto = function() {
+        return this.each(function() {
+            var fileInput = $(this)[0],
+                $formControl = $(this).closest('.form-control-photo'),
+                $fileDisplayArea = $(this).siblings('.form-control-photo-area'),
+                $notificationsArea = $(this).siblings('.form-control-photo-notify');
+
+            fileInput.addEventListener('change', function(e) {
+                var file = fileInput.files[0];
+                var imageType = /image.*/;
+
+                if (file.type.match(imageType)) {
+                    $formControl.removeClass('is-with-error');
+                    $formControl.addClass('is-with-photo');
+
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        $fileDisplayArea.html('');
+
+                        var img = new Image();
+                        img.src = reader.result;
+
+                        $fileDisplayArea.append(img);
+                    };
+
+                    reader.readAsDataURL(file);
+                } else {
+                    $formControl.addClass('is-with-error');
+                    $notificationsArea.addClass('active').html("Недопустимый формат файла!");
+                }
+            });
+        });
+    };
+}( jQuery ));
+
 var contactsMap;
 
 function initContactsMap(ymaps) {
@@ -23113,6 +23183,8 @@ function initSideModal(content, classNames) {
     $wrapper.find('.side-modal-overflow').html(content);
     $wrapper.find('[data-maskedinput]').maskedinput();
     $wrapper.find('[data-validate]').formValidation();
+    $wrapper.find('.js-input-file').inputFile();
+    $wrapper.find('.js-input-photo').inputPhoto();
 
     setTimeout(function () {
         $wrapper.addClass('active');

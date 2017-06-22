@@ -50,6 +50,8 @@ $(document).ready(function () {
 
     $('[data-maskedinput]').maskedinput();
     $('[data-validate]').formValidation();
+    $('.js-input-file').inputFile();
+    $('.js-input-photo').inputPhoto();
 
     $('.js-smooth-scroll').click(function() {
         history.pushState(null, null, $(this).attr('href'));

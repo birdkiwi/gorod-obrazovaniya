@@ -36,18 +36,13 @@
                         (Изображение не меньше 150×150 пикселей)
                     </div>
 
-                    <input id="registration-form-photo" type="file" name="photo" class="form-control-photo-input" required>
+                    <div class="form-control-photo-area"></div>
 
-                    <button tabindex="-1" class="button button-blue">Выбрать файл</button>
+
+                    <input id="registration-form-photo" type="file" accept="image/*" name="photo" class="form-control-photo-input js-input-photo" required>
+
+                    <button tabindex="-1" class="button button-blue js-input-file-title" data-input-file-default-title="Выбрать файл">Выбрать файл</button>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="form-group">
-                <textarea class="form-textarea" name="textarea"></textarea>
             </div>
         </div>
     </div>
@@ -72,21 +67,28 @@
             <div class="form-group">
                 <label class="form-label">Пол *</label>
 
-                <div class="form-control form-control-radio m-r-md m-t-sm">
-                    <input id="registration-form-sex-male" type="radio" name="sex" value="male" checked>
-                    <label for="registration-form-sex-male">Мужчина</label>
-                </div>
+                <div class="form-control-radio-group">
+                    <div class="form-control-radio-group-item">
+                        <input id="registration-form-sex-male" type="radio" name="sex" value="male" checked>
+                        <label for="registration-form-sex-male">Мужчина</label>
+                    </div>
 
-                <div class="form-control form-control-radio m-t-sm">
-                    <input id="registration-form-sex-female" type="radio" name="sex" value="male">
-                    <label for="registration-form-sex-female">Ура, я женщина!</label>
+                    <div class="form-control-radio-group-item">
+                        <input id="registration-form-sex-female" type="radio" name="sex" value="male">
+                        <label for="registration-form-sex-female">Женщина!</label>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
                 <label class="form-label" for="registration-form-birthdate">Дата рождения *</label>
-                <input id="registration-form-birthdate" type="text" name="birthdate" class="form-input" placeholder="дд.мм.гггг" data-maskedinput="99.99.9999" required>
+                <div class="form-control form-control-inline">
+                    <input id="registration-form-birthdate" type="text" name="birthdate" class="form-input" placeholder="дд.мм.гггг" data-maskedinput="99.99.9999" required>
+                    <span class="form-control-icon">
+                        <?php include "images/icons/icon-input-calendar.svg"; ?>
+                    </span>
+                </div>
             </div>
         </div>
     </div>

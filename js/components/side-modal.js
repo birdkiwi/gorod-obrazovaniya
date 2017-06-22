@@ -26,6 +26,8 @@ function initSideModal(content, classNames) {
     $wrapper.find('.side-modal-overflow').html(content);
     $wrapper.find('[data-maskedinput]').maskedinput();
     $wrapper.find('[data-validate]').formValidation();
+    $wrapper.find('.js-input-file').inputFile();
+    $wrapper.find('.js-input-photo').inputPhoto();
 
     setTimeout(function () {
         $wrapper.addClass('active');
