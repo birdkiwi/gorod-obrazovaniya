@@ -52,6 +52,8 @@ $(document).ready(function () {
     $('[data-validate]').formValidation();
     $('.js-input-file').inputFile();
     $('.js-input-photo').inputPhoto();
+    $('.js-datepicker').datePicker();
+    $('.js-input-region-city').inputRegionCity();
 
     $('.js-smooth-scroll').click(function() {
         history.pushState(null, null, $(this).attr('href'));

@@ -10,6 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "animate.css": "^3.5.2",
+    "croppie": "^2.4.1",
+    "devbridge-autocomplete": "^1.4.1",
     "flexboxgrid": "^6.3.1",
     "flipclock": "^0.7.8",
     "gulp": "^3.9.1",
@@ -25,7 +27,9 @@
     "jquery": "^3.2.1",
     "jquery-validation": "^1.16.0",
     "jquery.maskedinput": "^1.4.1",
+    "momentjs": "^2.0.0",
     "normalize.css": "^7.0.0",
+    "pikaday": "^1.6.1",
     "spin.js": "^2.3.2",
     "swiper": "^3.4.2"
   }

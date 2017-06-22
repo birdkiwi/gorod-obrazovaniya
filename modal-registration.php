@@ -36,8 +36,9 @@
                         (Изображение не меньше 150×150 пикселей)
                     </div>
 
-                    <div class="form-control-photo-area"></div>
+                    <div class="form-control-photo-notify"></div>
 
+                    <div class="form-control-photo-area"></div>
 
                     <input id="registration-form-photo" type="file" accept="image/*" name="photo" class="form-control-photo-input js-input-photo" required>
 
@@ -84,26 +85,28 @@
             <div class="form-group">
                 <label class="form-label" for="registration-form-birthdate">Дата рождения *</label>
                 <div class="form-control form-control-inline">
-                    <input id="registration-form-birthdate" type="text" name="birthdate" class="form-input" placeholder="дд.мм.гггг" data-maskedinput="99.99.9999" required>
-                    <span class="form-control-icon">
+                    <input id="registration-form-birthdate" type="text" name="birthdate" class="form-input js-datepicker" placeholder="дд.мм.гггг" data-maskedinput="99.99.9999" required>
+                    <label for="registration-form-birthdate" class="form-control-icon">
                         <?php include "images/icons/icon-input-calendar.svg"; ?>
-                    </span>
+                    </label>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row js-input-region-city">
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
                 <label class="form-label" for="registration-form-region">Регион *</label>
-                <input id="registration-form-region" type="text" name="region" class="form-input" required>
+                <input id="registration-form-region" type="text" name="region" class="form-input js-regions-autocomplete" required>
+                <input type="hidden" name="region_id" class="js-region-id">
             </div>
         </div>
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
                 <label class="form-label" for="registration-form-city">Город *</label>
-                <input id="registration-form-city" type="text" name="city" class="form-input" required>
+                <input id="registration-form-city" type="text" name="city" class="form-input js-cities-autocomplete" required>
+                <input type="hidden" name="city_id" class="js-city-id">
             </div>
         </div>
     </div>

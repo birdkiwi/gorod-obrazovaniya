@@ -210,7 +210,7 @@
 
                 <div class="welcome-block-image"></div>
 
-                <a href="modal-registration.php" data-side-modal data-side-modal-class="registration-modal" class="button button-wide button-red">Регистрация</a>
+                <a href="modal-registration.php" data-side-modal data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-wide button-red">Регистрация</a>
 
                 <div class="welcome-block-countdown">
                     <div class="welcome-block-countdown-title">До начала регистрации:</div>
@@ -1300,7 +1300,7 @@
                     </div>
                 </div>
                 <div class="exhibition-block-buttons">
-                    <a href="modal-exhibition-registration.php" data-side-modal data-side-modal-class="registration-modal" class="button button-red">Заявка на участие</a>
+                    <a href="modal-exhibition-registration.php" data-side-modal data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-red">Заявка на участие</a>
                 </div>
             </div>
 

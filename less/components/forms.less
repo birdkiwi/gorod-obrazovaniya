@@ -30,6 +30,12 @@
       transition: border-color 200ms;
     }
   }
+
+  &[disabled],
+  &[readonly] {
+    border-color: @c-input-border-disabled;
+    background-color: @c-input-bg-disabled;
+  }
 }
 
 .form-textarea {
@@ -400,8 +406,20 @@
   margin-bottom: 25px;
 }
 
+.form-control-photo-notify {
+  display: none;
+  color: @c-red;
+  font-weight: 500;
+  padding: 10px 0;
+
+  &.active {
+    display: block;
+  }
+}
+
 .form-control-photo-input {
   position: absolute;
+  z-index: 10;
   left: 0;
   top: 0;
   width: 100%;
@@ -412,5 +430,26 @@
     & + .button {
       opacity: 0.8;
     }
+  }
+}
+
+.autocomplete-suggestions {
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.55);
+  background: #fff;
+  border: 1px solid @c-input-border-focus;
+  overflow-y: auto;
+}
+
+.autocomplete-suggestion {
+  padding: 4px 15px;
+  font-size: 1rem;
+
+  &:hover {
+    background-color: @c-input-border-focus;
+    color: #fff;
+  }
+
+  strong {
+    font-weight: 500;
   }
 }

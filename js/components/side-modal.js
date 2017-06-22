@@ -21,28 +21,46 @@ function initSideModalWrapper(classNames) {
     return $('body').children('.side-modal-overlay');
 }
 
-function initSideModal(content, classNames) {
+function initSideModal(content, classNames, preventOverlayClose, preventEscClose) {
     var $wrapper = initSideModalWrapper(classNames);
     $wrapper.find('.side-modal-overflow').html(content);
     $wrapper.find('[data-maskedinput]').maskedinput();
     $wrapper.find('[data-validate]').formValidation();
     $wrapper.find('.js-input-file').inputFile();
     $wrapper.find('.js-input-photo').inputPhoto();
+    $wrapper.find('.js-datepicker').datePicker();
+    $wrapper.find('.js-input-region-city').inputRegionCity();
 
     setTimeout(function () {
         $wrapper.addClass('active');
-        $(document).on('click', 'body', hide);
+        if (!preventOverlayClose) {
+            $(document).on('click', 'body', hide);
+        }
+
+        if (!preventEscClose) {
+            $(document).on('keyup', hide);
+        }
     }, 200);
 
     var hide = function(e) {
-        if ( !$(e.target).closest('.side-modal').length && !$(e.target).is('input, label') ) {
+        if (
+            ( !$(e.target).closest('.side-modal').length && !$(e.target).is('input, label') ) ||
+            ( e.keyCode === 27 )
+        ) {
             $wrapper.removeClass('active');
             $(document).off('click', 'body', hide);
         }
     };
 
     $wrapper.find('[data-side-modal-close]').click(function () {
-        $(document).off('click', 'body', hide);
+        if (!preventOverlayClose) {
+            $(document).off('click', 'body', hide);
+        }
+
+        if (!preventEscClose) {
+            $(document).off('keyup', hide);
+        }
+
         $wrapper.removeClass('active');
         return false;
     });
@@ -51,11 +69,13 @@ function initSideModal(content, classNames) {
 $(document).on('click', '[data-side-modal]', function (e) {
     var url = $(this).attr('href'),
         modalContentSelector = $(this).data('side-modal'),
-        classNames = $(this).data('side-modal-class');
+        classNames = $(this).data('side-modal-class'),
+        preventOverlayClose = $(this).is('[data-side-modal-prevent-overlay-close]'),
+        preventEscClose = $(this).is('[data-side-modal-prevent-esc-close]');
 
     if (modalContentSelector) {
         $modalContent = $(modalContentSelector).clone();
-        initSideModal($modalContent, classNames);
+        initSideModal($modalContent, classNames, preventOverlayClose, preventEscClose);
     } else {
         $('body').spin('large', '#000');
 
@@ -64,7 +84,7 @@ $(document).on('click', '[data-side-modal]', function (e) {
             cache: false
         }).done(function (data) {
             $modalContent = data;
-            initSideModal($modalContent, classNames);
+            initSideModal($modalContent, classNames, preventOverlayClose, preventEscClose);
         }).fail(function(jqXHR, textStatus, errorThrown) {
             alert('Ошибка загрузки данных. Пожалуйста, попробуйте перезагрузить страницу.');
             console.log(jqXHR);

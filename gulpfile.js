@@ -36,7 +36,13 @@ var jsFiles = [
         './node_modules/flipclock/compiled/flipclock.js',
         './node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
         './node_modules/jquery-validation/dist/jquery.validate.js',
-        './js/**/*.js'
+        './node_modules/croppie/croppie.js',
+        './node_modules/moment/moment.js',
+        './node_modules/pikaday/pikaday.js',
+        './node_modules/pikaday/plugins/pikaday.jquery.js',
+        './node_modules/devbridge-autocomplete/dist/jquery.autocomplete.js',
+        './js/components/*.js',
+        './js/scripts.js'
     ],
     jsDest = './build';
 

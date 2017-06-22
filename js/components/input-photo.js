@@ -13,6 +13,7 @@
                 if (file.type.match(imageType)) {
                     $formControl.removeClass('is-with-error');
                     $formControl.addClass('is-with-photo');
+                    $notificationsArea.removeClass('active');
 
                     var reader = new FileReader();
 
@@ -27,8 +28,10 @@
 
                     reader.readAsDataURL(file);
                 } else {
+                    fileInput.value = '';
+                    $formControl.removeClass('is-with-photo');
                     $formControl.addClass('is-with-error');
-                    $notificationsArea.addClass('active').html("Недопустимый формат файла!");
+                    $notificationsArea.addClass('active').html('Недопустимый формат файла!');
                 }
             });
         });
