@@ -31040,6 +31040,7 @@ $(document).ready(function () {
                     type: method,
                     data: formData,
                     processData: false,
+                    contentType: false,
                     cache: false,
                     dataType: 'json'
                 }).done(function (data) {
