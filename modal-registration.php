@@ -58,7 +58,7 @@
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
                 <label class="form-label" for="registration-form-phone">Телефон *</label>
-                <input id="registration-form-phone" type="text" name="phone" class="form-input" placeholder="+7 (999) 999-99-99" data-maskedinput="+7 (999) 999-99-99" required>
+                <input id="registration-form-phone" type="text" name="phone" class="form-input" placeholder="+7 (999) 999-99-99" data-masked-input="+7 (000) 000-00-00" data-masked-input-placeholder="+7 (___) ___-__-__" data-masked-input-clearifnotmatch required>
             </div>
         </div>
     </div>

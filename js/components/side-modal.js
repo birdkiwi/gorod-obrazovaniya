@@ -23,7 +23,7 @@ function initSideModalWrapper(classNames) {
 function initSideModal(content, classNames, preventOverlayClose, preventEscClose) {
     var $wrapper = initSideModalWrapper(classNames);
     $wrapper.find('.side-modal-overflow').html(content);
-    $wrapper.find('[data-maskedinput]').maskedinput();
+    $wrapper.find('[data-masked-input]').maskedinput();
     $wrapper.find('[data-validate]').formValidation();
     $wrapper.find('.js-input-file').inputFile();
     $wrapper.find('.js-input-photo').inputPhoto();
