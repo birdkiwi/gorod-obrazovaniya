@@ -31123,6 +31123,18 @@ return hooks;
 }));
 
 (function( $ ) {
+    $.fn.avatarCrop = function() {
+        this.each(function() {
+            var cropper = $(this).croppie({
+                viewport: {
+                    width: 300,
+                    height: 300
+                }
+            });
+        });
+    }
+}( jQuery ));
+(function( $ ) {
     $.fn.datePicker = function() {
         return this.each(function () {
             var picker = new Pikaday({
@@ -31537,6 +31549,7 @@ function initSideModal(content, classNames, preventOverlayClose, preventEscClose
     $wrapper.find('.js-datepicker').datePicker();
     $wrapper.find('.js-input-region-city').inputRegionCity();
     $wrapper.find('[data-form-ajax]').formAjax();
+    $wrapper.find('.js-avatar-crop').avatarCrop();
 
     setTimeout(function () {
         $wrapper.addClass('active');
@@ -31659,6 +31672,7 @@ $(document).ready(function () {
     $('.js-input-photo').inputPhoto();
     $('.js-datepicker').datePicker();
     $('.js-input-region-city').inputRegionCity();
+    $('.js-avatar-crop').avatarCrop();
     $('[data-form-ajax]').formAjax();
 
     $('.js-smooth-scroll').click(function() {

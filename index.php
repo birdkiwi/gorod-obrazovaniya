@@ -103,6 +103,11 @@
             <a href="#" class="main-header-logo">
                 <img src="images/logo.svg" alt="Город образования">
             </a>
+
+            <div class="main-header-support">
+                <img src="images/logo-pravitelstvo-moskvy-2.png" alt="При поддержке правительства Москвы" title="При поддержке правительства ">
+            </div>
+
             <nav class="main-header-menu">
                 <ul>
                     <li class="parent active">
@@ -151,18 +156,18 @@
                 </ul>
             </nav>
 
-            <div class="main-header-language">
+            <!--<div class="main-header-language">
                 <a href="#" class="main-header-language-item main-header-language-item-ru active">
                     <span>Рус</span>
                 </a>
                 <a href="#" class="main-header-language-item main-header-language-item-en">
                     <span>Eng</span>
                 </a>
-            </div>
+            </div>-->
 
-            <div class="main-header-user">
-            <a href="#" class="button button-blue-hollow">Войти</a>
-        </div>
+            <!--<div class="main-header-user">
+                <a href="#" class="button button-blue-hollow">Войти</a>
+            </div>-->
         </div>
         <div class="main-header-mobile">
             <a href="#" class="main-header-toggler js-offcanvas">
@@ -183,9 +188,6 @@
 <main class="main-content">
     <section class="welcome-block">
         <div class="wrapper">
-            <div class="welcome-block-support">
-                <img src="images/logo-pravitelstvo-moskvy.png" alt="При поддержке правительства Москвы">
-            </div>
             <div class="welcome-block-content">
                 <div class="welcome-block-title">
                     <h1>
