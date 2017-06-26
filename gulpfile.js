@@ -33,7 +33,7 @@ var jsFiles = [
         './node_modules/spin.js/jquery.spin.js',
         './node_modules/swiper/dist/js/swiper.jquery.js',
         './node_modules/hammerjs/hammer.js',
-        './node_modules/flipclock/compiled/flipclock.js',
+        //'./node_modules/flipclock/compiled/flipclock.js',
         './node_modules/jquery-mask-plugin/dist/jquery.mask.js',
         './node_modules/jquery-validation/dist/jquery.validate.js',
         './node_modules/croppie/croppie.js',

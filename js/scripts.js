@@ -31,7 +31,8 @@ $(document).ready(function () {
         });
     });
 
-    $('.js-flip-clock').each(function () {
+    //Countdown timer
+    /*$('.js-flip-clock').each(function () {
         var timeLeft = +$(this).data('time-left');
 
         $(this).FlipClock(timeLeft, {
@@ -46,7 +47,7 @@ $(document).ready(function () {
             },
             language: 'russian'
         });
-    });
+    });*/
 
     $('[data-masked-input]').maskedinput();
     $('[data-validate]').formValidation();

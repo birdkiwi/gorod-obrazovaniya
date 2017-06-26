@@ -214,11 +214,6 @@
 
                 <a href="modal-registration.php" data-side-modal data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-wide button-red">Регистрация</a>
 
-                <div class="welcome-block-countdown">
-                    <div class="welcome-block-countdown-title">До начала регистрации:</div>
-                    <div class="js-flip-clock" data-time-left="86400"></div>
-                </div>
-
                 <div class="welcome-block-socials">
                     <div class="socials-block">
                         <div class="socials-block-title">Форум в соц. сетях</div>
