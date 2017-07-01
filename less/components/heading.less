@@ -1,0 +1,90 @@
+.main-heading {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  background: #979797;
+
+  @media (max-width: @breakpoint-s) {
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+
+  & > .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: @breakpoint-s) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+}
+
+.main-heading-navy {
+  background-color: #3785BA;
+}
+
+.main-heading-red {
+  background-color: #DC3B2A;
+}
+
+.main-heading-salad {
+  background-color: #7EAA40;
+}
+
+.main-heading-green {
+  background-color: #369A46;
+}
+
+.main-heading-pear-green {
+  background-color: #B7D13B;
+}
+
+.main-heading-blue {
+  background-color: #02A7DF;
+}
+
+.main-heading-title {
+  font-size: 42px;
+  color: #fff;
+  letter-spacing: 0.66px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (max-width: @breakpoint-s) {
+    font-size: 26px;
+  }
+}
+
+.main-heading-search-form {
+  position: relative;
+  width: 270px;
+  background: #fff;
+  padding-right: 30px;
+
+  @media (max-width: @breakpoint-s) {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+.main-heading-search-input {
+  font-size: 1.1rem;
+  border: none;
+  background: #fff;
+  appearance: none;
+  padding: 13px 16px;
+}
+
+.main-heading-search-submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  appearance: none;
+  background: url('../images/icons/icon-search-glass.svg') no-repeat left center transparent;
+  border: none;
+}

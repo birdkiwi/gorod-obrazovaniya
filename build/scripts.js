@@ -28382,21 +28382,30 @@ return hooks;
 }( jQuery ));
 (function( $ ) {
     $.fn.datePicker = function() {
+        var lang = $('html').attr('lang');
+
         return this.each(function () {
-            var picker = new Pikaday({
-                field: this,
-                firstDay: 1,
-                format: 'DD.MM.YYYY',
-                maxDate: new Date(),
-                yearRange: [1900, 2017],
-                i18n: {
-                    previousMonth: 'Предыдущий месяц',
+            var ruLang = {
+                previousMonth: 'Предыдущий месяц',
                     nextMonth: 'Следующий месяц',
                     months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
                     weekdays: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
                     weekdaysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
-                }
-            });
+            };
+
+            var options = {
+                field: this,
+                firstDay: 1,
+                format: 'DD.MM.YYYY',
+                maxDate: new Date(),
+                yearRange: [1900, 2017]
+            };
+
+            if (lang === 'ru') {
+                options.i18n = ruLang;
+            }
+
+            var picker = new Pikaday(options);
         });
     }
 }( jQuery ));
@@ -28438,31 +28447,40 @@ $(document).ready(function () {
                 var $form = $(this),
                     url = $form.attr('action'),
                     method = $form.attr('method'),
-                    formData = new FormData($form[0]);
+                    formData = new FormData($form[0]),
+                    validation = $form.is('[data-validate]');
 
-                $('body').spin('large', '#000');
+                if (validation && $form.valid()) {
+                    submitForm();
+                } else if (!validation) {
+                    submitForm();
+                }
 
-                $.ajax({
-                    url: url,
-                    type: method,
-                    data: formData,
-                    processData: false,
-                    contentType: false,
-                    cache: false,
-                    dataType: 'json'
-                }).done(function (data) {
-                    if (data && data.success) {
-                        initSideModal(data.message, 'message-modal', false, false);
-                    } else if (data && data.message) {
-                        alert('Ошибка отправки данных: ' + data.message);
-                    }
-                }).fail(function (jqXHR, textStatus, errorThrown) {
-                    alert('Ошибка отправки данных. Пожалуйста, попробуйте ещё раз.');
-                    console.log(jqXHR);
-                    console.log(errorThrown);
-                }).always(function () {
-                    $('body').spin(false);
-                });
+                function submitForm() {
+                    $('body').spin('large', '#000');
+
+                    $.ajax({
+                        url: url,
+                        type: method,
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        cache: false,
+                        dataType: 'json'
+                    }).done(function (data) {
+                        if (data && data.success) {
+                            initSideModal(data.message, 'message-modal', false, false);
+                        } else if (data && data.message) {
+                            alert('Ошибка отправки данных: ' + data.message);
+                        }
+                    }).fail(function (jqXHR, textStatus, errorThrown) {
+                        alert('Ошибка отправки данных. Пожалуйста, попробуйте ещё раз.');
+                        console.log(jqXHR);
+                        console.log(errorThrown);
+                    }).always(function () {
+                        $('body').spin(false);
+                    });
+                }
 
                 return false;
             });

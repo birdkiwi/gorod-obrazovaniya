@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
@@ -10,180 +10,8 @@
 </head>
 <body>
 
-<div id="offcanvas" class="main-offcanvas-overlay">
-    <nav class="main-offcanvas">
-        <div class="main-offcanvas-padding">
-            <div class="main-offcanvas-logo">
-                <img src="images/logo.svg" alt="Город образования">
-            </div>
-            <div class="main-offcanvas-user">
-                <a href="#" class="button button-blue-hollow">Войти</a>
-            </div>
-        </div>
-        <ul class="main-offcanvas-menu">
-            <li class="active">
-                <a href="#">О форуме</a>
-
-                <ul>
-                    <li>
-                        <a href="#">Посетителям</a>
-                    </li>
-                    <li>
-                        <a href="#">Экспонентам</a>
-                    </li>
-                    <li>
-                        <a href="#">Партнерам</a>
-                    </li>
-                    <li>
-                        <a href="#">СМИ</a>
-                    </li>
-                    <li>
-                        <a href="#">Полезная информация</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Новости</a>
-            </li>
-            <li>
-                <a href="#">Программа</a>
-            </li>
-            <li>
-                <a href="#">Спикеры</a>
-            </li>
-            <li>
-                <a href="#">Выставка</a>
-            </li>
-            <li>
-                <a href="#">Партнеры</a>
-            </li>
-            <li>
-                <a href="#">Контакты</a>
-            </li>
-        </ul>
-
-        <div class="main-offcanvas-padding">
-            <div class="main-offcanvas-lang">
-                <div class="main-offcanvas-lang-title">Язык: </div>
-                <div class="main-header-language">
-                    <a href="#" class="main-header-language-item main-header-language-item-ru active">
-                        <span>Рус</span>
-                    </a>
-                    <a href="#" class="main-header-language-item main-header-language-item-en">
-                        <span>Eng</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="main-offcanvas-padding">
-            <div class="socials-block main-offcanvas-socials-block">
-                <div class="socials-block-items">
-                    <a href="#" target="_blank" class="socials-block-item">
-                        <?php include "images/icons/icon-vk.svg"; ?>
-                    </a>
-                    <a href="#" target="_blank" class="socials-block-item">
-                        <?php include "images/icons/icon-facebook.svg"; ?>
-                    </a>
-                    <a href="#" target="_blank" class="socials-block-item">
-                        <?php include "images/icons/icon-twitter.svg"; ?>
-                    </a>
-                    <a href="#" target="_blank" class="socials-block-item">
-                        <?php include "images/icons/icon-instagram.svg"; ?>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
-</div>
-
-<header class="main-header">
-    <div class="wrapper">
-        <div class="main-header-desktop">
-            <a href="#" class="main-header-logo">
-                <img src="images/logo.svg" alt="Город образования">
-            </a>
-
-            <div class="main-header-support">
-                <img src="images/logo-pravitelstvo-moskvy-2.png" alt="При поддержке правительства Москвы" title="При поддержке правительства ">
-            </div>
-
-            <nav class="main-header-menu">
-                <ul>
-                    <li class="parent active">
-                        <a href="#">О форуме</a>
-
-                        <div class="main-header-submenu">
-                            <div class="wrapper">
-                                <ul>
-                                    <li>
-                                        <a href="#">Посетителям</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Экспонентам</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Партнерам</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">СМИ</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Полезная информация</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#">Новости</a>
-                    </li>
-                    <li>
-                        <a href="#">Программа</a>
-                    </li>
-                    <li>
-                        <a href="#">Спикеры</a>
-                    </li>
-                    <li>
-                        <a href="#">Выставка</a>
-                    </li>
-                    <li>
-                        <a href="#">Партнеры</a>
-                    </li>
-                    <li>
-                        <a href="#">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <!--<div class="main-header-language">
-                <a href="#" class="main-header-language-item main-header-language-item-ru active">
-                    <span>Рус</span>
-                </a>
-                <a href="#" class="main-header-language-item main-header-language-item-en">
-                    <span>Eng</span>
-                </a>
-            </div>-->
-
-            <!--<div class="main-header-user">
-                <a href="#" class="button button-blue-hollow">Войти</a>
-            </div>-->
-        </div>
-        <div class="main-header-mobile">
-            <a href="#" class="main-header-toggler js-offcanvas">
-                <?php include "images/icons/icon-header-toggler.svg"; ?>
-            </a>
-
-            <a href="#" class="main-header-logo-mobile">
-                <img src="images/logo.svg" alt="Город образования">
-            </a>
-
-            <a href="#" class="main-header-login">
-                <?php include "images/icons/icon-header-login.svg"; ?>
-            </a>
-        </div>
-    </div>
-</header>
+<?php include "blocks/offcanvas.php"; ?>
+<?php include "blocks/header.php"; ?>
 
 <main class="main-content">
     <section class="welcome-block">
@@ -212,7 +40,7 @@
 
                 <div class="welcome-block-image"></div>
 
-                <a href="modal-registration.php" data-side-modal data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-wide button-red">Регистрация</a>
+                <a href="blocks/modal-registration.php" data-side-modal data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-wide button-red">Регистрация</a>
 
                 <div class="welcome-block-socials">
                     <div class="socials-block">
@@ -318,7 +146,7 @@
         </div>
     </section>
 
-    <section class="news-block">
+    <section class="news-block news-block-bg">
         <div class="wrapper">
             <h2 class="news-block-title">
                 <a href="#">Новости</a> форума
@@ -945,14 +773,14 @@
         </div>
     </section>
 
-    <section class="speakers-block">
+    <section class="speakers-block speakers-block-bg">
         <div class="wrapper">
             <h2 class="speakers-block-title">150 российских и международных <a href="#">спикеров</a></h2>
 
             <div class="swiper-container js-speakers-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="speakers-block-row">
+                        <div class="speakers-block-row m-b-lg">
                             <a href="#" data-side-modal="#speaker-side-modal-1" data-side-modal-class="side-modal-wide side-modal-speaker" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/sergey-kravcov.jpg" alt="Сергей Кравцов">
@@ -1021,7 +849,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="speakers-block-row">
+                        <div class="speakers-block-row m-b-lg">
                             <a href="#" data-side-modal="#speaker-side-modal-1" data-side-modal-class="side-modal-wide side-modal-speaker" class="speakers-block-row-item">
                                 <div class="speakers-block-row-item-photo">
                                     <img src="images/tmp/speakers/sergey-kravcov.jpg" alt="Сергей Кравцов">
@@ -1297,7 +1125,7 @@
                     </div>
                 </div>
                 <div class="exhibition-block-buttons">
-                    <a href="modal-exhibition-registration.php" data-side-modal data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-red">Заявка на участие</a>
+                    <a href="blocks/modal-exhibition-registration.php" data-side-modal data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-red">Заявка на участие</a>
                 </div>
             </div>
 
@@ -1576,192 +1404,10 @@
     </section>
 </main>
 
-<footer class="main-footer">
-    <div class="wrapper">
-        <div class="main-footer-contacts">
-            <div class="main-footer-logo">
-                <img src="images/logo-white.svg" alt="Город Образования">
-            </div>
+<?php include "blocks/footer.php"; ?>
+<?php include "blocks/contacts-map.php"; ?>
 
-            <div class="main-footer-links">
-                <a href="tel:+7(495)000-00-00">
-                    <?php include "images/icons/icon-phone.svg"; ?>
-                    +7 (495) 000-00-00
-                </a>
-                <br>
-                <a href="mailto:info@moscowglobal.com">
-                    <?php include "images/icons/icon-letter.svg"; ?>
-                    info@moscowglobalforum.ru
-                </a>
-            </div>
-            
-            <div class="main-footer-socials">
-                <div class="socials-block">
-                    <div class="socials-block-items">
-                        <a href="#" target="_blank" class="socials-block-item">
-                            <?php include "images/icons/icon-vk.svg"; ?>
-                        </a>
-                        <a href="#" target="_blank" class="socials-block-item">
-                            <?php include "images/icons/icon-facebook.svg"; ?>
-                        </a>
-                        <a href="#" target="_blank" class="socials-block-item">
-                            <?php include "images/icons/icon-twitter.svg"; ?>
-                        </a>
-                        <a href="#" target="_blank" class="socials-block-item">
-                            <?php include "images/icons/icon-instagram.svg"; ?>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="main-footer-menu">
-            <div class="main-footer-menu-column">
-                <ul>
-                    <li class="parent">
-                        <a href="#">О форуме</a>
-
-                        <ul>
-                            <li><a href="#">Посетителям</a></li>
-                            <li><a href="#">Экспонентам</a></li>
-                            <li><a href="#">Партнерам</a></li>
-                            <li><a href="#">СМИ</a></li>
-                            <li><a href="#">Полезная информация</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="main-footer-menu-column">
-                <ul>
-                    <li class="parent">
-                        <a href="#">Программа</a>
-
-                        <ul>
-                            <li><a href="#">Деловая программа</a></li>
-                            <li><a href="#">Специальные мероприятия</a></li>
-                            <li><a href="#">Партнерам</a></li>
-                            <li><a href="#">Культурная программа</a></li>
-                            <li><a href="#">Спортивные мероприятия</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="main-footer-menu-column">
-                <ul>
-                    <li class="parent">
-                        <a href="#">Выставка</a>
-
-                        <ul>
-                            <li><a href="#">Каталог экспонентов</a></li>
-                            <li><a href="#">Схема выставки</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Спикеры</a>
-                    </li>
-                    <li>
-                        <a href="#">Новости</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="main-footer-menu-column">
-                <ul>
-                    <li class="parent">
-                        <a href="#">Партнеры</a>
-
-                        <ul>
-                            <li><a href="#">Генеральные партнеры</a></li>
-                            <li><a href="#">Медиа партнеры</a></li>
-                            <li><a href="#">Партнеры выставки и деловой программы</a></li>
-                        </ul>
-                    </li>
-                    <li class="parent">
-                        <a href="#">Контакты</a>
-
-                        <ul>
-                            <li><a href="#">Карта/схема ВДНХ</a></li>
-                            <li><a href="#">Задать вопрос</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="main-footer-menu-mobile">
-            <ul>
-                <li class="parent">
-                    <button class="main-footer-menu-mobile-toggle js-mobile-menu-toggle">
-                        <?php include "images/icons/icon-arrow-down.svg"; ?>
-                    </button>
-                    <a href="#">О форуме</a>
-                    <ul>
-                        <li><a href="#">Посетителям</a></li>
-                        <li><a href="#">Экспонентам</a></li>
-                        <li><a href="#">Партнерам</a></li>
-                        <li><a href="#">СМИ</a></li>
-                        <li><a href="#">Полезная информация</a></li>
-                    </ul>
-                </li>
-                <li class="parent">
-                    <button class="main-footer-menu-mobile-toggle js-mobile-menu-toggle">
-                        <?php include "images/icons/icon-arrow-down.svg"; ?>
-                    </button>
-                    <a href="#">Программа</a>
-                    <ul>
-                        <li><a href="#">Деловая программа</a></li>
-                        <li><a href="#">Специальные мероприятия</a></li>
-                        <li><a href="#">Партнерам</a></li>
-                        <li><a href="#">Культурная программа</a></li>
-                        <li><a href="#">Спортивные мероприятия</a></li>
-                    </ul>
-                </li>
-                <li class="parent">
-                    <button class="main-footer-menu-mobile-toggle js-mobile-menu-toggle">
-                        <?php include "images/icons/icon-arrow-down.svg"; ?>
-                    </button>
-                    <a href="#">Выставка</a>
-                    <ul>
-                        <li><a href="#">Каталог экспонентов</a></li>
-                        <li><a href="#">Схема выставки</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Спикеры</a>
-                </li>
-                <li>
-                    <a href="#">Новости</a>
-                </li>
-                <li class="parent">
-                    <button class="main-footer-menu-mobile-toggle js-mobile-menu-toggle">
-                        <?php include "images/icons/icon-arrow-down.svg"; ?>
-                    </button>
-                    <a href="#">Партнеры</a>
-                    <ul>
-                        <li><a href="#">Генеральные партнеры</a></li>
-                        <li><a href="#">Медиа партнеры</a></li>
-                        <li><a href="#">Партнеры выставки и деловой программы</a></li>
-                    </ul>
-                </li>
-                <li class="parent">
-                    <button class="main-footer-menu-mobile-toggle js-mobile-menu-toggle">
-                        <?php include "images/icons/icon-arrow-down.svg"; ?>
-                    </button>
-                    <a href="#">Контакты</a>
-                    <ul>
-                        <li><a href="#">Карта/схема ВДНХ</a></li>
-                        <li><a href="#">Задать вопрос</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-<section class="contacts-map-block">
-    <div id="js-contacts-map" data-map-coords="55.83110973, 37.63869129" data-map-zoom="16" data-map-data="data/contacts-map-data.json" class="contacts-map-block-map"></div>
-</section>
-
-<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initContactsMap"></script>
 <script src="build/scripts.min.js"></script>
+<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initContactsMap"></script>
 </body>
 </html>

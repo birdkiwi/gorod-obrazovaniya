@@ -1,5 +1,4 @@
 .speakers-block {
-  background: url("../images/bg-news-block.svg") no-repeat right calc(~"100% + 150px") #fff;
   padding-top: 70px;
   padding-bottom: 50px;
 
@@ -20,6 +19,10 @@
     padding-bottom: 20px;
     background-image: none;
   }
+}
+
+.speakers-block-bg {
+  background: url("../images/bg-news-block.svg") no-repeat right calc(~"100% + 150px");
 }
 
 .speakers-block-title {
@@ -46,7 +49,7 @@
 .speakers-block-row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto 30px;
+  margin: 0 auto;
 
   @media (max-width: @breakpoint-m) {
     max-width: 500px;
