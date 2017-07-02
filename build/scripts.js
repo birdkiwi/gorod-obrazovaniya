@@ -28828,11 +28828,15 @@ function initSideModal(content, classNames, preventOverlayClose, preventEscClose
 
     var hide = function(e) {
         if (
-            ( !$(e.target).closest('.side-modal').length && !$(e.target).is('input, label') ) ||
-            ( e.keyCode === 27 )
+            ( !$(e.target).closest('.side-modal').length && !$(e.target).is('input, label') && !$(e.target).is('body') ) ||
+            ( e.which === 27 )
         ) {
             $wrapper.removeClass('active');
             $(document).off('click', 'body', hide);
+
+            if (!preventEscClose) {
+                $(document).off('keyup', hide);
+            }
         }
     };
 

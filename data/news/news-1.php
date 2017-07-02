@@ -29,7 +29,7 @@
         </li>
     </ul>
 
-    <img src="images/tmp/gallery-demo.jpg" alt="" class="img-responsive m-t-md m-b-md">
+    <img src="images/tmp/gallery-demo.jpg" alt="" class="m-t-md m-b-md">
 
     <h3>Главная выставка страны</h3>
     <p>

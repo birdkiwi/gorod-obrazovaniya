@@ -87,7 +87,7 @@
                 <div class="form-control form-control-inline">
                     <input id="registration-form-birthdate" type="text" name="birthdate" class="form-input js-datepicker" placeholder="дд.мм.гггг" data-maskedinput="99.99.9999" required>
                     <label for="registration-form-birthdate" class="form-control-icon">
-                        <?php include "images/icons/icon-input-calendar.svg"; ?>
+                        <?php include "../images/icons/icon-input-calendar.svg"; ?>
                     </label>
                 </div>
             </div>
