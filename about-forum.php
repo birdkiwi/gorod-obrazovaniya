@@ -14,9 +14,9 @@
 <?php include "blocks/header.php"; ?>
 
 <main class="main-content">
-    <div class="main-heading main-heading-navy">
+    <div class="main-heading main-heading-blue">
         <div class="wrapper">
-            <h1 class="main-heading-title">Новости</h1>
+            <h1 class="main-heading-title">О форуме</h1>
 
             <form action="#" method="POST" class="main-heading-search-form">
                 <input type="search" name="search" class="main-heading-search-input" placeholder="Поиск">
@@ -30,17 +30,32 @@
             <ul class="subnav-list subnav-list-wide">
                 <li class="subnav-list-item active">
                     <a href="#" class="subnav-link">
-                        <span>Все</span>
+                        <span>Участникам</span>
                     </a>
                 </li>
                 <li class="subnav-list-item">
                     <a href="#" class="subnav-link">
-                        <span>Фотогалерея</span>
+                        <span>Партнерам</span>
                     </a>
                 </li>
                 <li class="subnav-list-item">
                     <a href="#" class="subnav-link">
-                        <span>Видео</span>
+                        <span>Посетителям</span>
+                    </a>
+                </li>
+                <li class="subnav-list-item">
+                    <a href="#" class="subnav-link">
+                        <span>Экспонентам</span>
+                    </a>
+                </li>
+                <li class="subnav-list-item">
+                    <a href="#" class="subnav-link">
+                        <span>Для СМИ</span>
+                    </a>
+                </li>
+                <li class="subnav-list-item">
+                    <a href="#" class="subnav-link">
+                        <span>Полезная информация</span>
                     </a>
                 </li>
             </ul>
@@ -51,8 +66,23 @@
         <div class="news-item-wrapper">
             <div class="news-item m-t-xl m-b-xl">
                 <div class="news-item-content">
-                    <h1 class="news-item-title">Дискуссии о ключевых трендах развития образования</h1>
-                    <p class="text-highlight m-b-xl">Главная дискуссия о ключевых трендах развития образования пройдет 8 сентября на Московском международного форума «Город образования» на ВДНХ.</p>
+                    <h1 class="news-item-title">Сугата Митра примет участие в форуме «Город образования»</h1>
+                    <p class="text-highlight m-b-xl">
+                        Спикер TED и известный индийский ученый Сугата Митра примет участие
+                        в Московском международном форуме «Город образования». Конференция руководителей систем образования городов мира пройдет 7 сентября в рамках Московского международного форума «Город образования».
+                    </p>
+
+                    <div class="news-item-highlight-full">
+                        <div class="news-item-highlight-full-image">
+                            <img src="images/tmp/news-page/news-full-2.jpg" alt="">
+                        </div>
+
+                        <div class="news-item-highlight-full-text">
+                            <div class="news-item-highlight-full-title">Выступлениe</div>
+
+                            <p>В выступлениях на международных форумах Сугата Митра предлагает внести кардинальные изменения в нынешнюю систему образования, чтобы изменить вектор дальнейшего развития науки и культуры для последующих поколений.</p>
+                        </div>
+                    </div>
 
                     <h2>Выступления на международных форумах</h2>
                     <p>В выступлениях на международных форумах Сугата Митра предлагает внести кардинальные изменения в нынешнюю систему образования, чтобы изменить вектор дальнейшего развития науки и культуры для последующих поколений. Его вдохновляющая идея о самоорганизующихся учебных пространствах предполагает создание «Школы в облаках» – своего рода лаборатории, где дети смогут проводить исследования и обучаться друг у друга, используя ресурсы из «облаков».</p>
@@ -71,6 +101,23 @@
                     <img src="images/tmp/news-page/news-full-1.jpg" alt="" class="m-b-md">
 
                     <h3 class="tt-uppercase">Дисскуссии о ключевых трендах</h3>
+
+                    <p>Его вдохновляющая идея о самоорганизующихся учебных пространствах предполагает создание «Школы в облаках» – своего рода лаборатории, где дети смогут проводить исследования и обучаться друг у друга, используя ресурсы из «облаков».</p>
+
+                    <div class="row m-t-lg m-b-lg">
+                        <div class="col-xs-12 col-sm-6">
+                            <img src="images/tmp/news-page/news-full-3.jpg" alt="">
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <img src="images/tmp/news-page/news-full-4.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <ul class="ul-blue-arrow">
+                        <li>школьный журнал,</li>
+                        <li>дневник,</li>
+                        <li>электронную библиотеку —  своего рода лаборатории, где дети смогут проводить исследования и обучаться друг у друга, используя ресурсы из «облаков»</li>
+                    </ul>
 
                     <p>Его вдохновляющая идея о самоорганизующихся учебных пространствах предполагает создание «Школы в облаках» – своего рода лаборатории, где дети смогут проводить исследования и обучаться друг у друга, используя ресурсы из «облаков».</p>
 

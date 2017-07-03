@@ -43,46 +43,47 @@
     </nav>
 
     <div class="wrapper">
-        <div class="speaker-block-wrapper">
-            <div class="speaker-block p-t-xl p-b-xl">
-                <div class="speaker-block-card">
-                    <div class="speaker-block-card-text">
-                        <div class="speaker-block-name">
+        <div class="exhibition-catalog-item-wrapper">
+            <div class="exhibition-catalog-item p-t-xl p-b-xl">
+                <div class="exhibition-catalog-item-card">
+                    <div class="exhibition-catalog-item-card-text">
+                        <div class="exhibition-catalog-item-name">
                             CISCO
                         </div>
 
-                        <div class="speaker-block-title">
+                        <div class="exhibition-catalog-item-title">
                             Описание компании кратко по образованию Организации экономического сотрудничества
                         </div>
 
-                        <div class="speaker-block-subtitle">
+                        <div class="exhibition-catalog-item-stand">
                             <?php include "images/icons/icon-stand.svg"; ?> Стенд 22
                         </div>
+
+                        <div class="exhibition-catalog-item-about">
+                            <div class="exhibition-catalog-item-about-title">
+                                О компании
+                            </div>
+
+                            <p>
+                                Расширенное описание компании, проекты на форуме и т. д. предлагает внести кардинальные изменения в нынешнюю систему образования, чтобы изменить вектор дальнейшего развития науки и культуры для последующих поколений. Его вдохновляющая идея о самоорганизующихся учебных пространствах предполагает создание «Школы в облаках» – своего рода лаборатории, где дети смогут проводить исследования и обучаться друг у друга, используя ресурсы из «облаков».
+                            </p>
+
+                            <div class="exhibition-catalog-item-about-title">
+                                Контакты
+                            </div>
+
+                            <p>
+                                Тел/факс: <a href="tel:+7(812)316-34-34">+7 (812) 316-34-34</a> <br>
+                                Email: <a href="mailto:contact@cisco.com">contact@cisco.com</a> <br>
+                                Сайт: <a href="https://cisco.com" target="_blank">www.cisco.com</a>
+                            </p>
+                        </div>
                     </div>
-                    <div class="speaker-block-card-photo">
+                    <div class="exhibition-catalog-item-card-photo">
                         <img src="images/tmp/sponsors/partner-4.png" alt="Cisco">
                     </div>
                 </div>
 
-                <div class="speaker-block-about">
-                    <div class="speaker-block-about-title">
-                        О компании
-                    </div>
-
-                    <p>
-                        Расширенное описание компании, проекты на форуме и т. д. предлагает внести кардинальные изменения в нынешнюю систему образования, чтобы изменить вектор дальнейшего развития науки и культуры для последующих поколений. Его вдохновляющая идея о самоорганизующихся учебных пространствах предполагает создание «Школы в облаках» – своего рода лаборатории, где дети смогут проводить исследования и обучаться друг у друга, используя ресурсы из «облаков».
-                    </p>
-
-                    <div class="speaker-block-about-title">
-                        Контакты
-                    </div>
-
-                    <p>
-                        Тел/факс: <a href="tel:+7(812)316-34-34">+7 (812) 316-34-34</a> <br>
-                        Email: <a href="mailto:contact@cisco.com">contact@cisco.com</a> <br>
-                        Сайт: <a href="https://cisco.com" target="_blank">www.cisco.com</a>
-                    </p>
-                </div>
             </div>
         </div>
     </div>

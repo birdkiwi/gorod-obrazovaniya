@@ -69,3 +69,26 @@ img {
   color: #666666;
   line-height: 1.7rem;
 }
+
+.ul-blue-arrow {
+  .ul-reset;
+
+  li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin-top: 0.4em;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 0 6px 6px;
+      border-color: transparent transparent transparent @c-blue;
+    }
+  }
+}

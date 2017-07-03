@@ -1,3 +1,83 @@
-.exhibition-catalog-item {
+.exhibition-catalog-item-wrapper {
+  max-width: 770px;
+  margin: 0 auto;
+}
 
+.exhibition-catalog-item {
+  background: url('../images/bg-news-block.svg') no-repeat calc(~"100% + 100px") -100px #fff;
+}
+
+.exhibition-catalog-item-card {
+  display: flex;
+  margin-bottom: 20px;
+
+  @media (max-width: @breakpoint-s) {
+    flex-direction: column-reverse;
+  }
+}
+
+.exhibition-catalog-item-card-text {
+  flex-basis: 60%;
+  padding-right: 40px;
+
+  @media (max-width: @breakpoint-s) {
+    flex-basis: auto;
+  }
+}
+
+.exhibition-catalog-item-card-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 270px;
+  background: #fff;
+  border: 1px solid #E2E2E2;
+  margin-bottom: 20px;
+}
+
+.exhibition-catalog-item-name {
+  font-size: 2.3rem;
+  line-height: 2.6rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.exhibition-catalog-item-title {
+  color: #888888;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.exhibition-catalog-item-stand {
+  font-size: 1.21rem;
+  line-height: 1.64rem;
+  color: @c-blue;
+
+  svg {
+    width: 12px;
+    height: 16px;
+    margin-right: 4px;
+
+    * {
+      fill: @c-blue;
+    }
+  }
+}
+
+.exhibition-catalog-item-about {
+  color: #888888;
+  line-height: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.exhibition-catalog-item-about-title {
+  text-transform: uppercase;
+  color: @c-main;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 6px;
 }
