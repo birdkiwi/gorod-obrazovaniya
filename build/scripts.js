@@ -28856,6 +28856,7 @@ function initSideModal(content, classNames, preventOverlayClose, preventEscClose
 
 $(document).on('click', '[data-side-modal]', function (e) {
     var url = $(this).attr('href'),
+        altUrl = $(this).data('side-modal-url'),
         modalContentSelector = $(this).data('side-modal'),
         classNames = $(this).data('side-modal-class'),
         preventOverlayClose = $(this).is('[data-side-modal-prevent-overlay-close]'),
@@ -28867,7 +28868,8 @@ $(document).on('click', '[data-side-modal]', function (e) {
     } else {
         $('body').spin('large', '#000');
 
-        $.ajax(url, {
+        $.ajax({
+            url: altUrl || url,
             method: 'GET',
             cache: false
         }).done(function (data) {

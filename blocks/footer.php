@@ -2,7 +2,9 @@
     <div class="wrapper">
         <div class="main-footer-contacts">
             <div class="main-footer-logo">
-                <img src="images/logo-white.svg" alt="Город Образования">
+                <a href="index.php">
+                    <img src="images/logo-white.svg" alt="Город Образования">
+                </a>
             </div>
 
             <div class="main-footer-links">
@@ -41,7 +43,7 @@
             <div class="main-footer-menu-column">
                 <ul>
                     <li class="parent">
-                        <a href="#">О форуме</a>
+                        <a href="about-forum.php">О форуме</a>
 
                         <ul>
                             <li><a href="#">Посетителям</a></li>
@@ -71,7 +73,7 @@
             <div class="main-footer-menu-column">
                 <ul>
                     <li class="parent">
-                        <a href="#">Выставка</a>
+                        <a href="exhibition-catalog.php">Выставка</a>
 
                         <ul>
                             <li><a href="#">Каталог экспонентов</a></li>
@@ -79,17 +81,17 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Спикеры</a>
+                        <a href="speakers.php">Спикеры</a>
                     </li>
                     <li>
-                        <a href="#">Новости</a>
+                        <a href="news.php">Новости</a>
                     </li>
                 </ul>
             </div>
             <div class="main-footer-menu-column">
                 <ul>
                     <li class="parent">
-                        <a href="#">Партнеры</a>
+                        <a href="partners.php">Партнеры</a>
 
                         <ul>
                             <li><a href="#">Генеральные партнеры</a></li>
@@ -98,7 +100,7 @@
                         </ul>
                     </li>
                     <li class="parent">
-                        <a href="#">Контакты</a>
+                        <a href="contacts.php">Контакты</a>
 
                         <ul>
                             <li><a href="#">Карта/схема ВДНХ</a></li>

@@ -40,7 +40,7 @@
 
                 <div class="welcome-block-image"></div>
 
-                <a href="blocks/modal-registration.php" data-side-modal data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-wide button-red">Регистрация</a>
+                <a href="#" data-side-modal data-side-modal-url="blocks/modal-registration.php" data-side-modal-class="registration-modal" data-side-modal-prevent-overlay-close data-side-modal-prevent-esc-close class="button button-wide button-red">Регистрация</a>
 
                 <div class="welcome-block-socials">
                     <div class="socials-block">

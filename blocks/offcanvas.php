@@ -2,7 +2,9 @@
     <nav class="main-offcanvas">
         <div class="main-offcanvas-padding">
             <div class="main-offcanvas-logo">
-                <img src="images/logo.svg" alt="Город образования">
+                <a href="index.php">
+                    <img src="images/logo.svg" alt="Город образования">
+                </a>
             </div>
             <div class="main-offcanvas-user">
                 <a href="#" class="button button-blue-hollow">Войти</a>
@@ -10,7 +12,7 @@
         </div>
         <ul class="main-offcanvas-menu">
             <li class="active">
-                <a href="#">О форуме</a>
+                <a href="about-forum.php">О форуме</a>
 
                 <ul>
                     <li>
@@ -31,22 +33,22 @@
                 </ul>
             </li>
             <li>
-                <a href="#">Новости</a>
+                <a href="news.php">Новости</a>
             </li>
             <li>
                 <a href="#">Программа</a>
             </li>
             <li>
-                <a href="#">Спикеры</a>
+                <a href="speakers.php">Спикеры</a>
             </li>
             <li>
-                <a href="#">Выставка</a>
+                <a href="exhibition-catalog.php">Выставка</a>
             </li>
             <li>
-                <a href="#">Партнеры</a>
+                <a href="partners.php">Партнеры</a>
             </li>
             <li>
-                <a href="#">Контакты</a>
+                <a href="contacts.php">Контакты</a>
             </li>
         </ul>
 

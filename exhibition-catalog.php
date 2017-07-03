@@ -46,68 +46,70 @@
         <div class="wrapper">
             <aside class="exhibition-catalog-sidebar">
                 <div class="exhibition-catalog-sidebar-title">Направления:</div>
-                <a href="#" class="exhibition-catalog-sidebar-category exhibition-catalog-sidebar-category-salad-green">
-                    <div class="exhibition-catalog-sidebar-category-subtitle">
-                        Новые
-                    </div>
-                    <div class="exhibition-catalog-sidebar-category-title">
-                        технологии
-                    </div>
-                </a>
+                <div class="exhibition-catalog-sidebar-categories">
+                    <a href="#" class="exhibition-catalog-sidebar-category exhibition-catalog-sidebar-category-salad-green">
+                        <div class="exhibition-catalog-sidebar-category-subtitle">
+                            Новые
+                        </div>
+                        <div class="exhibition-catalog-sidebar-category-title">
+                            технологии
+                        </div>
+                    </a>
 
-                <a href="#" class="exhibition-catalog-sidebar-category exhibition-catalog-sidebar-category-blue">
-                    <div class="exhibition-catalog-sidebar-category-subtitle">
-                        Виртуальная
-                    </div>
-                    <div class="exhibition-catalog-sidebar-category-title">
-                        реальность
-                    </div>
-                </a>
+                    <a href="#" class="exhibition-catalog-sidebar-category exhibition-catalog-sidebar-category-blue">
+                        <div class="exhibition-catalog-sidebar-category-subtitle">
+                            Виртуальная
+                        </div>
+                        <div class="exhibition-catalog-sidebar-category-title">
+                            реальность
+                        </div>
+                    </a>
 
-                <a href="#" class="exhibition-catalog-sidebar-category exhibition-catalog-sidebar-category-red">
-                    <div class="exhibition-catalog-sidebar-category-subtitle">
-                        Робото
-                    </div>
-                    <div class="exhibition-catalog-sidebar-category-title">
-                        техника
-                    </div>
-                </a>
+                    <a href="#" class="exhibition-catalog-sidebar-category exhibition-catalog-sidebar-category-red">
+                        <div class="exhibition-catalog-sidebar-category-subtitle">
+                            Робото
+                        </div>
+                        <div class="exhibition-catalog-sidebar-category-title">
+                            техника
+                        </div>
+                    </a>
 
-                <a href="#" class="exhibition-catalog-sidebar-category exhibition-catalog-sidebar-category-orange">
-                    <div class="exhibition-catalog-sidebar-category-subtitle">
-                        Развивающие
-                    </div>
-                    <div class="exhibition-catalog-sidebar-category-title">
-                        игры
-                    </div>
-                </a>
+                    <a href="#" class="exhibition-catalog-sidebar-category exhibition-catalog-sidebar-category-orange">
+                        <div class="exhibition-catalog-sidebar-category-subtitle">
+                            Развивающие
+                        </div>
+                        <div class="exhibition-catalog-sidebar-category-title">
+                            игры
+                        </div>
+                    </a>
 
-                <a href="#" class="exhibition-catalog-sidebar-category exhibition-catalog-sidebar-category-lightblue">
-                    <div class="exhibition-catalog-sidebar-category-subtitle">
-                        Классическое
-                    </div>
-                    <div class="exhibition-catalog-sidebar-category-title">
-                        образование
-                    </div>
-                </a>
+                    <a href="#" class="exhibition-catalog-sidebar-category exhibition-catalog-sidebar-category-lightblue">
+                        <div class="exhibition-catalog-sidebar-category-subtitle">
+                            Классическое
+                        </div>
+                        <div class="exhibition-catalog-sidebar-category-title">
+                            образование
+                        </div>
+                    </a>
 
-                <a href="#" class="exhibition-catalog-sidebar-category exhibition-catalog-sidebar-category-green">
-                    <div class="exhibition-catalog-sidebar-category-subtitle">
-                        Корпоративное
-                    </div>
-                    <div class="exhibition-catalog-sidebar-category-title">
-                        обучение
-                    </div>
-                </a>
+                    <a href="#" class="exhibition-catalog-sidebar-category exhibition-catalog-sidebar-category-green">
+                        <div class="exhibition-catalog-sidebar-category-subtitle">
+                            Корпоративное
+                        </div>
+                        <div class="exhibition-catalog-sidebar-category-title">
+                            обучение
+                        </div>
+                    </a>
 
-                <a href="#" class="exhibition-catalog-sidebar-category exhibition-catalog-sidebar-category-ink">
-                    <div class="exhibition-catalog-sidebar-category-subtitle">
-                        Иностранные
-                    </div>
-                    <div class="exhibition-catalog-sidebar-category-title">
-                        языки
-                    </div>
-                </a>
+                    <a href="#" class="exhibition-catalog-sidebar-category exhibition-catalog-sidebar-category-ink">
+                        <div class="exhibition-catalog-sidebar-category-subtitle">
+                            Иностранные
+                        </div>
+                        <div class="exhibition-catalog-sidebar-category-title">
+                            языки
+                        </div>
+                    </a>
+                </div>
             </aside>
             <div class="exhibition-catalog-content">
                 <div class="exhibition-catalog-cards">

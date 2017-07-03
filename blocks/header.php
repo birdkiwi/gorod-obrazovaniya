@@ -1,7 +1,7 @@
 <header class="main-header">
     <div class="wrapper">
         <div class="main-header-desktop">
-            <a href="#" class="main-header-logo">
+            <a href="index.php" class="main-header-logo">
                 <img src="images/logo.svg" alt="Город образования">
             </a>
 
@@ -12,7 +12,7 @@
             <nav class="main-header-menu">
                 <ul>
                     <li class="parent active">
-                        <a href="#">О форуме</a>
+                        <a href="about-forum.php">О форуме</a>
 
                         <div class="main-header-submenu">
                             <div class="wrapper">
@@ -37,22 +37,22 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#">Новости</a>
+                        <a href="news.php">Новости</a>
                     </li>
                     <li>
                         <a href="#">Программа</a>
                     </li>
                     <li>
-                        <a href="#">Спикеры</a>
+                        <a href="speakers.php">Спикеры</a>
                     </li>
                     <li>
-                        <a href="#">Выставка</a>
+                        <a href="exhibition-catalog.php">Выставка</a>
                     </li>
                     <li>
-                        <a href="#">Партнеры</a>
+                        <a href="partners.php">Партнеры</a>
                     </li>
                     <li>
-                        <a href="#">Контакты</a>
+                        <a href="contacts.php">Контакты</a>
                     </li>
                 </ul>
             </nav>
