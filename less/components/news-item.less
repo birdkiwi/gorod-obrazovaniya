@@ -60,3 +60,22 @@
   text-transform: uppercase;
   margin-bottom: 12px;
 }
+
+.news-item-highlight {
+  position: relative;
+  padding: 30px 40px;
+  font-size: 1.2rem;
+  line-height: 1.64rem;
+  background: #F7F7F7;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 12px;
+    height: 100%;
+    background: url('../images/news-highlight-pattern.png') repeat-y #cecece;
+  }
+}
