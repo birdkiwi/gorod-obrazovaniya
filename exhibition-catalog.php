@@ -47,7 +47,7 @@
             <aside class="exhibition-catalog-sidebar">
                 <div class="exhibition-catalog-sidebar-title">Направления:</div>
                 <div class="exhibition-catalog-sidebar-categories">
-                    <a href="#" class="exhibition-catalog-sidebar-category exhibition-catalog-sidebar-category-salad-green">
+                    <a href="#" class="exhibition-catalog-sidebar-category exhibition-catalog-sidebar-category-salad-green active">
                         <div class="exhibition-catalog-sidebar-category-subtitle">
                             Новые
                         </div>

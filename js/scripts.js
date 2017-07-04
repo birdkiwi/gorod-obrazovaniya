@@ -18,7 +18,15 @@ $(document).ready(function () {
         prevButton: '.js-news-block-button-prev',
         nextButton: '.js-news-block-button-next',
         pagination: '.js-news-swiper .swiper-pagination',
-        paginationClickable: true
+        paginationClickable: true,
+        breakpoints: {
+            1170: {
+                slidesPerView: 2
+            },
+            640: {
+                slidesPerView: 1
+            }
+        }
     });
 
     $('.js-events-swiper').each(function () {
@@ -27,7 +35,15 @@ $(document).ready(function () {
         new Swiper($swiper, {
             loop: true,
             pagination: $swiper.find('.swiper-pagination'),
-            paginationClickable: true
+            paginationClickable: true,
+            breakpoints: {
+                1170: {
+                    slidesPerView: 2
+                },
+                640: {
+                    slidesPerView: 1
+                }
+            }
         });
     });
 

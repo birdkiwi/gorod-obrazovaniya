@@ -269,3 +269,52 @@
     }
   }
 }
+
+.main-header-user {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  &:hover {
+    .main-header-user-name {
+      color: @c-blue;
+      transition: color 200ms;
+    }
+  }
+}
+
+.main-header-user-photo {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+
+  img {
+    border-radius: 32px;
+  }
+}
+
+.main-header-user-name {
+  font-size: 0.92rem;
+  line-height: 1.07rem;
+  margin-right: 10px;
+  color: @c-main;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 200ms;
+}
+
+.main-header-user-toggler {
+  width: 8px;
+  height: 5px;
+  background: url('../images/icons/icon-select-arrow-down.svg');
+}
+
+.main-header-user-mobile {
+  width: 32px;
+  height: 32px;
+
+  img {
+    border-radius: 32px;
+  }
+}

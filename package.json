@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "animate.css": "^3.5.2",
+    "baron": "^2.3.1",
     "croppie": "^2.4.1",
     "devbridge-autocomplete": "^1.4.1",
     "flexboxgrid": "^6.3.1",

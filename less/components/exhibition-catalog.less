@@ -53,6 +53,11 @@
   @media (max-width: @breakpoint-s) {
     flex-basis: 50%;
   }
+
+  &:hover,
+  &.active {
+    color: @c-blue;
+  }
 }
 
 .exhibition-catalog-sidebar-category-salad-green {
@@ -138,14 +143,14 @@
   padding: 16px;
   text-decoration: none;
   color: @c-main;
-  transition: transform 200ms, box-shadow 200ms;;
+  border: 1px solid transparent;
+  transition: border-color 200ms;;
 
   &:hover,
   &.active {
     color: @c-main;
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.35);
-    transition: transform 200ms, box-shadow 200ms;
+    border-color: @c-blue;
+    transition: border-color 200ms;
   }
 }
 

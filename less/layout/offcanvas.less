@@ -95,11 +95,48 @@
 }
 
 .main-offcanvas-user {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
   margin: 15px 0;
 
   .button {
     width: 100%;
   }
+
+  &:hover {
+    .main-offcanvas-user-name {
+      color: @c-blue;
+      transition: color 200ms;
+    }
+  }
+}
+
+.main-offcanvas-user-photo {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+
+  img {
+    border-radius: 32px;
+  }
+}
+
+.main-offcanvas-user-name {
+  font-size: 0.92rem;
+  line-height: 1.07rem;
+  margin-right: 10px;
+  color: @c-main;
+  max-width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 200ms;
+}
+
+.main-offcanvas-user-toggler {
+  width: 8px;
+  height: 5px;
+  background: url('../images/icons/icon-select-arrow-down.svg');
 }
 
 .main-offcanvas-lang {
