@@ -27,9 +27,18 @@
                         dataType: 'json'
                     }).done(function (data) {
                         if (data && data.success) {
+                            $form[0].reset();
                             initSideModal(data.message, 'message-modal', false, false);
                         } else if (data && data.message) {
                             alert('Ошибка отправки данных: ' + data.message);
+                        }
+
+                        if (data && data.redirect) {
+                            window.location.href = data.redirect;
+                        }
+
+                        if (data && data.reload) {
+                            window.location.reload();
                         }
                     }).fail(function (jqXHR, textStatus, errorThrown) {
                         alert('Ошибка отправки данных. Пожалуйста, попробуйте ещё раз.');

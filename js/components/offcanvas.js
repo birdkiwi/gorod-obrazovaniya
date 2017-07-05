@@ -32,8 +32,10 @@
         return false;
     });
 
-    var offcanvasHammer = new Hammer(document.querySelector(offcanvasOverlay));
-    offcanvasHammer.on("swipeleft", function(e) {
-        hide();
-    });
+    if ( $(offcanvasOverlay).length ) {
+        var offcanvasHammer = new Hammer($(offcanvasOverlay)[0]);
+        offcanvasHammer.on("swipeleft", function(e) {
+            hide();
+        });
+    }
 })();
