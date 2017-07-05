@@ -16,7 +16,11 @@
 <main class="main-content">
     <div class="main-heading main-heading-salad">
         <div class="wrapper">
-            <h1 class="main-heading-title">Выставка</h1>
+            <h1 class="main-heading-title">
+                <a href="#">
+                    Выставка
+                </a>
+            </h1>
 
             <form action="#" method="POST" class="main-heading-search-form">
                 <input type="search" name="search" class="main-heading-search-input" placeholder="Поиск">

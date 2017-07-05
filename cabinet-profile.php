@@ -16,7 +16,11 @@
 <main class="main-content">
     <div class="main-heading main-heading-ink">
         <div class="wrapper">
-            <h1 class="main-heading-title">Личный кабинет</h1>
+            <h1 class="main-heading-title">
+                <a href="#">
+                    Личный кабинет
+                </a>
+            </h1>
         </div>
     </div>
 
