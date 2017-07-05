@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<?php include "blocks/offcanvas-user.php"; ?>
+<?php include "blocks/offcanvas.php"; ?>
 <?php include "blocks/header-user.php"; ?>
 
 <main class="main-content">

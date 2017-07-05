@@ -62,7 +62,7 @@
                 </a>
             </div>
 
-            <a href="#" class="main-header-user">
+            <div class="main-header-user">
                 <div class="main-header-user-photo">
                     <img src="images/tmp/speakers/andreas-shlyayher.jpg" alt="">
                 </div>
@@ -71,7 +71,27 @@
                     Shlyayher
                 </div>
                 <div class="main-header-user-toggler"></div>
-            </a>
+
+                <div class="main-header-user-dropdown-wrapper">
+                    <div class="main-header-user-dropdown">
+                        <ul class="main-header-user-dropdown-menu">
+                            <li>
+                                <a href="#">Мой билет</a>
+                            </li>
+                            <li>
+                                <a href="#">Расписание</a>
+                            </li>
+                            <li>
+                                <a href="#">Профиль</a>
+                            </li>
+                            <li class="main-header-user-dropdown-menu-divider"></li>
+                            <li>
+                                <a href="index.php" onclick="return confirm('Вы действительно хотите выйти?');">Выйти</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="main-header-mobile">
             <a href="#" class="main-header-toggler js-offcanvas">
@@ -82,9 +102,29 @@
                 <img src="images/logo.svg" alt="Город образования">
             </a>
 
-            <a href="#" class="main-header-user-mobile">
+            <div class="main-header-user-mobile">
                 <img src="images/tmp/speakers/andreas-shlyayher.jpg" alt="">
-            </a>
+
+                <div class="main-header-user-dropdown-wrapper">
+                    <div class="main-header-user-dropdown">
+                        <ul class="main-header-user-dropdown-menu">
+                            <li>
+                                <a href="#">Мой билет</a>
+                            </li>
+                            <li>
+                                <a href="#">Расписание</a>
+                            </li>
+                            <li>
+                                <a href="#">Профиль</a>
+                            </li>
+                            <li class="main-header-user-dropdown-menu-divider"></li>
+                            <li>
+                                <a href="index.php" onclick="return confirm('Вы действительно хотите выйти?');">Выйти</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </header>
