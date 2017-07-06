@@ -85,7 +85,7 @@
             <div class="form-group">
                 <label class="form-label" for="registration-form-birthdate">Дата рождения *</label>
                 <div class="form-control form-control-inline">
-                    <input id="registration-form-birthdate" type="text" name="birthdate" class="form-input js-datepicker" placeholder="дд.мм.гггг" data-maskedinput="99.99.9999" required>
+                    <input id="registration-form-birthdate" type="text" name="birthdate" class="form-input js-datepicker" placeholder="дд.мм.гггг" data-masked-input="00.00.0000" data-masked-input-clearifnotmatch required>
                     <label for="registration-form-birthdate" class="form-control-icon">
                         <?php include "../images/icons/icon-input-calendar.svg"; ?>
                     </label>

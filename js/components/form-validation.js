@@ -1,3 +1,25 @@
+$.validator.addMethod("dateRange", function(value, element, params) {
+    try {
+        var date = new Date(value);
+        if (date >= params.from && date <= params.to) {
+            return true;
+        }
+    } catch (e) {}
+    return false;
+}, 'message');
+
+var birthFromDate = new Date("2017-02-01");
+var birthToDate = new Date("2017-12-31");
+
+$.validator.addClassRules({
+    birthdateValidate: {
+        dateRange: {
+            from: birthFromDate,
+            to: birthToDate
+        }
+    }
+});
+
 (function( $ ) {
     $.fn.formValidation = function() {
         this.each(function() {

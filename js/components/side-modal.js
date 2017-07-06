@@ -34,6 +34,8 @@ function initSideModal(content, classNames, preventOverlayClose, preventEscClose
 
     setTimeout(function () {
         $wrapper.addClass('active');
+        // Focus on first input in modal
+        $wrapper.find('input').first().focus();
         if (!preventOverlayClose) {
             $(document).on('click', 'body', hide);
         }

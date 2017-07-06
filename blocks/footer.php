@@ -58,7 +58,7 @@
             <div class="main-footer-menu-column">
                 <ul>
                     <li class="parent">
-                        <a href="#">Программа</a>
+                        <a href="program.php">Программа</a>
 
                         <ul>
                             <li><a href="#">Деловая программа</a></li>

@@ -36,7 +36,7 @@
                         <a href="news.php">Новости</a>
                     </li>
                     <li>
-                        <a href="#">Программа</a>
+                        <a href="program.php">Программа</a>
                     </li>
                     <li>
                         <a href="speakers.php">Спикеры</a>
