@@ -137,6 +137,27 @@
   }
 }
 
+.form-control-errors {
+  display: none;
+  margin-top: 5px;
+  color: @c-input-border-error;
+
+  &.active {
+    display: block;
+  }
+}
+
+.form-messages {
+  display: none;
+  color: @c-input-border-error;
+  padding: 15px 20px;
+  border: 1px dashed #DC3B2A;
+
+  &.active {
+    display: block;
+  }
+}
+
 .form-control-checkbox {
   display: inline-block;
 

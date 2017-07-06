@@ -79,7 +79,7 @@
                 <img src="images/logo.svg" alt="Город образования">
             </a>
 
-            <a href="#" class="main-header-login">
+            <a href="#" class="main-header-login" data-side-modal data-side-modal-url="blocks/modal-login.php" data-side-modal-class="login-modal">
                 <?php include "images/icons/icon-header-login.svg"; ?>
             </a>
         </div>

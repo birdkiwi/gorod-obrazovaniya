@@ -1,26 +1,21 @@
-$.validator.addMethod("dateRange", function(value, element, params) {
-    try {
-        var date = new Date(value);
-        if (date >= params.from && date <= params.to) {
-            return true;
-        }
-    } catch (e) {}
-    return false;
-}, 'message');
-
-var birthFromDate = new Date("2017-02-01");
-var birthToDate = new Date("2017-12-31");
-
-$.validator.addClassRules({
-    birthdateValidate: {
-        dateRange: {
-            from: birthFromDate,
-            to: birthToDate
-        }
-    }
-});
-
 (function( $ ) {
+    $.validator.addMethod("dateRange", function(value, el, params) {
+        try {
+            var dateRange = params.split(','),
+                dateFrom = dateRange[0].split('.').reverse(),
+                timestampFrom = moment(dateFrom).unix(),
+                dateTo = dateRange[1].split('.').reverse(),
+                timestampTo = moment(dateTo).unix(),
+                dateValue = value.split('.').reverse(),
+                timestampValue = moment(dateValue).unix();
+
+            return (timestampFrom <= timestampValue && timestampValue <= timestampTo);
+        } catch(e) {
+            console.log(e);
+            return false;
+        }
+    });
+
     $.fn.formValidation = function() {
         this.each(function() {
             $(this).validate({

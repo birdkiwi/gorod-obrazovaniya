@@ -30,7 +30,17 @@
                             $form[0].reset();
                             initSideModal(data.message, 'message-modal', false, false);
                         } else if (data && data.message) {
-                            alert('Ошибка отправки данных: ' + data.message);
+                            $form.find('.js-form-messages').addClass('active').html(data.message);
+                            if (data.errors) {
+                                data.errors.forEach(function (error) {
+                                    var $field = $('[name="' + error.name + '"]');
+                                    if ($field.length) {
+                                        $field.addClass('error');
+                                        $field.siblings('.form-label').addClass('form-label-error');
+                                        $field.siblings('.form-control-errors').addClass('active').html(error.message);
+                                    }
+                                });
+                            }
                         }
 
                         if (data && data.redirect) {

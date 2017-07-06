@@ -15,8 +15,9 @@
                 field: this,
                 firstDay: 1,
                 format: 'DD.MM.YYYY',
-                maxDate: new Date(),
-                yearRange: [1900, 2017]
+                defaultDate: new Date(1980, 0, 1),
+                maxDate: new Date(2010, 0, 1),
+                yearRange: [1900, 2010]
             };
 
             if (lang === 'ru') {

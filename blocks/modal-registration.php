@@ -12,6 +12,7 @@
             <div class="form-group">
                 <label class="form-label" for="registration-form-name">Имя *</label>
                 <input id="registration-form-name" type="text" name="first_name" class="form-input" required>
+                <div class="form-control-errors"></div>
             </div>
 
             <div class="form-group">
@@ -70,7 +71,7 @@
 
                 <div class="form-control-radio-group">
                     <div class="form-control-radio-group-item">
-                        <input id="registration-form-sex-male" type="radio" name="sex" value="male" checked>
+                        <input id="registration-form-sex-male" type="radio" name="sex" value="male" checked required>
                         <label for="registration-form-sex-male">Мужчина</label>
                     </div>
 
@@ -85,7 +86,7 @@
             <div class="form-group">
                 <label class="form-label" for="registration-form-birthdate">Дата рождения *</label>
                 <div class="form-control form-control-inline">
-                    <input id="registration-form-birthdate" type="text" name="birthdate" class="form-input js-datepicker" placeholder="дд.мм.гггг" data-masked-input="00.00.0000" data-masked-input-clearifnotmatch required>
+                    <input id="registration-form-birthdate" type="text" name="birthdate" class="form-input js-datepicker" data-rule-dateRange="01.01.1900,01.01.2010" placeholder="дд.мм.гггг" data-masked-input="00.00.0000" data-masked-input-clearifnotmatch required>
                     <label for="registration-form-birthdate" class="form-control-icon">
                         <?php include "../images/icons/icon-input-calendar.svg"; ?>
                     </label>
@@ -135,6 +136,10 @@
                 <input id="registration-form-title" type="text" name="title" class="form-input">
             </div>
         </div>
+    </div>
+
+    <div class="form-group">
+        <div class="form-messages animated flash js-form-messages"></div>
     </div>
 
     <div class="form-group">
