@@ -6,9 +6,12 @@
     position: relative;
   }
 
+  @media (max-width: @breakpoint-l) {
+
+  }
+
   @media (max-width: @breakpoint-m) {
     background-image: none;
-    min-height: inherit;
   }
 }
 
@@ -26,6 +29,11 @@
   width: 460px;
   padding-top: 70px;
   padding-bottom: 50px;
+
+  @media (max-width: @breakpoint-l) {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
 
   @media (max-width: @breakpoint-m) {
     width: 100%;
@@ -47,12 +55,17 @@
     font-size: 3.8rem;
     font-weight: bold;
     color: #333333;
+    text-shadow: 2px 2px 0 #fff;
     text-transform: uppercase;
     margin: 0;
 
     @media (max-width: @breakpoint-m) {
       font-size:  2.1rem;
     }
+  }
+
+  @media (max-width: @breakpoint-l) {
+    margin-bottom: 40px;
   }
 
   @media (max-width: @breakpoint-m) {
@@ -62,6 +75,7 @@
 
 .welcome-block-subtitle {
   font-size: 1.7rem;
+  text-shadow: 2px 2px 0 #fff;
 
   @media (max-width: @breakpoint-m) {
     font-size: 1rem;
@@ -72,11 +86,16 @@
 
 .welcome-block-highlight {
   display: flex;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
+
+  @media (max-width: @breakpoint-l) {
+    flex-direction: column;
+  }
 
   @media (max-width: @breakpoint-m) {
     justify-content: center;
     margin-bottom: 0;
+    flex-direction: row;
   }
 }
 
@@ -87,6 +106,7 @@
   font-size: 1.1em;
   font-weight: 300;
   color: #666666;
+  margin-bottom: 20px;
 
   &::before {
     position: absolute;

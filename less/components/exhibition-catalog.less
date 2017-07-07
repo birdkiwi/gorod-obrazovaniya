@@ -6,7 +6,7 @@
   & > .wrapper {
     display: flex;
 
-    @media (max-width: @breakpoint-m) {
+    @media (max-width: @breakpoint-l) {
       flex-direction: column;
     }
   }
@@ -16,7 +16,7 @@
   width: 235px;
   padding-right: 35px;
 
-  @media (max-width: @breakpoint-m) {
+  @media (max-width: @breakpoint-l) {
     width: 100%;
     padding-right: 0;
     margin-bottom: 30px;
@@ -31,7 +31,7 @@
 }
 
 .exhibition-catalog-sidebar-categories {
-  @media (max-width: @breakpoint-m) {
+  @media (max-width: @breakpoint-l) {
     display: flex;
     flex-wrap: wrap;
   }
@@ -46,12 +46,13 @@
   color: #666666;
   padding-right: 25px;
 
-  @media (max-width: @breakpoint-m) {
+  @media (max-width: @breakpoint-l) {
     flex: 0 1 25%;
   }
 
   @media (max-width: @breakpoint-s) {
     flex-basis: 50%;
+    padding-right: 0;
   }
 
   &:hover,
@@ -121,8 +122,12 @@
   padding: 0 15px;
   margin-bottom: 30px;
 
-  @media (max-width: @breakpoint-m) {
+  @media (max-width: @breakpoint-l) {
     flex-basis: 33.3333%;
+  }
+
+  @media (max-width: @breakpoint-l) {
+    flex-basis: 50%;
   }
 
   @media (max-width: @breakpoint-s) {

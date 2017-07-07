@@ -264,6 +264,82 @@
                             </div>
                         </a>
                     </div>
+
+                    <div class="exhibition-catalog-card-wrapper">
+                        <a href="#" class="exhibition-catalog-card">
+                            <div class="exhibition-catalog-card-logo">
+                                <img src="images/tmp/sponsors/partner-1.png" alt="">
+                            </div>
+
+                            <div class="exhibition-catalog-card-title">
+                                English First
+                            </div>
+
+                            <div class="exhibition-catalog-card-desc">
+                                <div class="exhibition-catalog-card-stand">
+                                    <?php include "images/icons/icon-stand.svg"; ?>
+                                    Стенд 22
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="exhibition-catalog-card-wrapper">
+                        <a href="#" class="exhibition-catalog-card">
+                            <div class="exhibition-catalog-card-logo">
+                                <img src="images/tmp/sponsors/partner-2.png" alt="">
+                            </div>
+
+                            <div class="exhibition-catalog-card-title">
+                                Lego
+                            </div>
+
+                            <div class="exhibition-catalog-card-desc">
+                                <div class="exhibition-catalog-card-stand">
+                                    <?php include "images/icons/icon-stand.svg"; ?>
+                                    Стенд 22
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="exhibition-catalog-card-wrapper">
+                        <a href="#" class="exhibition-catalog-card">
+                            <div class="exhibition-catalog-card-logo">
+                                <img src="images/tmp/sponsors/partner-3.png" alt="">
+                            </div>
+
+                            <div class="exhibition-catalog-card-title">
+                                Касио
+                            </div>
+
+                            <div class="exhibition-catalog-card-desc">
+                                <div class="exhibition-catalog-card-stand">
+                                    <?php include "images/icons/icon-stand.svg"; ?>
+                                    Стенд 22
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="exhibition-catalog-card-wrapper">
+                        <a href="#" class="exhibition-catalog-card">
+                            <div class="exhibition-catalog-card-logo">
+                                <img src="images/tmp/sponsors/partner-4.png" alt="">
+                            </div>
+
+                            <div class="exhibition-catalog-card-title">
+                                Очень преочень длинное название длинной компании
+                            </div>
+
+                            <div class="exhibition-catalog-card-desc">
+                                <div class="exhibition-catalog-card-stand">
+                                    <?php include "images/icons/icon-stand.svg"; ?>
+                                    Стенд 22
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="pagination text-center m-b-xl">

@@ -9,7 +9,7 @@
     position: relative;
   }
 
-  @media (max-width: @breakpoint-m) {
+  @media (max-width: @breakpoint-l) {
     padding-top: 30px;
     padding-bottom: 20px;
   }
@@ -23,7 +23,7 @@
   margin-top: 0;
   margin-bottom: 50px;
 
-  @media (max-width: @breakpoint-m) {
+  @media (max-width: @breakpoint-l) {
     font-size: 1.3rem;
     margin-bottom: 30px;
     line-height: 1.5rem;
@@ -36,7 +36,7 @@
   z-index: 10;
   max-width: 540px;
 
-  @media (max-width: @breakpoint-m) {
+  @media (max-width: @breakpoint-l) {
     max-width: 100%;
   }
 }
@@ -44,6 +44,12 @@
 .exhibition-block-sections {
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: @breakpoint-l) {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .exhibition-block-sections-item {
@@ -52,7 +58,7 @@
   align-items: center;
   margin-bottom: 50px;
 
-  @media (max-width: @breakpoint-m) {
+  @media (max-width: @breakpoint-l) {
     flex-basis: 100%;
     margin-bottom: 30px;
   }
@@ -81,18 +87,18 @@
   width: 755px;
   height: 688px;
 
-  @media (max-width: @breakpoint-m) {
+  @media (max-width: @breakpoint-l) {
     display: none;
   }
 }
 
 .exhibition-block-buttons {
-  @media (max-width: @breakpoint-m) {
+  @media (max-width: @breakpoint-l) {
     text-align: center;
   }
 
   .button {
-    @media (max-width: @breakpoint-m) {
+    @media (max-width: @breakpoint-l) {
       width: 100%;
       max-width: 320px;
     }
