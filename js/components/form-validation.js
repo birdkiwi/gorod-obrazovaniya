@@ -16,6 +16,10 @@
         }
     });
 
+    $.validator.methods.email = function( value, element ) {
+        return this.optional(element) || /.+@.+\..+/i.test(value);
+    };
+
     $.fn.formValidation = function() {
         this.each(function() {
             $(this).validate({
