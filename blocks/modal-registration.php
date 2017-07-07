@@ -6,7 +6,8 @@
     Регистрация
 </div>
 
-<form action="data/form-response.json" method="POST" enctype="multipart/form-data" class="registration-form registration-modal-form" data-validate data-form-ajax>
+<form action="data/form-response.json" method="POST" enctype="multipart/form-data" class="registration-form registration-modal-form" data-validate data-form-ajax data-form-ajax-overlay="#registration-form-overlay">
+    <div id="registration-form-overlay" class="form-overlay"></div>
     <div class="row">
         <div class="col-xs-12 col-sm-7">
             <div class="form-group">

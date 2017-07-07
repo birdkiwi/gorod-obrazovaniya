@@ -6,7 +6,8 @@
     Заявка на участие в выставке
 </div>
 
-<form action="data/form-response-error.json" method="POST" enctype="multipart/form-data" class="registration-form registration-modal-form" data-validate data-form-ajax>
+<form action="data/form-response-error.json" method="POST" enctype="multipart/form-data" class="registration-form registration-modal-form" data-validate data-form-ajax data-form-ajax-overlay="#exhibition-form-overlay">
+    <div id="exhibition-form-overlay" class="form-overlay"></div>
     <div class="form-group">
         <label class="form-label" for="registration-form-name">Название компании-участника выставки *</label>
         <input id="registration-form-name" type="text" name="name" class="form-input" required>
@@ -84,6 +85,10 @@
                 Нажимая кнопку «Отправить заявку», <br> я принимаю условия <a href="#" target="_blank">Пользовательского соглашения</a>.
             </label>
         </div>
+    </div>
+    
+    <div class="form-group">
+        <div class="form-messages animated flash js-form-messages"></div>
     </div>
 
     <div class="registration-form-submit">

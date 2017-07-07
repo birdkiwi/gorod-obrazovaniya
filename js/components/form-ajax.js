@@ -6,6 +6,7 @@
                     url = $form.attr('action'),
                     method = $form.attr('method'),
                     formData = new FormData($form[0]),
+                    formOverlay = $form.data('form-ajax-overlay'),
                     validation = $form.is('[data-validate]');
 
                 if (validation && $form.valid()) {
@@ -14,8 +15,20 @@
                     submitForm();
                 }
 
+                function showOverlay() {
+                    if (formOverlay) {
+                        $(formOverlay).addClass('active').spin('large', '#000');
+                    } else {
+                        $('body').spin('large', '#000');
+                    }
+                }
+
+                function hideOverlay() {
+                    $(formOverlay).removeClass('active').spin(false);
+                }
+
                 function submitForm() {
-                    $('body').spin('large', '#000');
+                    showOverlay();
 
                     $.ajax({
                         url: url,
@@ -55,7 +68,7 @@
                         console.log(jqXHR);
                         console.log(errorThrown);
                     }).always(function () {
-                        $('body').spin(false);
+                        hideOverlay();
                     });
                 }
 

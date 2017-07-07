@@ -93,7 +93,7 @@
                     <div class="col-xs-12 col-sm-6">
                         <div class="form-group">
                             <label for="feedback-form-email" class="form-label">E-mail *</label>
-                            <input id="feedback-form-name" type="email" class="form-input" name="email" required placeholder="ivanov@mail.ru">
+                            <input id="feedback-form-email" type="email" class="form-input" name="email" required placeholder="ivanov@mail.ru">
                         </div>
                     </div>
                 </div>
