@@ -54,7 +54,7 @@ gulp.task('scripts', function() {
             .pipe(gulp.dest(jsDest))
             .pipe(rename('scripts.min.js'))
             .pipe(uglify())
-        .pipe(sourcemaps.write())
+        //.pipe(sourcemaps.write())
         .pipe(gulp.dest(jsDest));
 });
 
