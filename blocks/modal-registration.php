@@ -98,14 +98,14 @@
 
     <div class="row js-input-region-city">
         <div class="col-xs-12 col-sm-6">
-            <div class="form-group">
+            <div class="form-group" style="position: relative">
                 <label class="form-label" for="registration-form-region">Регион *</label>
                 <input id="registration-form-region" type="text" name="region" class="form-input js-regions-autocomplete" required>
                 <input type="hidden" name="region_id" class="js-region-id">
             </div>
         </div>
         <div class="col-xs-12 col-sm-6">
-            <div class="form-group">
+            <div class="form-group" style="position: relative">
                 <label class="form-label" for="registration-form-city">Город *</label>
                 <input id="registration-form-city" type="text" name="city" class="form-input js-cities-autocomplete" required>
                 <input type="hidden" name="city_id" class="js-city-id">

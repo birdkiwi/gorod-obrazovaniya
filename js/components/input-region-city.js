@@ -8,16 +8,17 @@
                 selectedRegion = null,
                 selectedCity = null;
 
-            $citiesField.attr('readonly', true);
+            //$citiesField.attr('readonly', true);
 
             $regionsField.devbridgeAutocomplete({
+                appendTo: $regionsField.parent(),
                 serviceUrl: 'data/regions.json',
                 minChars: 1,
                 onSelect: function (suggestion) {
                     selectedRegion = suggestion;
 
                     if ($regionIdField.val() != suggestion.data) {
-                        $citiesField.attr('readonly', false);
+                        //$citiesField.attr('readonly', false);
                         $regionIdField.val(suggestion.data);
                         $citiesField.val('');
                         $cityIdField.val('');
@@ -28,11 +29,12 @@
                     $regionsField.val('');
                     $cityIdField.val('');
                     $citiesField.val('');
-                    $citiesField.attr('readonly', true);
+                    //$citiesField.attr('readonly', true);
                 }
             });
 
             $citiesField.devbridgeAutocomplete({
+                appendTo: $citiesField.parent(),
                 serviceUrl: function (el, query){
                     return 'data/cities.json?' + selectedRegion.data;
                 },
