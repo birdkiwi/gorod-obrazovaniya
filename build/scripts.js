@@ -28524,13 +28524,14 @@ $(document).ready(function () {
 (function( $ ) {
     $.validator.addMethod("dateRange", function(value, el, params) {
         try {
-            var dateRange = params.split(','),
+            var dateFormat = 'YYYY.MM.DD',
+                dateRange = params.split(','),
                 dateFrom = dateRange[0].split('.').reverse(),
-                timestampFrom = moment(dateFrom).unix(),
+                timestampFrom = moment(dateFrom, dateFormat).unix(),
                 dateTo = dateRange[1].split('.').reverse(),
-                timestampTo = moment(dateTo).unix(),
+                timestampTo = moment(dateTo, dateFormat).unix(),
                 dateValue = value.split('.').reverse(),
-                timestampValue = moment(dateValue).unix();
+                timestampValue = moment(dateValue, dateFormat).unix();
 
             return (timestampFrom <= timestampValue && timestampValue <= timestampTo);
         } catch(e) {
