@@ -56,7 +56,7 @@
     </nav>
 
     <div class="program-table-wrapper js-program-table-scroll">
-        <div class="program-table">
+        <div class="program-table program-table-2">
             <div class="program-table-scrollable js-program-table-scrollable">
                 <div class="program-table-timeline">
                     <div class="program-table-timeline-date">

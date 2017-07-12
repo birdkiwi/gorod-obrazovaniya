@@ -1,7 +1,6 @@
 $(document).ready(function () {
     // Horizontal scroller
     baron({
-        root: '.js-program-table-scroll',
         scroller: '.js-program-table-scrollable',
         bar: '.js-program-table-scrollbar',
         scrollingCls: '_scrolling',
@@ -14,7 +13,9 @@ $(document).ready(function () {
         backward: '.js-program-table-scroll-left'
     });
 
-    $('.program-table-hours').css('padding-top', $('.program-table-heading').height() + $('.program-table-scroll').height());
+    $('.program-table-timeline-date')
+        .css('height', $('.program-table-heading').height())
+        .css('margin-bottom', $('.program-table-scroll').height());
 
     function tableHeaderFixed() {
         var $tableHeading = $('.program-table-heading'),
@@ -35,7 +36,15 @@ $(document).ready(function () {
         }
     }
 
+    function setFullEventsWidth() {
+        var eventsViewPortWidth = $('.js-program-table-scrollable').width();
+        $('.program-table-event-global').css('width', eventsViewPortWidth);
+    }
+
     tableHeaderFixed();
+    setFullEventsWidth();
+
     $(window).scroll(tableHeaderFixed);
+    $(window).resize(setFullEventsWidth);
 });
 
