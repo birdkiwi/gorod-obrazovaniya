@@ -11,7 +11,7 @@
 <body>
 
 <?php include "blocks/offcanvas.php"; ?>
-<?php include "blocks/header.php"; ?>
+<?php include "blocks/header-not-fixed.php"; ?>
 
 <main class="main-content">
     <div class="main-heading main-heading-red">
@@ -48,7 +48,7 @@
                 </li>
                 <li class="subnav-list-item">
                     <a href="#" class="subnav-link">
-                        <span>Дополнительная программа</span>
+                        <span>Спецпроекты</span>
                     </a>
                 </li>
             </ul>
@@ -56,7 +56,7 @@
     </nav>
 
     <div class="program-table-wrapper js-program-table-scroll">
-        <div class="program-table program-table-2">
+        <div class="program-table">
             <div class="program-table-scrollable js-program-table-scrollable">
                 <div class="program-table-timeline">
                     <div class="program-table-timeline-date">
@@ -191,28 +191,28 @@
 
                                 <div class="row">
                                     <div class="col-xs-4">
-                                        <p>
+                                        <div class="program-table-event-speakers">
                                             <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                        </p>
-                                        <p>
+                                        </div>
+                                        <div class="program-table-event-speakers">
                                             <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                        </p>
+                                        </div>
                                     </div>
                                     <div class="col-xs-4">
-                                        <p>
+                                        <div class="program-table-event-speakers">
                                             <b>Людмила Мясникова</b>, председатель городского совета родительской общественности
-                                        </p>
-                                        <p>
+                                        </div>
+                                        <div class="program-table-event-speakers">
                                             <b>Анне-Берит Кавли</b>, Президент Международной ассоциации по оценке учебных достижений (IEA)
-                                        </p>
+                                        </div>
                                     </div>
                                     <div class="col-xs-4">
-                                        <p>
+                                        <div class="program-table-event-speakers">
                                             <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                        </p>
-                                        <p>
+                                        </div>
+                                        <div class="program-table-event-speakers">
                                             <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                        </p>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
@@ -232,9 +232,12 @@
                                         12:30 — 13:30
                                     </span>
                                 </div>
-
-                                <p>Панельная дискуссия: как правильно преподавать STEM-дисциплины в школе (Dan Meyer, Arthur Benjamin и пр.)</p>
-                                <p>Панельная дискуссия: как правильно преподавать STEM-дисциплины в школе (Dan Meyer, Arthur Benjamin и пр.)</p>
+                                <div class="program-table-event-subtitle">
+                                    Панельная дискуссия: как правильно преподавать STEM-дисциплины в школе (Dan Meyer, Arthur Benjamin и пр.)
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -246,7 +249,12 @@
                                         13:30 — 14:30
                                     </span>
                                 </div>
-                                Закрытый показ: самые инновационные школы в мире и России. Оценка эффективности образования (Piter Adams. PISA) Дискуссия.
+                                <div class="program-table-event-subtitle">
+                                    Закрытый показ: самые инновационные школы в мире и России. Оценка эффективности образования (Piter Adams. PISA) Дискуссия.
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -258,7 +266,12 @@
                                         14:30 — 15:30
                                     </span>
                                 </div>
-                                Закрытый показ: самые инновационные школы в мире и России. Оценка эффективности образования (Piter Adams. PISA) Дискуссия.
+                                <div class="program-table-event-subtitle">
+                                    Закрытый показ: самые инновационные школы в мире и России. Оценка эффективности образования (Piter Adams. PISA) Дискуссия.
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -290,13 +303,9 @@
                                 <div class="program-table-event-subtitle">
                                     Christopher Emdin. Учить учителей создавать магию на уроках
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотрудников
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                             <a href="#" class="program-table-event program-table-event-height-30">
                                 <div class="program-table-event-meta">
@@ -304,7 +313,12 @@
                                         11:30 — 12:00
                                     </span>
                                 </div>
-                                Christopher Emdin. Учить учителей создавать магию на уроках
+                                <div class="program-table-event-subtitle">
+                                    Christopher Emdin. Учить учителей создавать магию на уроках
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -333,6 +347,10 @@
                                     </span>
                                 </div>
                                 Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
+
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -344,7 +362,12 @@
                                         14:00 — 14:45
                                     </span>
                                 </div>
-                                BYOD (про формы педагогической работы)
+                                <div class="program-table-event-subtitle">
+                                    BYOD (про формы педагогической работы)
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -368,7 +391,12 @@
                                         11:00 — 11:30
                                     </span>
                                 </div>
-                                Блоггер-учитель: создание собственного бренда
+                                <div class="program-table-event-subtitle">
+                                    Блоггер-учитель: создание собственного бренда
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                             <a href="#" class="program-table-event program-table-event-height-30">
                                 <div class="program-table-event-meta">
@@ -376,7 +404,12 @@
                                         11:30 — 12:00
                                     </span>
                                 </div>
-                                Christopher Emdin. Учить учителей создавать магию на уроках
+                                <div class="program-table-event-subtitle">
+                                    Christopher Emdin. Учить учителей создавать магию на уроках
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -388,7 +421,12 @@
                                         12:00 — 13:00
                                     </span>
                                 </div>
-                                BYOD (про формы педагогической работы)
+                                <div class="program-table-event-subtitle">
+                                    BYOD (про формы педагогической работы)
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -400,7 +438,12 @@
                                         13:00 — 14:00
                                     </span>
                                 </div>
-                                Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
+                                <div class="program-table-event-subtitle">
+                                    Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -412,7 +455,12 @@
                                         14:00 — 14:45
                                     </span>
                                 </div>
-                                BYOD (про формы педагогической работы)
+                                <div class="program-table-event-subtitle">
+                                    BYOD (про формы педагогической работы)
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -436,7 +484,12 @@
                                         11:00 — 11:30
                                     </span>
                                 </div>
-                                Блоггер-учитель: создание собственного бренда
+                                <div class="program-table-event-subtitle">
+                                    Блоггер-учитель: создание собственного бренда
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                             <a href="#" class="program-table-event program-table-event-height-30">
                                 <div class="program-table-event-meta">
@@ -444,7 +497,12 @@
                                         11:30 — 12:00
                                     </span>
                                 </div>
-                                Christopher Emdin. Учить учителей создавать магию на уроках
+                                <div class="program-table-event-subtitle">
+                                    Christopher Emdin. Учить учителей создавать магию на уроках
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -456,7 +514,12 @@
                                         12:00 — 13:00
                                     </span>
                                 </div>
-                                BYOD (про формы педагогической работы)
+                                <div class="program-table-event-subtitle">
+                                    BYOD (про формы педагогической работы)
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -468,7 +531,12 @@
                                         13:00 — 14:00
                                     </span>
                                 </div>
-                                Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
+                                <div class="program-table-event-subtitle">
+                                    Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -480,11 +548,15 @@
                                         14:00 — 14:45
                                     </span>
                                 </div>
-                                BYOD (про формы педагогической работы)
+                                <div class="program-table-event-subtitle">
+                                    BYOD (про формы педагогической работы)
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
                     </div>
-
                     <div class="program-table-column">
                         <!-- 9:00 — 10:00 -->
                         <div class="program-table-column-hour">
@@ -504,7 +576,12 @@
                                         11:00 — 11:30
                                     </span>
                                 </div>
-                                Блоггер-учитель: создание собственного бренда
+                                <div class="program-table-event-subtitle">
+                                    Блоггер-учитель: создание собственного бренда
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                             <a href="#" class="program-table-event program-table-event-height-30">
                                 <div class="program-table-event-meta">
@@ -512,7 +589,12 @@
                                         11:30 — 12:00
                                     </span>
                                 </div>
-                                Christopher Emdin. Учить учителей создавать магию на уроках
+                                <div class="program-table-event-subtitle">
+                                    Christopher Emdin. Учить учителей создавать магию на уроках
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -524,7 +606,12 @@
                                         12:00 — 13:00
                                     </span>
                                 </div>
-                                BYOD (про формы педагогической работы)
+                                <div class="program-table-event-subtitle">
+                                    BYOD (про формы педагогической работы)
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -536,7 +623,12 @@
                                         13:00 — 14:00
                                     </span>
                                 </div>
-                                Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
+                                <div class="program-table-event-subtitle">
+                                    Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -548,11 +640,15 @@
                                         14:00 — 14:45
                                     </span>
                                 </div>
-                                BYOD (про формы педагогической работы)
+                                <div class="program-table-event-subtitle">
+                                    BYOD (про формы педагогической работы)
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
                     </div>
-
                     <div class="program-table-column">
                         <!-- 9:00 — 10:00 -->
                         <div class="program-table-column-hour">
@@ -572,7 +668,12 @@
                                         11:00 — 11:30
                                     </span>
                                 </div>
-                                Блоггер-учитель: создание собственного бренда
+                                <div class="program-table-event-subtitle">
+                                    Блоггер-учитель: создание собственного бренда
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                             <a href="#" class="program-table-event program-table-event-height-30">
                                 <div class="program-table-event-meta">
@@ -580,7 +681,12 @@
                                         11:30 — 12:00
                                     </span>
                                 </div>
-                                Christopher Emdin. Учить учителей создавать магию на уроках
+                                <div class="program-table-event-subtitle">
+                                    Christopher Emdin. Учить учителей создавать магию на уроках
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -592,7 +698,12 @@
                                         12:00 — 13:00
                                     </span>
                                 </div>
-                                BYOD (про формы педагогической работы)
+                                <div class="program-table-event-subtitle">
+                                    BYOD (про формы педагогической работы)
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -604,7 +715,12 @@
                                         13:00 — 14:00
                                     </span>
                                 </div>
-                                Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
+                                <div class="program-table-event-subtitle">
+                                    Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -616,11 +732,15 @@
                                         14:00 — 14:45
                                     </span>
                                 </div>
-                                BYOD (про формы педагогической работы)
+                                <div class="program-table-event-subtitle">
+                                    BYOD (про формы педагогической работы)
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
                     </div>
-
                     <div class="program-table-column">
                         <!-- 9:00 — 10:00 -->
                         <div class="program-table-column-hour">
@@ -640,7 +760,12 @@
                                         11:00 — 11:30
                                     </span>
                                 </div>
-                                Блоггер-учитель: создание собственного бренда
+                                <div class="program-table-event-subtitle">
+                                    Блоггер-учитель: создание собственного бренда
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                             <a href="#" class="program-table-event program-table-event-height-30">
                                 <div class="program-table-event-meta">
@@ -648,7 +773,12 @@
                                         11:30 — 12:00
                                     </span>
                                 </div>
-                                Christopher Emdin. Учить учителей создавать магию на уроках
+                                <div class="program-table-event-subtitle">
+                                    Christopher Emdin. Учить учителей создавать магию на уроках
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -660,7 +790,12 @@
                                         12:00 — 13:00
                                     </span>
                                 </div>
-                                BYOD (про формы педагогической работы)
+                                <div class="program-table-event-subtitle">
+                                    BYOD (про формы педагогической работы)
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -672,7 +807,12 @@
                                         13:00 — 14:00
                                     </span>
                                 </div>
-                                Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
+                                <div class="program-table-event-subtitle">
+                                    Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -684,11 +824,15 @@
                                         14:00 — 14:45
                                     </span>
                                 </div>
-                                BYOD (про формы педагогической работы)
+                                <div class="program-table-event-subtitle">
+                                    BYOD (про формы педагогической работы)
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
                     </div>
-
                     <div class="program-table-column">
                         <!-- 9:00 — 10:00 -->
                         <div class="program-table-column-hour">
@@ -708,7 +852,12 @@
                                         11:00 — 11:30
                                     </span>
                                 </div>
-                                Блоггер-учитель: создание собственного бренда
+                                <div class="program-table-event-subtitle">
+                                    Блоггер-учитель: создание собственного бренда
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                             <a href="#" class="program-table-event program-table-event-height-30">
                                 <div class="program-table-event-meta">
@@ -716,7 +865,12 @@
                                         11:30 — 12:00
                                     </span>
                                 </div>
-                                Christopher Emdin. Учить учителей создавать магию на уроках
+                                <div class="program-table-event-subtitle">
+                                    Christopher Emdin. Учить учителей создавать магию на уроках
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -728,7 +882,12 @@
                                         12:00 — 13:00
                                     </span>
                                 </div>
-                                BYOD (про формы педагогической работы)
+                                <div class="program-table-event-subtitle">
+                                    BYOD (про формы педагогической работы)
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -740,7 +899,12 @@
                                         13:00 — 14:00
                                     </span>
                                 </div>
-                                Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
+                                <div class="program-table-event-subtitle">
+                                    Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -752,11 +916,15 @@
                                         14:00 — 14:45
                                     </span>
                                 </div>
-                                BYOD (про формы педагогической работы)
+                                <div class="program-table-event-subtitle">
+                                    BYOD (про формы педагогической работы)
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
                     </div>
-
                     <div class="program-table-column">
                         <!-- 9:00 — 10:00 -->
                         <div class="program-table-column-hour">
@@ -776,7 +944,12 @@
                                         11:00 — 11:30
                                     </span>
                                 </div>
-                                Блоггер-учитель: создание собственного бренда
+                                <div class="program-table-event-subtitle">
+                                    Блоггер-учитель: создание собственного бренда
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                             <a href="#" class="program-table-event program-table-event-height-30">
                                 <div class="program-table-event-meta">
@@ -784,7 +957,12 @@
                                         11:30 — 12:00
                                     </span>
                                 </div>
-                                Christopher Emdin. Учить учителей создавать магию на уроках
+                                <div class="program-table-event-subtitle">
+                                    Christopher Emdin. Учить учителей создавать магию на уроках
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -796,7 +974,12 @@
                                         12:00 — 13:00
                                     </span>
                                 </div>
-                                BYOD (про формы педагогической работы)
+                                <div class="program-table-event-subtitle">
+                                    BYOD (про формы педагогической работы)
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -808,7 +991,12 @@
                                         13:00 — 14:00
                                     </span>
                                 </div>
-                                Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
+                                <div class="program-table-event-subtitle">
+                                    Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
 
@@ -820,7 +1008,12 @@
                                         14:00 — 14:45
                                     </span>
                                 </div>
-                                BYOD (про формы педагогической работы)
+                                <div class="program-table-event-subtitle">
+                                    BYOD (про формы педагогической работы)
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    Анне-Берит Кавли, Питер Адамс, Людмила Мясникова, Питер Адамс
+                                </div>
                             </a>
                         </div>
                     </div>

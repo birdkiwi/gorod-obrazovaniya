@@ -1,4 +1,4 @@
-<header class="main-header main-header-fixed">
+<header class="main-header">
     <div class="wrapper">
         <div class="main-header-desktop">
             <a href="index.php" class="main-header-logo">

@@ -20,19 +20,21 @@ $(document).ready(function () {
     function tableHeaderFixed() {
         var $tableHeading = $('.program-table-heading'),
             $scroller = $('.program-table-scroll'),
+            $timelineDate = $('.program-table-timeline-date'),
             scrollTop = $(window).scrollTop(),
-            tableTopPosition = $('.js-program-table-scroll').position().top,
-            headerHeight = $('.main-header').height();
+            tableTopPosition = $('.js-program-table-scroll').position().top;
 
-        if (scrollTop > tableTopPosition - headerHeight) {
-            var topPos = scrollTop - tableTopPosition + headerHeight;
+        if (scrollTop > tableTopPosition) {
+            var topPos = scrollTop - tableTopPosition;
             $scroller.addClass('with-shadow');
             $tableHeading.css('top', topPos);
             $scroller.css('margin-top', topPos);
+            $timelineDate.css('top', topPos);
         } else {
             $scroller.removeClass('with-shadow');
             $tableHeading.css('top', 0);
             $scroller.css('margin-top', 0);
+            $timelineDate.css('top', 0);
         }
     }
 

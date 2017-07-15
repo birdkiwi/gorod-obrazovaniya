@@ -1,8 +1,8 @@
 @import (less) "../../node_modules/baron/baron.css";
 
-@program-table-cell-width: 220px;
-@program-table-hour-height: 120px;
-@program-table-hour-height2: 370px;
+@program-table-cell-width: 260px;
+@program-table-hour-height: 130px;
+@program-table-hour-height-large: 200px;
 @program-table-border-color: #E0E0E0;
 
 .program-table-wrapper {
@@ -24,8 +24,8 @@
 
 .program-table-scrollable {
   height: auto !important;
-  min-height: auto !important;
-  max-height: auto !important;
+  min-height: unset !important;
+  max-height: unset !important;
 }
 
 .program-table-timeline {
@@ -41,6 +41,8 @@
 }
 
 .program-table-timeline-date {
+  position: relative;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,6 +84,14 @@
   font-size: 0.9rem;
   height: @program-table-hour-height / 4;
   color: #999999;
+}
+
+.program-table-timeline-hour-large {
+  height: @program-table-hour-height-large;
+
+  .program-table-timeline-hour-quarter {
+    height: @program-table-hour-height-large / 4;
+  }
 }
 
 .program-table-heading {
@@ -217,6 +227,42 @@
   height: @program-table-hour-height;
 }
 
+.program-table-column-hour-large {
+  height: @program-table-hour-height-large;
+
+  .program-table-event-height-15 {
+    min-height: (@program-table-hour-height-large/4)-1;
+    max-height: (@program-table-hour-height-large/4)-1;
+  }
+
+  .program-table-event-height-30 {
+    min-height: (@program-table-hour-height-large/2)-1;
+    max-height: (@program-table-hour-height-large/2)-1;
+  }
+
+  .program-table-event-height-45 {
+    min-height: ((@program-table-hour-height-large/4)*3)-1;
+    max-height: ((@program-table-hour-height-large/4)*3)-1;
+  }
+
+  .program-table-event-height-60 {
+    min-height: (@program-table-hour-height-large)-1;
+    max-height: (@program-table-hour-height-large)-1;
+  }
+
+  .program-table-event-offset-15 {
+    top: (@program-table-hour-height-large/4)-1;
+  }
+
+  .program-table-event-offset-30 {
+    top: (@program-table-hour-height-large/2)-1;
+  }
+
+  .program-table-event-offset-45 {
+    top: ((@program-table-hour-height-large/4)*3)-1;
+  }
+}
+
 .program-table-event {
   display: block;
   position: relative;
@@ -231,6 +277,7 @@
   text-overflow: ellipsis;
   text-decoration: none;
   outline: none;
+  transition: background-color 200ms;
 
   &::after {
     content: '';
@@ -241,6 +288,7 @@
     width: 100%;
     height: 15px;
     background: linear-gradient(to bottom, transparent, #fff);
+    transition: all 200ms;
   }
 
   &:hover,
@@ -248,12 +296,17 @@
     color: #666666;
     z-index: 5;
     max-height: none;
-    box-shadow: 0 0 0 1px @program-table-border-color, 0 0 25px -5px rgba(0, 0, 0, 0.35), 0 0 0 1px @c-blue inset;
+    background: #fbfbfb;
+    transition: background-color 200ms;
+    //box-shadow: 0 0 0 1px @program-table-border-color, 0 0 25px -5px rgba(0, 0, 0, 0.35), 0 0 0 1px @c-blue inset;
 
     &::after {
-      bottom: 1px;
+      opacity: 0;
+      /*bottom: 1px;
       left: 1px;
-      width: calc(~"100% - 2px");
+      width: calc(~"100% - 2px");*/
+      background: linear-gradient(to bottom, transparent, #fbfbfb);
+      transition: all 200ms;
     }
   }
 
@@ -287,7 +340,7 @@
 }
 
 .program-table-event-subtitle {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   margin-bottom: 3px;
   font-weight: bold;
 }
@@ -334,50 +387,4 @@
 
 .program-table-event-offset-45 {
   top: ((@program-table-hour-height/4)*3)-1;
-}
-
-.program-table-2 {
-  .program-table-timeline-hour {
-    height: @program-table-hour-height2;
-  }
-
-  .program-table-timeline-hour-quarter {
-    height: @program-table-hour-height2 / 4;
-  }
-
-  .program-table-column-hour {
-    height: @program-table-hour-height2;
-  }
-
-  .program-table-event-height-15 {
-    min-height: (@program-table-hour-height2/4)-1;
-    max-height: (@program-table-hour-height2/4)-1;
-  }
-
-  .program-table-event-height-30 {
-    min-height: (@program-table-hour-height2/2)-1;
-    max-height: (@program-table-hour-height2/2)-1;
-  }
-
-  .program-table-event-height-45 {
-    min-height: ((@program-table-hour-height2/4)*3)-1;
-    max-height: ((@program-table-hour-height2/4)*3)-1;
-  }
-
-  .program-table-event-height-60 {
-    min-height: (@program-table-hour-height2)-1;
-    max-height: (@program-table-hour-height2)-1;
-  }
-
-  .program-table-event-offset-15 {
-    top: (@program-table-hour-height2/4)-1;
-  }
-
-  .program-table-event-offset-30 {
-    top: (@program-table-hour-height2/2)-1;
-  }
-
-  .program-table-event-offset-45 {
-    top: ((@program-table-hour-height2/4)*3)-1;
-  }
 }
