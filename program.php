@@ -11,7 +11,7 @@
 <body>
 
 <?php include "blocks/offcanvas.php"; ?>
-<?php include "blocks/header-not-fixed.php"; ?>
+<?php include "blocks/header-user-program.php"; ?>
 
 <main class="main-content">
     <div class="main-heading main-heading-red">
@@ -163,10 +163,12 @@
                         <div class="program-table-column-hour">
                             <a href="#" class="program-table-event program-table-event-global program-table-event-height-60">
                                 <div class="program-table-event-meta">
-                                    
                                     <span class="program-table-event-meta-date">
                                         09:00 — 10:00
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
 
                                 <div class="program-table-event-title">
@@ -179,10 +181,12 @@
                         <div class="program-table-column-hour">
                             <a href="#" class="program-table-event program-table-event-global program-table-event-height-60">
                                 <div class="program-table-event-meta">
-                                    
                                     <span class="program-table-event-meta-date">
                                         10:00 — 11:00
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
 
                                 <div class="program-table-event-title">
@@ -191,28 +195,34 @@
 
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-4">
-                                        <p>
-                                            <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                        </p>
-                                        <p>
-                                            <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                        </p>
+                                        <div class="program-table-event-speakers">
+                                            <p>
+                                                <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                            </p>
+                                            <p>
+                                                <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                            </p>
+                                        </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-4">
-                                        <p>
-                                            <b>Людмила Мясникова</b>, председатель городского совета родительской общественности
-                                        </p>
-                                        <p>
-                                            <b>Анне-Берит Кавли</b>, Президент Международной ассоциации по оценке учебных достижений (IEA)
-                                        </p>
+                                        <div class="program-table-event-speakers">
+                                            <p>
+                                                <b>Людмила Мясникова</b>, председатель городского совета родительской общественности
+                                            </p>
+                                            <p>
+                                                <b>Анне-Берит Кавли</b>, Президент Международной ассоциации по оценке учебных достижений (IEA)
+                                            </p>
+                                        </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-4">
-                                        <p>
-                                            <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                        </p>
-                                        <p>
-                                            <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                        </p>
+                                        <div class="program-table-event-speakers">
+                                            <p>
+                                                <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                            </p>
+                                            <p>
+                                                <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
@@ -227,20 +237,24 @@
                         <div class="program-table-column-hour program-table-column-hour-large">
                             <a href="#" class="program-table-event program-table-event-offset-30 program-table-event-height-60">
                                 <div class="program-table-event-meta">
-                                    
                                     <span class="program-table-event-meta-date">
                                         12:30 — 13:30
                                     </span>
+                                    <div class="program-table-event-meta-fav active" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     Панельная дискуссия: как правильно преподавать STEM-дисциплины в школе (Dan Meyer, Arthur Benjamin и пр.)
                                 </div>
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
 
@@ -251,16 +265,21 @@
                                     <span class="program-table-event-meta-date">
                                         13:30 — 14:30
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     Закрытый показ: самые инновационные школы в мире и России. Оценка эффективности образования (Piter Adams. PISA) Дискуссия.
                                 </div>
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
 
@@ -271,16 +290,21 @@
                                     <span class="program-table-event-meta-date">
                                         14:30 — 15:30
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     Закрытый показ: самые инновационные школы в мире и России. Оценка эффективности образования (Piter Adams. PISA) Дискуссия.
                                 </div>
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
 
@@ -308,34 +332,42 @@
                                     <span class="program-table-event-meta-date">
                                         11:00 — 11:30
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     Christopher Emdin. Учить учителей создавать магию на уроках
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотрудников
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотрудников
+                                    </p>
+                                </div>
                             </a>
                             <a href="#" class="program-table-event program-table-event-height-30">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
                                         11:30 — 12:00
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     Christopher Emdin. Учить учителей создавать магию на уроках
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
 
@@ -346,17 +378,21 @@
                                     <span class="program-table-event-meta-date">
                                         12:00 — 13:00
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     BYOD (про формы педагогической работы)
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
 
@@ -367,17 +403,21 @@
                                     <span class="program-table-event-meta-date">
                                         13:00 — 14:00
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
 
@@ -388,17 +428,21 @@
                                     <span class="program-table-event-meta-date">
                                         14:00 — 14:45
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     BYOD (про формы педагогической работы)
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -421,34 +465,42 @@
                                     <span class="program-table-event-meta-date">
                                         11:00 — 11:30
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     Christopher Emdin. Учить учителей создавать магию на уроках
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотрудников
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотрудников
+                                    </p>
+                                </div>
                             </a>
                             <a href="#" class="program-table-event program-table-event-height-30">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
                                         11:30 — 12:00
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     Christopher Emdin. Учить учителей создавать магию на уроках
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
 
@@ -459,17 +511,21 @@
                                     <span class="program-table-event-meta-date">
                                         12:00 — 13:00
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     BYOD (про формы педагогической работы)
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
 
@@ -480,17 +536,21 @@
                                     <span class="program-table-event-meta-date">
                                         13:00 — 14:00
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
 
@@ -501,17 +561,21 @@
                                     <span class="program-table-event-meta-date">
                                         14:00 — 14:45
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     BYOD (про формы педагогической работы)
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -533,34 +597,42 @@
                                     <span class="program-table-event-meta-date">
                                         11:00 — 11:30
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     Christopher Emdin. Учить учителей создавать магию на уроках
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотрудников
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотрудников
+                                    </p>
+                                </div>
                             </a>
                             <a href="#" class="program-table-event program-table-event-height-30">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
                                         11:30 — 12:00
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     Christopher Emdin. Учить учителей создавать магию на уроках
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
 
@@ -571,17 +643,21 @@
                                     <span class="program-table-event-meta-date">
                                         12:00 — 13:00
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     BYOD (про формы педагогической работы)
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
 
@@ -592,17 +668,21 @@
                                     <span class="program-table-event-meta-date">
                                         13:00 — 14:00
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
 
@@ -613,17 +693,21 @@
                                     <span class="program-table-event-meta-date">
                                         14:00 — 14:45
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     BYOD (про формы педагогической работы)
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -645,34 +729,42 @@
                                     <span class="program-table-event-meta-date">
                                         11:00 — 11:30
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     Christopher Emdin. Учить учителей создавать магию на уроках
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотрудников
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотрудников
+                                    </p>
+                                </div>
                             </a>
                             <a href="#" class="program-table-event program-table-event-height-30">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
                                         11:30 — 12:00
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     Christopher Emdin. Учить учителей создавать магию на уроках
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
 
@@ -683,17 +775,21 @@
                                     <span class="program-table-event-meta-date">
                                         12:00 — 13:00
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     BYOD (про формы педагогической работы)
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
 
@@ -704,17 +800,21 @@
                                     <span class="program-table-event-meta-date">
                                         13:00 — 14:00
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
 
@@ -725,17 +825,21 @@
                                     <span class="program-table-event-meta-date">
                                         14:00 — 14:45
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     BYOD (про формы педагогической работы)
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -757,34 +861,42 @@
                                     <span class="program-table-event-meta-date">
                                         11:00 — 11:30
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     Christopher Emdin. Учить учителей создавать магию на уроках
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотрудников
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотрудников
+                                    </p>
+                                </div>
                             </a>
                             <a href="#" class="program-table-event program-table-event-height-30">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
                                         11:30 — 12:00
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     Christopher Emdin. Учить учителей создавать магию на уроках
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
 
@@ -795,17 +907,21 @@
                                     <span class="program-table-event-meta-date">
                                         12:00 — 13:00
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     BYOD (про формы педагогической работы)
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
 
@@ -816,17 +932,21 @@
                                     <span class="program-table-event-meta-date">
                                         13:00 — 14:00
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
                             </a>
                         </div>
 
@@ -837,353 +957,21 @@
                                     <span class="program-table-event-meta-date">
                                         14:00 — 14:45
                                     </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
                                 </div>
                                 <div class="program-table-event-subtitle">
                                     BYOD (про формы педагогической работы)
                                 </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="program-table-column">
-                        <!-- 9:00 — 10:00 -->
-                        <div class="program-table-column-hour">
-
-                        </div>
-
-                        <!-- 10:00 — 11:00 -->
-                        <div class="program-table-column-hour">
-
-                        </div>
-
-                        <!-- 11:00 — 12:00 -->
-                        <div class="program-table-column-hour program-table-column-hour-large">
-                            <a href="#" class="program-table-event program-table-event-height-30">
-                                <div class="program-table-event-meta">
-                                    <span class="program-table-event-meta-date">
-                                        11:00 — 11:30
-                                    </span>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
                                 </div>
-                                <div class="program-table-event-subtitle">
-                                    Christopher Emdin. Учить учителей создавать магию на уроках
-                                </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотрудников
-                                </p>
-                            </a>
-                            <a href="#" class="program-table-event program-table-event-height-30">
-                                <div class="program-table-event-meta">
-                                    <span class="program-table-event-meta-date">
-                                        11:30 — 12:00
-                                    </span>
-                                </div>
-                                <div class="program-table-event-subtitle">
-                                    Christopher Emdin. Учить учителей создавать магию на уроках
-                                </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
-                            </a>
-                        </div>
-
-                        <!-- 12:00 — 13:00 -->
-                        <div class="program-table-column-hour program-table-column-hour-large">
-                            <a href="#" class="program-table-event program-table-event-height-60">
-                                <div class="program-table-event-meta">
-                                    <span class="program-table-event-meta-date">
-                                        12:00 — 13:00
-                                    </span>
-                                </div>
-                                <div class="program-table-event-subtitle">
-                                    BYOD (про формы педагогической работы)
-                                </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
-                            </a>
-                        </div>
-
-                        <!-- 13:00 — 14:00 -->
-                        <div class="program-table-column-hour program-table-column-hour-large">
-                            <a href="#" class="program-table-event program-table-event-height-60">
-                                <div class="program-table-event-meta">
-                                    <span class="program-table-event-meta-date">
-                                        13:00 — 14:00
-                                    </span>
-                                </div>
-                                <div class="program-table-event-subtitle">
-                                    Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
-                                </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
-                            </a>
-                        </div>
-
-                        <!-- 14:00 — 15:00 -->
-                        <div class="program-table-column-hour program-table-column-hour-large">
-                            <a href="#" class="program-table-event program-table-event-height-45">
-                                <div class="program-table-event-meta">
-                                    <span class="program-table-event-meta-date">
-                                        14:00 — 14:45
-                                    </span>
-                                </div>
-                                <div class="program-table-event-subtitle">
-                                    BYOD (про формы педагогической работы)
-                                </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="program-table-column">
-                        <!-- 9:00 — 10:00 -->
-                        <div class="program-table-column-hour">
-
-                        </div>
-
-                        <!-- 10:00 — 11:00 -->
-                        <div class="program-table-column-hour">
-
-                        </div>
-
-                        <!-- 11:00 — 12:00 -->
-                        <div class="program-table-column-hour program-table-column-hour-large">
-                            <a href="#" class="program-table-event program-table-event-height-30">
-                                <div class="program-table-event-meta">
-                                    <span class="program-table-event-meta-date">
-                                        11:00 — 11:30
-                                    </span>
-                                </div>
-                                <div class="program-table-event-subtitle">
-                                    Christopher Emdin. Учить учителей создавать магию на уроках
-                                </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотрудников
-                                </p>
-                            </a>
-                            <a href="#" class="program-table-event program-table-event-height-30">
-                                <div class="program-table-event-meta">
-                                    <span class="program-table-event-meta-date">
-                                        11:30 — 12:00
-                                    </span>
-                                </div>
-                                <div class="program-table-event-subtitle">
-                                    Christopher Emdin. Учить учителей создавать магию на уроках
-                                </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
-                            </a>
-                        </div>
-
-                        <!-- 12:00 — 13:00 -->
-                        <div class="program-table-column-hour program-table-column-hour-large">
-                            <a href="#" class="program-table-event program-table-event-height-60">
-                                <div class="program-table-event-meta">
-                                    <span class="program-table-event-meta-date">
-                                        12:00 — 13:00
-                                    </span>
-                                </div>
-                                <div class="program-table-event-subtitle">
-                                    BYOD (про формы педагогической работы)
-                                </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
-                            </a>
-                        </div>
-
-                        <!-- 13:00 — 14:00 -->
-                        <div class="program-table-column-hour program-table-column-hour-large">
-                            <a href="#" class="program-table-event program-table-event-height-60">
-                                <div class="program-table-event-meta">
-                                    <span class="program-table-event-meta-date">
-                                        13:00 — 14:00
-                                    </span>
-                                </div>
-                                <div class="program-table-event-subtitle">
-                                    Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
-                                </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
-                            </a>
-                        </div>
-
-                        <!-- 14:00 — 15:00 -->
-                        <div class="program-table-column-hour program-table-column-hour-large">
-                            <a href="#" class="program-table-event program-table-event-height-45">
-                                <div class="program-table-event-meta">
-                                    <span class="program-table-event-meta-date">
-                                        14:00 — 14:45
-                                    </span>
-                                </div>
-                                <div class="program-table-event-subtitle">
-                                    BYOD (про формы педагогической работы)
-                                </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="program-table-column">
-                        <!-- 9:00 — 10:00 -->
-                        <div class="program-table-column-hour">
-
-                        </div>
-
-                        <!-- 10:00 — 11:00 -->
-                        <div class="program-table-column-hour">
-
-                        </div>
-
-                        <!-- 11:00 — 12:00 -->
-                        <div class="program-table-column-hour program-table-column-hour-large">
-                            <a href="#" class="program-table-event program-table-event-height-30">
-                                <div class="program-table-event-meta">
-                                    <span class="program-table-event-meta-date">
-                                        11:00 — 11:30
-                                    </span>
-                                </div>
-                                <div class="program-table-event-subtitle">
-                                    Christopher Emdin. Учить учителей создавать магию на уроках
-                                </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотрудников
-                                </p>
-                            </a>
-                            <a href="#" class="program-table-event program-table-event-height-30">
-                                <div class="program-table-event-meta">
-                                    <span class="program-table-event-meta-date">
-                                        11:30 — 12:00
-                                    </span>
-                                </div>
-                                <div class="program-table-event-subtitle">
-                                    Christopher Emdin. Учить учителей создавать магию на уроках
-                                </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
-                            </a>
-                        </div>
-
-                        <!-- 12:00 — 13:00 -->
-                        <div class="program-table-column-hour program-table-column-hour-large">
-                            <a href="#" class="program-table-event program-table-event-height-60">
-                                <div class="program-table-event-meta">
-                                    <span class="program-table-event-meta-date">
-                                        12:00 — 13:00
-                                    </span>
-                                </div>
-                                <div class="program-table-event-subtitle">
-                                    BYOD (про формы педагогической работы)
-                                </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
-                            </a>
-                        </div>
-
-                        <!-- 13:00 — 14:00 -->
-                        <div class="program-table-column-hour program-table-column-hour-large">
-                            <a href="#" class="program-table-event program-table-event-height-60">
-                                <div class="program-table-event-meta">
-                                    <span class="program-table-event-meta-date">
-                                        13:00 — 14:00
-                                    </span>
-                                </div>
-                                <div class="program-table-event-subtitle">
-                                    Coursera, Udemy, Udacity, EdX, Lektorium, Stepik. MOOC в контексте смешанного обучения
-                                </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
-                            </a>
-                        </div>
-
-                        <!-- 14:00 — 15:00 -->
-                        <div class="program-table-column-hour program-table-column-hour-large">
-                            <a href="#" class="program-table-event program-table-event-height-45">
-                                <div class="program-table-event-meta">
-                                    <span class="program-table-event-meta-date">
-                                        14:00 — 14:45
-                                    </span>
-                                </div>
-                                <div class="program-table-event-subtitle">
-                                    BYOD (про формы педагогической работы)
-                                </div>
-
-                                <p>
-                                    <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </p>
-                                <p>
-                                    <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
-                                </p>
                             </a>
                         </div>
                     </div>

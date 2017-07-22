@@ -43,6 +43,7 @@
                     <div class="form-control-photo-area"></div>
 
                     <input id="registration-form-photo" type="file" accept="image/*" name="photo" class="form-control-photo-input js-input-photo" required>
+                    <input type="text" name="photo-crop-base64" class="js-input-photo-base64" style="position:absolute; visibility:hidden;">
 
                     <button tabindex="-1" class="button button-blue js-input-file-title" data-input-file-default-title="Выбрать файл">Выбрать файл</button>
                 </div>

@@ -20217,9 +20217,9 @@ return $;
 }));
 /*************************
  * Croppie
- * Copyright 2016
+ * Copyright 2017
  * Foliotek
- * Version: 2.4.1
+ * Version: 2.5.0
  *************************/
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
@@ -20372,30 +20372,51 @@ return $;
     }
 
     /* Utilities */
-    function loadImage(src, imageEl) {
+    function loadImage(src, imageEl, doExif) {
         var img = imageEl || new Image();
         img.style.opacity = 0;
 
         return new Promise(function (resolve) {
-            if (img.src === src) {
-                // If image source hasn't changed resolve immediately
-                resolve(img);
-            } 
-            else {
-                img.removeAttribute('crossOrigin');
-                if (src.match(/^https?:\/\/|^\/\//)) {
-                    img.setAttribute('crossOrigin', 'anonymous');
-                }
-                img.onload = function () {
-                    setTimeout(function () {
-                        resolve(img);
-                    }, 1);
-                }
-                img.src = src;
+            function _resolve() {
+                setTimeout(function(){
+                    resolve(img);
+                }, 1);
             }
+
+            if (img.src === src) {// If image source hasn't changed resolve immediately
+                _resolve();
+                return;
+            } 
+
+            img.exifdata = null;
+            img.removeAttribute('crossOrigin');
+            if (src.match(/^https?:\/\/|^\/\//)) {
+                img.setAttribute('crossOrigin', 'anonymous');
+            }
+            img.onload = function () {
+                if (doExif) {
+                    EXIF.getData(img, function () {
+                        _resolve();
+                    });    
+                }
+                else {
+                    _resolve();
+                }
+            };
+            img.src = src;
         });
     }
 
+    function naturalImageDimensions(img) {
+        var w = img.naturalWidth;
+        var h = img.naturalHeight;
+        if (img.exifdata && img.exifdata.Orientation >= 5) {
+            var x= w;
+            w = h;
+            h = x;
+        }
+        return { width: w, height: h };
+    }
 
     /* CSS Transform Prototype */
     var TRANSLATE_OPTS = {
@@ -20463,15 +20484,8 @@ return $;
         return this.x + 'px ' + this.y + 'px';
     };
 
-    function getExifOrientation (img, cb) {
-        if (!window.EXIF) {
-            cb(0);
-        }
-
-        EXIF.getData(img, function () {
-            var orientation = EXIF.getTag(this, 'Orientation');
-            cb(orientation);
-        });
+    function getExifOrientation (img) {
+        return img.exifdata.Orientation;
     }
 
     function drawCanvas(canvas, img, orientation) {
@@ -20537,14 +20551,13 @@ return $;
         var self = this,
             contClass = 'croppie-container',
             customViewportClass = self.options.viewport.type ? 'cr-vp-' + self.options.viewport.type : null,
-            boundary, img, viewport, overlay, canvas, bw, bh;
+            boundary, img, viewport, overlay, bw, bh;
 
         self.options.useCanvas = self.options.enableOrientation || _hasExif.call(self);
         // Properties on class
         self.data = {};
         self.elements = {};
 
-        // Generating Markup
         boundary = self.elements.boundary = document.createElement('div');
         viewport = self.elements.viewport = document.createElement('div');
         img = self.elements.img = document.createElement('img');
@@ -20598,6 +20611,10 @@ return $;
         // if (self.options.enableOrientation) {
         //     _initRotationControls.call(self);
         // }
+
+        if (self.options.enableResize) {
+            _initializeResize.call(self);
+        }
     }
 
     // function _initRotationControls () {
@@ -20632,6 +20649,143 @@ return $;
 
     function _hasExif() {
         return this.options.enableExif && window.EXIF;
+    }
+
+    function _initializeResize () {
+        var self = this;
+        var wrap = document.createElement('div');
+        var isDragging = false;
+        var direction;
+        var originalX;
+        var originalY;
+        var minSize = 50;
+        var maxWidth;
+        var maxHeight;
+        var vr;
+        var hr;
+
+        addClass(wrap, 'cr-resizer');
+        css(wrap, {
+            width: this.options.viewport.width + 'px',
+            height: this.options.viewport.height + 'px'
+        });
+
+        if (this.options.resizeControls.height) {
+            vr = document.createElement('div');
+            addClass(vr, 'cr-resizer-vertical');
+            wrap.appendChild(vr);
+        }
+
+        if (this.options.resizeControls.width) {
+            hr = document.createElement('div');
+            addClass(hr, 'cr-resizer-horisontal');
+            wrap.appendChild(hr);
+        }
+
+        function mouseDown(ev) {
+            if (ev.button !== undefined && ev.button !== 0) return;
+
+            ev.preventDefault();
+            if (isDragging) {
+                return;
+            }
+
+            var overlayRect = self.elements.overlay.getBoundingClientRect();
+
+            isDragging = true;
+            originalX = ev.pageX;
+            originalY = ev.pageY;
+            direction = ev.currentTarget.className.indexOf('vertical') !== -1 ? 'v' : 'h';
+            maxWidth = overlayRect.width;
+            maxHeight = overlayRect.height;
+
+            if (ev.touches) {
+                var touches = ev.touches[0];
+                originalX = touches.pageX;
+                originalY = touches.pageY;
+            }
+
+            window.addEventListener('mousemove', mouseMove);
+            window.addEventListener('touchmove', mouseMove);
+            window.addEventListener('mouseup', mouseUp);
+            window.addEventListener('touchend', mouseUp);
+            document.body.style[CSS_USERSELECT] = 'none';
+        }
+
+        function mouseMove(ev) {
+            var pageX = ev.pageX;
+            var pageY = ev.pageY;
+
+            ev.preventDefault();
+
+            if (ev.touches) {
+                var touches = ev.touches[0];
+                pageX = touches.pageX;
+                pageY = touches.pageY;
+            }
+
+            var deltaX = pageX - originalX;
+            var deltaY = pageY - originalY;
+            var newHeight = self.options.viewport.height + deltaY;
+            var newWidth = self.options.viewport.width + deltaX;
+
+            if (direction === 'v' && newHeight >= minSize && newHeight <= maxHeight) {
+                css(wrap, {
+                    height: newHeight + 'px'
+                });
+
+                self.options.boundary.height += deltaY;
+                css(self.elements.boundary, {
+                    height: self.options.boundary.height + 'px'
+                });
+
+                self.options.viewport.height += deltaY;
+                css(self.elements.viewport, {
+                    height: self.options.viewport.height + 'px'
+                });
+            }
+            else if (direction === 'h' && newWidth >= minSize && newWidth <= maxWidth) {
+                css(wrap, {
+                    width: newWidth + 'px'
+                });
+
+                self.options.boundary.width += deltaX;
+                css(self.elements.boundary, {
+                    width: self.options.boundary.width + 'px'
+                });
+
+                self.options.viewport.width += deltaX;
+                css(self.elements.viewport, {
+                    width: self.options.viewport.width + 'px'
+                }); 
+            }
+
+            _updateOverlay.call(self);
+            _updateZoomLimits.call(self);
+            _updateCenterPoint.call(self);
+            _triggerUpdate.call(self);
+            originalY = pageY;
+            originalX = pageX;
+        }
+
+        function mouseUp() {
+            isDragging = false;
+            window.removeEventListener('mousemove', mouseMove);
+            window.removeEventListener('touchmove', mouseMove);
+            window.removeEventListener('mouseup', mouseUp);
+            window.removeEventListener('touchend', mouseUp);
+            document.body.style[CSS_USERSELECT] = '';
+        }
+
+        if (vr) {
+            vr.addEventListener('mousedown', mouseDown);
+        }
+
+        if (hr) {
+            hr.addEventListener('mousedown', mouseDown);
+        }
+
+        this.elements.boundary.appendChild(wrap);
     }
 
     function _setZoomerVal(v) {
@@ -20702,8 +20856,7 @@ return $;
         var self = this,
             transform = ui ? ui.transform : Transform.parse(self.elements.preview),
             vpRect = ui ? ui.viewportRect : self.elements.viewport.getBoundingClientRect(),
-            origin = ui ? ui.origin : new TransformOrigin(self.elements.preview),
-            transCss = {};
+            origin = ui ? ui.origin : new TransformOrigin(self.elements.preview);
 
         function applyCss() {
             var transCss = {};
@@ -20715,7 +20868,6 @@ return $;
         self._currentZoom = ui ? ui.value : self._currentZoom;
         transform.scale = self._currentZoom;
         applyCss();
-
 
         if (self.options.enforceBoundary) {
             var boundaries = _getVirtualBoundaries.call(self, vpRect),
@@ -20860,7 +21012,7 @@ return $;
                 }
                 self.setZoom(zoom);
             }
-            else if (ev.keyCode >= 37 && ev.keyCode <= 40) {
+            else if (self.options.enableKeyMovement && (ev.keyCode >= 37 && ev.keyCode <= 40)) {
                 ev.preventDefault();
                 var movement = parseKeyDown(ev.keyCode);
 
@@ -20901,6 +21053,8 @@ return $;
         }
 
         function mouseDown(ev) {
+            if (ev.button !== undefined && ev.button !== 0) return;
+
             ev.preventDefault();
             if (isDragging) return;
             isDragging = true;
@@ -21027,20 +21181,13 @@ return $;
 
     function _updatePropertiesFromImage() {
         var self = this,
-            minZoom = 0,
-            maxZoom = 1.5,
             initialZoom = 1,
             cssReset = {},
             img = self.elements.preview,
-            zoomer = self.elements.zoomer,
+            imgData = self.elements.preview.getBoundingClientRect(),
             transformReset = new Transform(0, 0, initialZoom),
             originReset = new TransformOrigin(),
-            isVisible = _isVisible.call(self),
-            imgData,
-            vpData,
-            boundaryData,
-            minW,
-            minH;
+            isVisible = _isVisible.call(self);
 
         if (!isVisible || self.data.bound) {
             // if the croppie isn't visible or it doesn't need binding
@@ -21053,29 +21200,11 @@ return $;
         cssReset['opacity'] = 1;
         css(img, cssReset);
 
-        imgData = img.getBoundingClientRect();
-        vpData = self.elements.viewport.getBoundingClientRect();
-        boundaryData = self.elements.boundary.getBoundingClientRect();
         self._originalImageWidth = imgData.width;
         self._originalImageHeight = imgData.height;
 
         if (self.options.enableZoom) {
-            if (self.options.enforceBoundary) {
-                minW = vpData.width / imgData.width;
-                minH = vpData.height / imgData.height;
-                minZoom = Math.max(minW, minH);
-            }
-
-            if (minZoom >= maxZoom) {
-                maxZoom = minZoom + 1;
-            }
-
-            zoomer.min = fix(minZoom, 4);
-            zoomer.max = fix(maxZoom, 4);
-            var defaultInitialZoom = Math.max((boundaryData.width / imgData.width), (boundaryData.height / imgData.height));
-            initialZoom = self.data.boundZoom !== null ? self.data.boundZoom : defaultInitialZoom;
-            _setZoomerVal.call(self, initialZoom);
-            dispatchChange(zoomer);
+            _updateZoomLimits.call(self, true);
         }
         else {
             self._currentZoom = initialZoom;
@@ -21094,6 +21223,42 @@ return $;
 
         _updateCenterPoint.call(self);
         _updateOverlay.call(self);
+    }
+
+    function _updateZoomLimits (initial) {
+        var self = this,
+            minZoom = 0,
+            maxZoom = 1.5,
+            initialZoom,
+            defaultInitialZoom,
+            zoomer = self.elements.zoomer,
+            scale = parseFloat(zoomer.value),
+            boundaryData = self.elements.boundary.getBoundingClientRect(),
+            imgData = self.elements.preview.getBoundingClientRect(),
+            vpData = self.elements.viewport.getBoundingClientRect(),
+            minW,
+            minH;
+
+        if (self.options.enforceBoundary) {
+            minW = vpData.width / (initial ? imgData.width : imgData.width / scale);
+            minH = vpData.height / (initial ? imgData.height : imgData.height / scale);
+            minZoom = Math.max(minW, minH);
+        }
+
+        if (minZoom >= maxZoom) {
+            maxZoom = minZoom + 1;
+        }
+
+        zoomer.min = fix(minZoom, 4);
+        zoomer.max = fix(maxZoom, 4);
+
+        if (initial) {
+            defaultInitialZoom = Math.max((boundaryData.width / imgData.width), (boundaryData.height / imgData.height));
+            initialZoom = self.data.boundZoom !== null ? self.data.boundZoom : defaultInitialZoom;
+            _setZoomerVal.call(self, initialZoom);
+        }
+
+        dispatchChange(zoomer);
     }
 
     function _bindPoints(points) {
@@ -21150,14 +21315,11 @@ return $;
         canvas.width = img.width;
         canvas.height = img.height;
 
-        if (exif) {
-            getExifOrientation(img, function (orientation) {
-                drawCanvas(canvas, img, num(orientation, 10));
-                if (customOrientation) {
-                    drawCanvas(canvas, img, customOrientation);
-                }
-            });
-        } else if (customOrientation) {
+        if (exif && !customOrientation) {
+            var orientation = getExifOrientation(img);
+            drawCanvas(canvas, img, num(orientation || 0, 10));
+        } 
+        else if (customOrientation) {
             drawCanvas(canvas, img, customOrientation);
         }
     }
@@ -21196,22 +21358,25 @@ return $;
             ctx.fillStyle = data.backgroundColor;
             ctx.fillRect(0, 0, outWidth, outHeight);
         }
+
         // start fixing data to send to draw image for enforceBoundary: false
-        if (left < 0) {
-            startX = Math.abs(left);
-            left = 0;
-        }
-        if (top < 0) {
-            startY = Math.abs(top);
-            top = 0;
-        }
-        if (right > self._originalImageWidth) {
-            width = self._originalImageWidth - left;
-            outWidth = width;
-        }
-        if (bottom > self._originalImageHeight) {
-            height = self._originalImageHeight - top;
-            outHeight = height;
+        if (!self.options.enforceBoundary) {
+            if (left < 0) {
+                startX = Math.abs(left);
+                left = 0;
+            }
+            if (top < 0) {
+                startY = Math.abs(top);
+                top = 0;
+            }
+            if (right > self._originalImageWidth) {
+                width = self._originalImageWidth - left;
+                outWidth = width;
+            }
+            if (bottom > self._originalImageHeight) {
+                height = self._originalImageHeight - top;
+                outHeight = height;
+            }
         }
 
         if (outputRatio !== 1) {
@@ -21221,7 +21386,7 @@ return $;
             outHeight *= outputRatio;
         }
 
-        ctx.drawImage(this.elements.preview, left, top, width, height, startX, startY, outWidth, outHeight);
+        ctx.drawImage(this.elements.preview, left, top, Math.min(width, self._originalImageWidth), Math.min(height, self._originalImageHeight), startX, startY, outWidth, outHeight);
         if (circle) {
             ctx.fillStyle = '#fff';
             ctx.globalCompositeOperation = 'destination-in';
@@ -21272,7 +21437,8 @@ return $;
         var self = this,
             url,
             points = [],
-            zoom = null;
+            zoom = null,
+            hasExif = _hasExif.call(self);;
 
         if (typeof (options) === 'string') {
             url = options;
@@ -21296,47 +21462,43 @@ return $;
         self.data.url = url || self.data.url;
         self.data.boundZoom = zoom;
 
-        return loadImage(url, self.elements.img).then(function (img) {
-            if(!points.length){
-                var iWidth = img.naturalWidth;
-                var iHeight = img.naturalHeight;
-
+        return loadImage(url, self.elements.img, hasExif).then(function (img) {
+            if (!points.length) {
+                var natDim = naturalImageDimensions(img);
                 var rect = self.elements.viewport.getBoundingClientRect();
                 var aspectRatio = rect.width / rect.height;
+                var imgAspectRatio = natDim.width / natDim.height;
                 var width, height;
 
-                if( iWidth / iHeight > aspectRatio){
-                    height = iHeight;
+                if (imgAspectRatio > aspectRatio) {
+                    height = natDim.height;
                     width = height * aspectRatio;
-                }else{
-                    width = iWidth;
+                }
+                else {
+                    width = natDim.width;
                     height = width / aspectRatio;
                 }
 
-                var x0 = (iWidth - width) / 2;
-                var y0 = (iHeight - height) / 2;
+                var x0 = (natDim.width - width) / 2;
+                var y0 = (natDim.height - height) / 2;
                 var x1 = x0 + width;
                 var y1 = y0 + height;
 
                 self.data.points = [x0, y0, x1, y1];
-            } else {
-                if(self.options.relative){
-                    // de-relative points
-                    points = [
-                        points[0] * img.naturalWidth / 100,
-                        points[1] * img.naturalHeight / 100,
-                        points[2] * img.naturalWidth / 100,
-                        points[3] * img.naturalHeight / 100
-                    ];
-                }
-
-                self.data.points = points.map(function (p) {
-                    return parseFloat(p);
-                });
+            } 
+            else if (self.options.relative) {
+                points = [
+                    points[0] * img.naturalWidth / 100,
+                    points[1] * img.naturalHeight / 100,
+                    points[2] * img.naturalWidth / 100,
+                    points[3] * img.naturalHeight / 100
+                ];
             }
 
+            self.data.points = points.map(function (p) {
+                return parseFloat(p);
+            });
             if (self.options.useCanvas) {
-                self.elements.img.exifdata = null;
                 _transferImageToCanvas.call(self, options.orientation || 1);
             }
             _updatePropertiesFromImage.call(self);
@@ -21355,7 +21517,7 @@ return $;
             vpData = self.elements.viewport.getBoundingClientRect(),
             x1 = vpData.left - imgData.left,
             y1 = vpData.top - imgData.top,
-            widthDiff = (vpData.width - self.elements.viewport.offsetWidth) / 2,
+            widthDiff = (vpData.width - self.elements.viewport.offsetWidth) / 2, //border
             heightDiff = (vpData.height - self.elements.viewport.offsetHeight) / 2,
             x2 = x1 + self.elements.viewport.offsetWidth + widthDiff,
             y2 = y1 + self.elements.viewport.offsetHeight + heightDiff,
@@ -21389,7 +21551,7 @@ return $;
             data = _get.call(self),
             opts = deepExtend(RESULT_DEFAULTS, deepExtend({}, options)),
             resultType = (typeof (options) === 'string' ? options : (opts.type || 'base64')),
-            size = opts.size,
+            size = opts.size || 'viewport',
             format = opts.format,
             quality = opts.quality,
             backgroundColor = opts.backgroundColor,
@@ -21455,7 +21617,6 @@ return $;
 
         var self = this,
             canvas = self.elements.canvas,
-            img = self.elements.img,
             copy = document.createElement('canvas'),
             ornt = 1;
 
@@ -21470,6 +21631,7 @@ return $;
 
         drawCanvas(canvas, copy, ornt);
         _onZoom.call(self);
+        copy = null;
     }
 
     function _destroy() {
@@ -21565,13 +21727,19 @@ return $;
             leftClass: '',
             rightClass: ''
         },
+        resizeControls: {
+            width: true,
+            height: true
+        },
         customClass: '',
         showZoomer: true,
         enableZoom: true,
+        enableResize: false,
         mouseWheelZoom: true,
         enableExif: false,
         enforceBoundary: true,
         enableOrientation: false,
+        enableKeyMovement: true,
         update: function () { }
     };
 
@@ -21587,9 +21755,6 @@ return $;
             var data = _get.call(this);
             var points = data.points;
             if (this.options.relative) {
-                //
-                // Relativize points
-                //
                 points[0] /= this.elements.img.naturalWidth / 100;
                 points[1] /= this.elements.img.naturalHeight / 100;
                 points[2] /= this.elements.img.naturalWidth / 100;
@@ -28369,19 +28534,6 @@ return hooks;
 
 !function(){"use strict";function t(i){var s,e,r=i&&i[0]||i,o=r instanceof HTMLElement,n=o?{root:i}:i,l=!!n,a={$:c.jQuery,direction:"v",barOnCls:"_scrollbar",resizeDebounce:0,event:function(t,i,s,e){n.$(t)[e||"on"](i,s)},cssGuru:!1,impact:"scroller",position:"static"};n=n||{};for(var h in a)void 0===n[h]&&(n[h]=a[h]);s=n.$&&this instanceof n.$,n._chain?e=n.root:s?n.root=e=this:e=n.$?n.$(n.root||n.scroller):[];var u=new t.fn.constructor(e,n,l);return u.autoUpdate&&u.autoUpdate(),u}function i(t,i){var s=0,e=t;for(void 0!==e.length&&e!==c||(e=[e]);e[s];)i.call(this,e[s],s),s++}function s(){return(new Date).getTime()}function e(t,s,e){t._eventHandlers=t._eventHandlers||[{element:t.scroller,handler:function(i){t.scroll(i)},type:"scroll"},{element:t.root,handler:function(){t.update()},type:"transitionend animationend"},{element:t.scroller,handler:function(){t.update()},type:"keyup"},{element:t.bar,handler:function(i){i.preventDefault(),t.selection(),t.drag.now=1,t.draggingCls&&a(t.root).addClass(t.draggingCls)},type:"touchstart mousedown"},{element:document,handler:function(){t.selection(1),t.drag.now=0,t.draggingCls&&a(t.root).removeClass(t.draggingCls)},type:"mouseup blur touchend"},{element:document,handler:function(i){2!=i.button&&t._pos0(i)},type:"touchstart mousedown"},{element:document,handler:function(i){t.drag.now&&t.drag(i)},type:"mousemove touchmove"},{element:c,handler:function(){t.update()},type:"resize"},{element:t.root,handler:function(){t.update()},type:"sizeChange"},{element:t.clipper,handler:function(){t.clipperOnScroll()},type:"scroll"}],i(t._eventHandlers,function(t){t.element&&s(t.element,t.type,t.handler,e)})}function r(t,i,s,e){var r="data-baron-"+i+"-id";return"on"==s?t.setAttribute(r,e):"off"==s&&t.removeAttribute(r),t.getAttribute(r)}function o(t){var i=new u.prototype.constructor(t);return e(i,t.event,"on"),r(i.root,t.direction,"on",p.length),p.push(i),i.update(),i}function n(t){var i={},s=t||{};for(var e in s)s.hasOwnProperty(e)&&(i[e]=s[e]);return i}function l(t){if(this.events&&this.events[t])for(var i=0;i<this.events[t].length;i++){var s=Array.prototype.slice.call(arguments,1);this.events[t][i].apply(this,s)}}var c=function(){return this||(0,eval)("this")}(),a=c.$,h=t,u={},f=["left","top","right","bottom","width","height"],p=[],d={v:{x:"Y",pos:f[1],oppos:f[3],crossPos:f[0],crossOpPos:f[2],size:f[5],crossSize:f[4],crossMinSize:"min-"+f[4],crossMaxSize:"max-"+f[4],client:"clientHeight",crossClient:"clientWidth",scrollEdge:"scrollLeft",offset:"offsetHeight",crossOffset:"offsetWidth",offsetPos:"offsetTop",scroll:"scrollTop",scrollSize:"scrollHeight"},h:{x:"X",pos:f[0],oppos:f[2],crossPos:f[1],crossOpPos:f[3],size:f[4],crossSize:f[5],crossMinSize:"min-"+f[5],crossMaxSize:"max-"+f[5],client:"clientWidth",crossClient:"clientHeight",scrollEdge:"scrollTop",offset:"offsetWidth",crossOffset:"offsetHeight",offsetPos:"offsetLeft",scroll:"scrollLeft",scrollSize:"scrollWidth"}},v=17,g=15,m=/[\s\S]*Macintosh[\s\S]*\) Gecko[\s\S]*/,b=m.test(c.navigator&&c.navigator.userAgent);t.fn={constructor:function(t,s,e){var l=n(s);l.event=function(t,e,r,o){i(t,function(t){s.event(t,e,r,o)})},this.length=0,i.call(this,t,function(t,i){var s=r(t,l.direction),e=+s;if(e==e&&null!==s&&p[e])this[i]=p[e];else{var c=n(l);if(l.root&&l.scroller){if(c.scroller=l.$(l.scroller,t),!c.scroller.length)return}else c.scroller=t;c.root=t,this[i]=o(c)}this.length=i+1}),this.params=l},dispose:function(){var t=this.params;i(this,function(i,s){i.dispose(t),p[s]=null}),this.params=null},update:function(){var t=arguments;i(this,function(i){i.update.apply(i,t)})},baron:function(s){return s.root=[],this.params.root&&(s.scroller=this.params.scroller),i.call(this,this,function(t){s.root.push(t.root)}),s.direction="v"==this.params.direction?"h":"v",s._chain=!0,t(s)}},u.prototype={_debounce:function(t,i){var e,r,o=this,n=function(){if(o._disposed)return clearTimeout(e),void(e=o=null);var l=s()-r;l<i&&l>=0?e=setTimeout(n,i-l):(e=null,t())};return function(){r=s(),e||(e=setTimeout(n,i))}},constructor:function(t){function i(t,i){return u(t,i)[0]}function e(t){var i=this.barMinSize||20,s=t;s>0&&s<i&&(s=i),this.bar&&u(this.bar).css(this.origin.size,parseInt(s,10)+"px")}function r(t){if(this.bar){var i=u(this.bar).css(this.origin.pos),s=+t+"px";s&&s!=i&&u(this.bar).css(this.origin.pos,s)}}function o(){return m[this.origin.client]-this.barTopLimit-this.bar[this.origin.offset]}function n(t){return t*o.call(this)+this.barTopLimit}function a(t){return(t-this.barTopLimit)/o.call(this)}function h(){return!1}var u,f,p,m,C,y,z,$;if(z=s(),u=this.$=t.$,this.event=t.event,this.events={},this.root=t.root,this.scroller=i(t.scroller),this.bar=i(t.bar,this.root),m=this.track=i(t.track,this.root),!this.track&&this.bar&&(m=this.bar.parentNode),this.clipper=this.scroller.parentNode,this.direction=t.direction,this.rtl=t.rtl,this.origin=d[this.direction],this.barOnCls=t.barOnCls,this.scrollingCls=t.scrollingCls,this.draggingCls=t.draggingCls,this.impact=t.impact,this.position=t.position,this.rtl=t.rtl,this.barTopLimit=0,this.resizeDebounce=t.resizeDebounce,this.cursor=function(t){return t["client"+this.origin.x]||(((t.originalEvent||t).touches||{})[0]||{})["page"+this.origin.x]},this.pos=function(t){var i="page"+this.origin.x+"Offset",s=this.scroller[i]?i:this.origin.scroll;return void 0!==t&&(this.scroller[s]=t),this.scroller[s]},this.rpos=function(t){var i,s=this.scroller[this.origin.scrollSize]-this.scroller[this.origin.client];return i=t?this.pos(t*s):this.pos(),i/(s||1)},this.barOn=function(t){if(this.barOnCls){var i=this.scroller[this.origin.client]>=this.scroller[this.origin.scrollSize];t||i?u(this.root).hasClass(this.barOnCls)&&u(this.root).removeClass(this.barOnCls):u(this.root).hasClass(this.barOnCls)||u(this.root).addClass(this.barOnCls)}},this._pos0=function(t){p=this.cursor(t)-f},this.drag=function(t){var i=a.call(this,this.cursor(t)-p),s=this.scroller[this.origin.scrollSize]-this.scroller[this.origin.client];this.scroller[this.origin.scroll]=i*s},this.selection=function(t){this.event(document,"selectpos selectstart",h,t?"off":"on")},this.resize=function(){function t(){var t,e,r=i.scroller[i.origin.crossOffset],o=i.scroller[i.origin.crossClient],n=0;if(b?n=g:o>0&&0===r&&(r=o+v),r)if(i.barOn(),"scroller"==i.impact){var c=r-o+n;if("static"==i.position)t=i.$(i.scroller).css(i.origin.crossSize),e=i.clipper[i.origin.crossClient]+c+"px",t!=e&&i._setCrossSizes(i.scroller,e);else{var a={},h=i.rtl?"Left":"Right";"h"==i.direction&&(h="Bottom"),a["padding"+h]=c+"px",i.$(i.scroller).css(a)}}else t=i.$(i.clipper).css(i.origin.crossSize),e=o+"px",t!=e&&i._setCrossSizes(i.clipper,e);Array.prototype.unshift.call(arguments,"resize"),l.apply(i,arguments),z=s()}var i=this,e=void 0===i.resizeDebounce?300:i.resizeDebounce,r=0;s()-z<e&&(clearTimeout(C),r=e),r?C=setTimeout(t,r):t()},this.updatePositions=function(t){var i,s=this;s.bar&&(i=(m[s.origin.client]-s.barTopLimit)*s.scroller[s.origin.client]/s.scroller[s.origin.scrollSize],(t||parseInt($,10)!=parseInt(i,10))&&(e.call(s,i),$=i),f=n.call(s,s.rpos()),r.call(s,f)),Array.prototype.unshift.call(arguments,"scroll"),l.apply(s,arguments)},this.scroll=function(){var t=this;t.updatePositions(),t.scrollingCls&&(y||t.$(t.root).addClass(t.scrollingCls),clearTimeout(y),y=setTimeout(function(){t.$(t.root).removeClass(t.scrollingCls),y=void 0},300))},this.clipperOnScroll=function(){this.rtl?this.clipper[this.origin.scrollEdge]=this.clipper[this.origin.scrollSize]:this.clipper[this.origin.scrollEdge]=0},this._setCrossSizes=function(t,i){var s={};s[this.origin.crossSize]=i,s[this.origin.crossMinSize]=i,s[this.origin.crossMaxSize]=i,this.$(t).css(s)},this._dumbCss=function(i){if(!t.cssGuru){var s=i?"hidden":null,e=i?"none":null;this.$(this.clipper).css({overflow:s,msOverflowStyle:e,position:"static"==this.position?"":"relative"});var r=i?"scroll":null,o="v"==this.direction?"y":"x",n={};n["overflow-"+o]=r,n["box-sizing"]="border-box",n.margin="0",n.border="0","absolute"==this.position&&(n.position="absolute",n.top="0","h"==this.direction?n.left=n.right="0":(n.bottom="0",n.right=this.rtl?"0":"",n.left=this.rtl?"":"0")),this.$(this.scroller).css(n)}},this._dumbCss(!0),b){var S="paddingRight",_={},w=c.getComputedStyle(this.scroller)[[S]];"h"==t.direction?S="paddingBottom":t.rtl&&(S="paddingLeft");var x=parseInt(w,10);x!=x&&(x=0),_[S]=g+x+"px",u(this.scroller).css(_)}return this},update:function(t){return l.call(this,"upd",t),this.resize(1),this.updatePositions(1),this},dispose:function(t){e(this,this.event,"off"),r(this.root,t.direction,"off"),"v"==t.direction?this._setCrossSizes(this.scroller,""):this._setCrossSizes(this.clipper,""),this._dumbCss(!1),this.barOn(!0),l.call(this,"dispose"),this._disposed=!0},on:function(t,i,s){for(var e=t.split(" "),r=0;r<e.length;r++)"init"==e[r]?i.call(this,s):(this.events[e[r]]=this.events[e[r]]||[],this.events[e[r]].push(function(t){i.call(this,t||s)}))}},t.fn.constructor.prototype=t.fn,u.prototype.constructor.prototype=u.prototype,t.noConflict=function(){return c.baron=h,t},t.version="2.3.1","undefined"!=typeof module?(module.exports=t,require("./fix"),require("./pull"),require("./controls"),require("./autoUpdate")):(window.baron=t,a&&a.fn&&(a.fn.baron=t))}(),function(){var t,i=function(){return this||(0,eval)("this")}();t="undefined"!=typeof module?require("./core.js"):i.baron;var s=function(t){function i(t,i,s){var e=i,l=1==s?"pos":"oppos";o<(n.minView||0)&&(e=void 0),this.$(r[t]).css(this.origin.pos,"").css(this.origin.oppos,"").removeClass(n.outside),void 0!==e&&(e+="px",this.$(r[t]).css(this.origin[l],e).addClass(n.outside))}function s(t){try{var i=document.createEvent("WheelEvent");i.initWebKitWheelEvent(t.originalEvent.wheelDeltaX,t.originalEvent.wheelDeltaY),h.dispatchEvent(i),t.preventDefault()}catch(s){}}function e(t){var i;for(var e in t)n[e]=t[e];if(r=this.$(n.elements,this.scroller)){o=this.scroller[this.origin.client];for(var h=0;h<r.length;h++)i={},i[this.origin.size]=r[h][this.origin.offset],r[h].parentNode!==this.scroller&&this.$(r[h].parentNode).css(i),i={},i[this.origin.crossSize]=r[h].parentNode[this.origin.crossClient],this.$(r[h]).css(i),o-=r[h][this.origin.offset],a[h]=r[h].parentNode[this.origin.offsetPos],l[h]=l[h-1]||0,c[h]=c[h-1]||Math.min(a[h],0),r[h-1]&&(l[h]+=r[h-1][this.origin.offset],c[h]+=r[h-1][this.origin.offset]),0==h&&0==a[h]||(this.event(r[h],"mousewheel",s,"off"),this.event(r[h],"mousewheel",s));n.limiter&&r[0]&&(this.track&&this.track!=this.scroller?(i={},i[this.origin.pos]=r[0].parentNode[this.origin.offset],this.$(this.track).css(i)):this.barTopLimit=r[0].parentNode[this.origin.offset],this.scroll()),n.limiter===!1&&(this.barTopLimit=0)}var d={element:r,handler:function(){for(var t,i=f(this)[0].parentNode,s=i.offsetTop,e=0;e<r.length;e++)r[e]===this&&(t=e);var o=s-l[t];n.scroll?n.scroll({x1:p.scroller.scrollTop,x2:o}):p.scroller.scrollTop=o},type:"click"};n.clickable&&(this._eventHandlers.push(d),u(d.element,d.type,d.handler,"on"))}var r,o,n={outside:"",inside:"",before:"",after:"",past:"",future:"",radius:0,minView:0},l=[],c=[],a=[],h=this.scroller,u=this.event,f=this.$,p=this;this.on("init",e,t);var d=[],v=[];this.on("init scroll",function(){var t,s,e,h;if(r){var u;for(h=0;h<r.length;h++)t=0,a[h]-this.pos()<c[h]+n.radius?(t=1,s=l[h]):a[h]-this.pos()>c[h]+o-n.radius?(t=2,s=this.scroller[this.origin.client]-r[h][this.origin.offset]-l[h]-o):(t=3,s=void 0),e=!1,(a[h]-this.pos()<c[h]||a[h]-this.pos()>c[h]+o)&&(e=!0),t==d[h]&&e==v[h]||(i.call(this,h,s,t),d[h]=t,v[h]=e,u=!0);if(u)for(h=0;h<r.length;h++)1==d[h]&&n.past&&this.$(r[h]).addClass(n.past).removeClass(n.future),2==d[h]&&n.future&&this.$(r[h]).addClass(n.future).removeClass(n.past),3==d[h]?((n.future||n.past)&&this.$(r[h]).removeClass(n.past).removeClass(n.future),n.inside&&this.$(r[h]).addClass(n.inside)):n.inside&&this.$(r[h]).removeClass(n.inside),d[h]!=d[h+1]&&1==d[h]&&n.before?this.$(r[h]).addClass(n.before).removeClass(n.after):d[h]!=d[h-1]&&2==d[h]&&n.after?this.$(r[h]).addClass(n.after).removeClass(n.before):this.$(r[h]).removeClass(n.before).removeClass(n.after),n.grad&&(v[h]?this.$(r[h]).addClass(n.grad):this.$(r[h]).removeClass(n.grad))}}),this.on("resize upd",function(t){e.call(this,t&&t.fix)})};t.fn.fix=function(t){for(var i=0;this[i];)s.call(this[i],t),i++;return this}}(),function(){var t,i=function(){return this||(0,eval)("this")}();t="undefined"!=typeof module?require("./core"):i.baron;var s=i.MutationObserver||i.WebKitMutationObserver||i.MozMutationObserver||null,e=function(){function t(){o.root[o.origin.offset]?e():i()}function i(){r||(r=setInterval(function(){o.root[o.origin.offset]&&(e(),o.update())},300))}function e(){clearInterval(r),r=null}var r,o=this;if(!this._au){var n=o._debounce(function(){o.update()},300);this._observer=new s(function(){t(),o.update(),n()}),this.on("init",function(){o._observer.observe(o.root,{childList:!0,subtree:!0,characterData:!0}),t()}),this.on("dispose",function(){o._observer.disconnect(),e(),delete o._observer}),this._au=!0}};t.fn.autoUpdate=function(t){if(!s)return this;for(var i=0;this[i];)e.call(this[i],t),i++;return this}}(),function(){var t,i=function(){return this||(0,eval)("this")}();t="undefined"!=typeof module?require("./core"):i.baron;var s=function(t){var i,s,e,r,o,n=this;r=t.screen||.9,t.forward&&(i=this.$(t.forward,this.clipper),o={element:i,handler:function(){var i=n.pos()+(t.delta||30);n.pos(i)},type:"click"},this._eventHandlers.push(o),this.event(o.element,o.type,o.handler,"on")),t.backward&&(s=this.$(t.backward,this.clipper),o={element:s,handler:function(){var i=n.pos()-(t.delta||30);n.pos(i)},type:"click"},this._eventHandlers.push(o),this.event(o.element,o.type,o.handler,"on")),t.track&&(e=t.track===!0?this.track:this.$(t.track,this.clipper)[0],e&&(o={element:e,handler:function(t){if(t.target==e){var i=t["offset"+n.origin.x],s=n.bar[n.origin.offsetPos],o=0;i<s?o=-1:i>s+n.bar[n.origin.offset]&&(o=1);var l=n.pos()+o*r*n.scroller[n.origin.client];n.pos(l)}},type:"mousedown"},this._eventHandlers.push(o),this.event(o.element,o.type,o.handler,"on")))};t.fn.controls=function(t){for(var i=0;this[i];)s.call(this[i],t),i++;return this}}();
 (function( $ ) {
-    $.fn.avatarCrop = function() {
-        this.each(function() {
-            var imageInput = '';
-            var cropper = $(this).croppie({
-                viewport: {
-                    width: 300,
-                    height: 300
-                }
-            });
-        });
-    }
-}( jQuery ));
-(function( $ ) {
     $.fn.datePicker = function() {
         var lang = $('html').attr('lang');
 
@@ -28612,6 +28764,7 @@ $(document).ready(function () {
         return this.each(function() {
             var fileInput = $(this)[0],
                 $formControl = $(this).closest('.form-control-photo'),
+                $base64Input = $(this).siblings('.js-input-photo-base64'),
                 $fileDisplayArea = $(this).siblings('.form-control-photo-area'),
                 $notificationsArea = $(this).siblings('.form-control-photo-notify');
 
@@ -28629,10 +28782,31 @@ $(document).ready(function () {
                     reader.onload = function(e) {
                         $fileDisplayArea.html('');
 
-                        var img = new Image();
-                        img.src = reader.result;
+                        var $uploadCrop = $fileDisplayArea.croppie({
+                            enableExif: true,
+                            enableOrientation: true,
+                            url: reader.result,
+                            viewport: {
+                                width: 150,
+                                height: 150
+                            },
+                            boundary: {
+                                width: 200,
+                                height: 200
+                            }
+                        });
 
-                        $fileDisplayArea.append(img);
+                        function saveResult() {
+                            $uploadCrop.croppie('result', {
+                                type: 'base64'
+                            }).then(function (resp) {
+                                $base64Input.val(resp);
+                            });
+                        }
+
+                        $uploadCrop.on('update', function (ev, data) {
+                            saveResult()
+                        });
                     };
 
                     reader.readAsDataURL(file);
@@ -28873,7 +29047,6 @@ function initSideModal(content, classNames, preventOverlayClose, preventEscClose
     $wrapper.find('.js-datepicker').datePicker();
     $wrapper.find('.js-input-region-city').inputRegionCity();
     $wrapper.find('[data-form-ajax]').formAjax();
-    $wrapper.find('.js-avatar-crop').avatarCrop();
 
     setTimeout(function () {
         $wrapper.addClass('active');
@@ -29021,7 +29194,6 @@ $(document).ready(function () {
     $('.js-input-photo').inputPhoto();
     $('.js-datepicker').datePicker();
     $('.js-input-region-city').inputRegionCity();
-    $('.js-avatar-crop').avatarCrop();
     $('[data-form-ajax]').formAjax();
 
     $('.js-smooth-scroll').click(function() {

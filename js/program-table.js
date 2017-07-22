@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    var tableCellWidth = 260;
+
     // Horizontal scroller
     baron({
         scroller: '.js-program-table-scrollable',
@@ -8,9 +10,31 @@ $(document).ready(function () {
         direction: 'h',
         impact: 'scroller'
     }).controls({
-        track: '.js-program-table-scroll-track',
-        forward: '.js-program-table-scroll-right',
-        backward: '.js-program-table-scroll-left'
+        track: '.js-program-table-scroll-track'
+        //forward: '.js-program-table-scroll-right',
+        //backward: '.js-program-table-scroll-left'
+    });
+
+    $('.js-program-table-scroll-right, .js-program-table-scroll-left').click(function() {
+        var currentScroll = $('.js-program-table-scrollable').scrollLeft(),
+            currentShift = currentScroll%tableCellWidth,
+            forwardShift = tableCellWidth-currentShift,
+            direction = $(this).hasClass('js-program-table-scroll-left') ? -1 : 1,
+            scrollAmount = 0;
+
+        if (direction > 0) {
+            scrollAmount = currentShift ? currentScroll + forwardShift : currentScroll + tableCellWidth;
+        } else {
+            scrollAmount = currentShift ? currentScroll - currentShift : currentScroll - tableCellWidth;
+        }
+
+        console.log('currentShift: ' + currentShift);
+        console.log('dir: ' + direction);
+        console.log('scrollAmount: ' + scrollAmount);
+
+        $('.js-program-table-scrollable').animate({
+            'scrollLeft':  scrollAmount
+        }, 200);
     });
 
     $('.program-table-timeline-date')
@@ -48,5 +72,35 @@ $(document).ready(function () {
 
     $(window).scroll(tableHeaderFixed);
     $(window).resize(setFullEventsWidth);
+
+    $('[data-program-table-fav]').click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        var $link = $(this),
+            active = $link.hasClass('active'),
+            url = $link.data('program-table-fav') + "?activate=" + !active;
+
+        $('body').spin('large', '#000');
+
+        $.ajax({
+            url: url,
+            processData: false,
+            contentType: false,
+            cache: false,
+            dataType: 'json'
+        }).done(function (data) {
+            if (data) {
+                active ? $link.removeClass('active') : $link.addClass('active');
+            }
+        }).fail(function (jqXHR, textStatus, errorThrown) {
+            alert('Ошибка отправки данных. Пожалуйста, попробуйте ещё раз.');
+            console.log(jqXHR);
+            console.log(errorThrown);
+        }).always(function () {
+            $('body').spin(false);
+        });
+
+    })
 });
 

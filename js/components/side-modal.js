@@ -30,7 +30,6 @@ function initSideModal(content, classNames, preventOverlayClose, preventEscClose
     $wrapper.find('.js-datepicker').datePicker();
     $wrapper.find('.js-input-region-city').inputRegionCity();
     $wrapper.find('[data-form-ajax]').formAjax();
-    $wrapper.find('.js-avatar-crop').avatarCrop();
 
     setTimeout(function () {
         $wrapper.addClass('active');
