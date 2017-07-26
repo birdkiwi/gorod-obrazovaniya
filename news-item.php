@@ -78,6 +78,47 @@
 
                     <p>Его вдохновляющая идея о самоорганизующихся учебных пространствах предполагает создание «Школы в облаках» – своего рода лаборатории, где дети смогут проводить исследования и обучаться друг у друга, используя ресурсы из «облаков».</p>
 
+                    <h3 class="tt-uppercase">Спикеры</h3>
+
+                    <div class="m-t-md m-b-md">
+                        <ul class="speakers-list">
+                            <li class="speakers-list-item">
+                                <a href="#" class="speakers-list-item-photo">
+                                    <img src="images/tmp/speakers/andreas-shlyayher.jpg" alt="">
+                                </a>
+                                <div class="speakers-list-item-text">
+                                    <div class="speakers-list-item-title">
+                                        Сугата Митра
+                                    </div>
+                                    Ученый-просветитель, Профессор образовательных технологий Ньюкаслского
+                                    университета
+                                </div>
+                            </li>
+                            <li class="speakers-list-item">
+                                <a href="#" class="speakers-list-item-photo">
+                                    <img src="images/tmp/speakers/dirk-hasted.jpg" alt="">
+                                </a>
+                                <div class="speakers-list-item-text">
+                                    <div class="speakers-list-item-title">
+                                        Андреас Шляйхер
+                                    </div>
+                                    Директор Департамента по образованию Организации экономического сотрудничества и развития
+                                </div>
+                            </li>
+                            <li class="speakers-list-item">
+                                <a href="#" class="speakers-list-item-photo">
+                                    <img src="images/tmp/speakers/issak-kalina.jpg" alt="">
+                                </a>
+                                <div class="speakers-list-item-text">
+                                    <div class="speakers-list-item-title">
+                                        Анне-Берит Кавли
+                                    </div>
+                                    Президент Международной ассоциации по оценке учебных достижений (IEA)
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
                     <div class="news-item-highlight">
                         Участие в Форуме – это отличная возможность представить новейшие разработки заинтересованной аудитории из России и зарубежных стран.
                     </div>
