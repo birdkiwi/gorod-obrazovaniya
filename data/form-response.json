@@ -1,4 +1,4 @@
 {
   "success": true,
-  "message": "<h1 class='message-modal-title'>Благодарим вас</h1> <p class='text-center'>Данные были успешно отправлены</p>"
+  "message": "<h1 class='message-modal-title'>Благодарим вас</h1> <p class='text-center'>Данные были успешно отправлены</p> <p class='text-center'><a href='/' class='button'>Перейти на главную страницу</a></p>"
 }

@@ -28538,6 +28538,8 @@ return hooks;
         var lang = $('html').attr('lang');
 
         return this.each(function () {
+            var $pickerEl = $(this);
+
             var ruLang = {
                 previousMonth: 'Предыдущий месяц',
                     nextMonth: 'Следующий месяц',
@@ -28552,7 +28554,9 @@ return hooks;
                 format: 'DD.MM.YYYY',
                 defaultDate: new Date(1980, 0, 1),
                 maxDate: new Date(2010, 0, 1),
-                yearRange: [1900, 2010]
+                yearRange: [1900, 2010],
+                reposition: false,
+                container: $pickerEl.closest('.form-group')[0] || $('body')[0]
             };
 
             if (lang === 'ru') {
@@ -29094,8 +29098,15 @@ $(document).on('click', '[data-side-modal]', function (e) {
         altUrl = $(this).data('side-modal-url'),
         modalContentSelector = $(this).data('side-modal'),
         classNames = $(this).data('side-modal-class'),
+        preventMobile = $(this).is('[data-side-modal-prevent-mobile]'),
         preventOverlayClose = $(this).is('[data-side-modal-prevent-overlay-close]'),
         preventEscClose = $(this).is('[data-side-modal-prevent-esc-close]');
+
+    if (preventMobile) {
+        if (window.outerWidth < 768) {
+            window.location.href = url;
+        }
+    }
 
     if (modalContentSelector) {
         $modalContent = $(modalContentSelector).clone();

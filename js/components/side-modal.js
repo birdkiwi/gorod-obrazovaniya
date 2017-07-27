@@ -77,8 +77,15 @@ $(document).on('click', '[data-side-modal]', function (e) {
         altUrl = $(this).data('side-modal-url'),
         modalContentSelector = $(this).data('side-modal'),
         classNames = $(this).data('side-modal-class'),
+        preventMobile = $(this).is('[data-side-modal-prevent-mobile]'),
         preventOverlayClose = $(this).is('[data-side-modal-prevent-overlay-close]'),
         preventEscClose = $(this).is('[data-side-modal-prevent-esc-close]');
+
+    if (preventMobile) {
+        if (window.outerWidth < 768) {
+            window.location.href = url;
+        }
+    }
 
     if (modalContentSelector) {
         $modalContent = $(modalContentSelector).clone();

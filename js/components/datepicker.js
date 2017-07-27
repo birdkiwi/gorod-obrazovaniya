@@ -3,6 +3,8 @@
         var lang = $('html').attr('lang');
 
         return this.each(function () {
+            var $pickerEl = $(this);
+
             var ruLang = {
                 previousMonth: 'Предыдущий месяц',
                     nextMonth: 'Следующий месяц',
@@ -17,7 +19,9 @@
                 format: 'DD.MM.YYYY',
                 defaultDate: new Date(1980, 0, 1),
                 maxDate: new Date(2010, 0, 1),
-                yearRange: [1900, 2010]
+                yearRange: [1900, 2010],
+                reposition: false,
+                container: $pickerEl.closest('.form-group')[0] || $('body')[0]
             };
 
             if (lang === 'ru') {
