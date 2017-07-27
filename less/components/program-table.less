@@ -250,16 +250,36 @@
     max-height: (@program-table-hour-height-large)-1;
   }
 
+  .program-table-event-height-75 {
+    min-height: ((@program-table-hour-height-large/4)*5)-1;
+    max-height: ((@program-table-hour-height-large/4)*5)-1;
+  }
+
+  .program-table-event-height-90 {
+    min-height: ((@program-table-hour-height-large/4)*6)-1;
+    max-height: ((@program-table-hour-height-large/4)*6)-1;
+  }
+
+  .program-table-event-height-105 {
+    min-height: ((@program-table-hour-height-large/4)*7)-1;
+    max-height: ((@program-table-hour-height-large/4)*7)-1;
+  }
+
+  .program-table-event-height-120 {
+    min-height: (@program-table-hour-height-large * 2)-1;
+    max-height: (@program-table-hour-height-large * 2)-1;
+  }
+
   .program-table-event-offset-15 {
-    top: (@program-table-hour-height-large/4)-1;
+    transform: translateY( (@program-table-hour-height-large/4)-1 );
   }
 
   .program-table-event-offset-30 {
-    top: (@program-table-hour-height-large/2)-1;
+    transform: translateY( (@program-table-hour-height-large/2)-1 );
   }
 
   .program-table-event-offset-45 {
-    top: ((@program-table-hour-height-large/4)*3)-1;
+    transform: translateY( ((@program-table-hour-height-large/4)*3)-1 );
   }
 }
 
@@ -414,14 +434,34 @@
   max-height: (@program-table-hour-height)-1;
 }
 
+.program-table-event-height-75 {
+  min-height: ((@program-table-hour-height/4)*5)-1;
+  max-height: ((@program-table-hour-height/4)*5)-1;
+}
+
+.program-table-event-height-90 {
+  min-height: ((@program-table-hour-height/4)*6)-1;
+  max-height: ((@program-table-hour-height/4)*6)-1;
+}
+
+.program-table-event-height-105 {
+  min-height: ((@program-table-hour-height/4)*7)-1;
+  max-height: ((@program-table-hour-height/4)*7)-1;
+}
+
+.program-table-event-height-120 {
+  min-height: (@program-table-hour-height * 2)-1;
+  max-height: (@program-table-hour-height * 2)-1;
+}
+
 .program-table-event-offset-15 {
-  top: (@program-table-hour-height/4)-1;
+  transform: translateY( (@program-table-hour-height/4)-1 );
 }
 
 .program-table-event-offset-30 {
-  top: (@program-table-hour-height/2)-1;
+  transform: translateY( (@program-table-hour-height/2)-1 );
 }
 
 .program-table-event-offset-45 {
-  top: ((@program-table-hour-height/4)*3)-1;
+  transform: translateY( ((@program-table-hour-height/4)*3)-1 );
 }

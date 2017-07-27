@@ -161,10 +161,10 @@
                     <div class="program-table-column">
                         <!-- 9:00 — 10:00 -->
                         <div class="program-table-column-hour">
-                            <a href="#" class="program-table-event program-table-event-global program-table-event-height-60">
+                            <a href="#" class="program-table-event program-table-event-global program-table-event-offset-30 program-table-event-height-30">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
-                                        09:00 — 10:00
+                                        09:30 — 10:00
                                     </span>
                                     <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
                                         <?php include "images/icons/icon-program-table-fav.svg"; ?>
@@ -230,7 +230,27 @@
 
                         <!-- 11:00 — 12:00 -->
                         <div class="program-table-column-hour program-table-column-hour-large">
-
+                            <a href="#" class="program-table-event program-table-event-height-120">
+                                <div class="program-table-event-meta">
+                                    <span class="program-table-event-meta-date">
+                                        11:00 — 13:00
+                                    </span>
+                                    <div class="program-table-event-meta-fav active" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
+                                </div>
+                                <div class="program-table-event-subtitle">
+                                    Панельная дискуссия: как правильно преподавать STEM-дисциплины в школе (Dan Meyer, Arthur Benjamin и пр.)
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотруд...
+                                    </p>
+                                </div>
+                            </a>
                         </div>
 
                         <!-- 12:00 — 13:00 -->
