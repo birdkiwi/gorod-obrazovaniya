@@ -29105,6 +29105,7 @@ $(document).on('click', '[data-side-modal]', function (e) {
     if (preventMobile) {
         if (window.outerWidth < 768) {
             window.location.href = url;
+            return;
         }
     }
 
