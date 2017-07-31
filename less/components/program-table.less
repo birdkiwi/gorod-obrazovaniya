@@ -5,8 +5,69 @@
 @program-table-hour-height-large: 200px;
 @program-table-border-color: #E0E0E0;
 
+.program-table-main-heading {
+  @media (max-width: @breakpoint-s) {
+    padding: 0;
+
+    .main-heading-title,
+    .main-heading-links {
+      display: none;
+    }
+
+    .main-heading-tabs {
+      display: flex;
+      width: 100%;
+    }
+
+    .main-heading-tabs-item {
+      flex: 1 0 auto;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 0.85rem;
+      padding: 8px 10px;
+    }
+  }
+}
+
+.program-table-subnav {
+  @media (max-width: @breakpoint-s) {
+    .subnav-list {
+      display: flex;
+
+      .subnav-list-item {
+        flex: 1;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      .subnav-link {
+        height: 100%;
+        padding: 0;
+        text-align: center;
+        text-transform: none;
+        font-size: 0.95rem;
+
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
 .program-table-wrapper {
   position: relative;
+
+  @media (max-width: @breakpoint-s) {
+    display: none;
+  }
 }
 
 .program-table {
@@ -464,4 +525,74 @@
 
 .program-table-event-offset-45 {
   transform: translateY( ((@program-table-hour-height/4)*3)-1 );
+}
+
+.program-table-mobile {
+  display: none;
+  background: #F7F7F7;
+
+  @media (max-width: @breakpoint-s) {
+    display: block;
+  }
+}
+
+.program-table-mobile-date {
+  text-align: center;
+  color: #222;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  line-height: 1.57rem;
+  font-weight: 500;
+  padding: 16px;
+}
+
+.program-table-mobile-event {
+  display: flex;
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 2px;
+}
+
+.program-table-mobile-event-content {
+  color: @c-main;
+  text-decoration: none;
+}
+
+.program-table-mobile-event-fav {
+  padding-left: 10px;
+}
+
+.program-table-mobile-event-name {
+  margin-bottom: 7px;
+  font-size: 1.05rem;
+  line-height: 1.3rem;
+}
+
+.program-table-mobile-event-meta {
+  color: #8E8E93;
+  font-size: 0.85rem;
+}
+
+.program-table-mobile-event-date,
+.program-table-mobile-event-location {
+  display: inline-flex;
+  align-items: center;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+
+    * {
+      fill: #8E8E93;
+    }
+  }
+}
+
+.program-table-mobile-event-date {
+  margin-right: 15px;
+}
+
+.program-table-mobile-event-location {
+
 }

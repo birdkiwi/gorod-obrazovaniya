@@ -14,7 +14,7 @@
 <?php include "blocks/header-user-program.php"; ?>
 
 <main class="main-content">
-    <div class="main-heading main-heading-red">
+    <div class="main-heading main-heading-red program-table-main-heading">
         <div class="wrapper">
             <h1 class="main-heading-title">Программа</h1>
             <div class="main-heading-tabs">
@@ -38,17 +38,22 @@
         </div>
     </div>
 
-    <nav class="subnav">
+    <nav class="subnav program-table-subnav">
         <div class="wrapper">
             <ul class="subnav-list subnav-list-program subnav-list-wide">
                 <li class="subnav-list-item active">
                     <a href="#" class="subnav-link">
-                        <span>Основная программа</span>
+                        <span>Вся программа</span>
                     </a>
                 </li>
                 <li class="subnav-list-item">
                     <a href="#" class="subnav-link">
-                        <span>Спецпроекты</span>
+                        <span>Деловая программа</span>
+                    </a>
+                </li>
+                <li class="subnav-list-item">
+                    <a href="#" class="subnav-link">
+                        <span>Специальные мероприятия</span>
                     </a>
                 </li>
             </ul>

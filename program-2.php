@@ -14,7 +14,7 @@
 <?php include "blocks/header-not-fixed.php"; ?>
 
 <main class="main-content">
-    <div class="main-heading main-heading-red">
+    <div class="main-heading main-heading-red program-table-main-heading">
         <div class="wrapper">
             <h1 class="main-heading-title">Программа</h1>
             <div class="main-heading-tabs">
@@ -38,17 +38,22 @@
         </div>
     </div>
 
-    <nav class="subnav">
+    <nav class="subnav program-table-subnav">
         <div class="wrapper">
             <ul class="subnav-list subnav-list-program subnav-list-wide">
                 <li class="subnav-list-item active">
                     <a href="#" class="subnav-link">
-                        <span>Основная программа</span>
+                        <span>Вся программа</span>
                     </a>
                 </li>
                 <li class="subnav-list-item">
                     <a href="#" class="subnav-link">
-                        <span>Спецпроекты</span>
+                        <span>Деловая программа</span>
+                    </a>
+                </li>
+                <li class="subnav-list-item">
+                    <a href="#" class="subnav-link">
+                        <span>Специальные мероприятия</span>
                     </a>
                 </li>
             </ul>
@@ -1019,6 +1024,100 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="program-table-mobile">
+        <div class="program-table-mobile-date">
+            7 сентября
+        </div>
+
+        <div class="program-table-mobile-event">
+            <a href="#" class="program-table-mobile-event-content">
+                <div class="program-table-mobile-event-name">
+                    Christopher Emdin. Учить учителей создавать магию на уроках.
+                </div>
+                <div class="program-table-mobile-event-meta">
+                    <span class="program-table-mobile-event-date">
+                        <?php include "images/icons/icon-news-item-clock.svg"; ?>
+                        12:00 - 12:30
+                    </span>
+                    <span class="program-table-mobile-event-location">
+                        <?php include "images/icons/icon-map-mark.svg"; ?>
+                        Конференц-зал
+                    </span>
+                </div>
+            </a>
+            <a href="#" class="program-table-mobile-event-fav">
+                <?php include "images/icons/icon-news-item-fav.svg"; ?>
+            </a>
+        </div>
+
+        <div class="program-table-mobile-event">
+            <a href="#" class="program-table-mobile-event-content">
+                <div class="program-table-mobile-event-name">
+                    Панельная дискуссия: школа и школьное пространство (представители зарубежных школ)
+                </div>
+                <div class="program-table-mobile-event-meta">
+                    <span class="program-table-mobile-event-date">
+                        <?php include "images/icons/icon-news-item-clock.svg"; ?>
+                        12:30 - 13:00
+                    </span>
+                    <span class="program-table-mobile-event-location">
+                        <?php include "images/icons/icon-map-mark.svg"; ?>
+                        Зона 1
+                    </span>
+                </div>
+            </a>
+            <a href="#" class="program-table-mobile-event-fav">
+                <?php include "images/icons/icon-news-item-fav-active.svg"; ?>
+            </a>
+        </div>
+
+        <div class="program-table-mobile-date">
+            8 сентября
+        </div>
+
+        <div class="program-table-mobile-event">
+            <a href="#" class="program-table-mobile-event-content">
+                <div class="program-table-mobile-event-name">
+                    Christopher Emdin. Учить учителей создавать магию на уроках.
+                </div>
+                <div class="program-table-mobile-event-meta">
+                    <span class="program-table-mobile-event-date">
+                        <?php include "images/icons/icon-news-item-clock.svg"; ?>
+                        12:00 - 12:30
+                    </span>
+                    <span class="program-table-mobile-event-location">
+                        <?php include "images/icons/icon-map-mark.svg"; ?>
+                        Конференц-зал
+                    </span>
+                </div>
+            </a>
+            <a href="#" class="program-table-mobile-event-fav">
+                <?php include "images/icons/icon-news-item-fav.svg"; ?>
+            </a>
+        </div>
+
+        <div class="program-table-mobile-event">
+            <a href="#" class="program-table-mobile-event-content">
+                <div class="program-table-mobile-event-name">
+                    Панельная дискуссия: школа и школьное пространство (представители зарубежных школ)
+                </div>
+                <div class="program-table-mobile-event-meta">
+                    <span class="program-table-mobile-event-date">
+                        <?php include "images/icons/icon-news-item-clock.svg"; ?>
+                        12:30 - 13:00
+                    </span>
+                    <span class="program-table-mobile-event-location">
+                        <?php include "images/icons/icon-map-mark.svg"; ?>
+                        Зона 1
+                    </span>
+                </div>
+            </a>
+            <a href="#" class="program-table-mobile-event-fav">
+                <?php include "images/icons/icon-news-item-fav-active.svg"; ?>
+            </a>
         </div>
     </div>
 </main>
