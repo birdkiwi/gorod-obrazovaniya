@@ -23,6 +23,11 @@
         <input id="registration-form-website" type="text" name="website" class="form-input">
     </div>
 
+    <div class="form-group">
+        <label class="form-label" for="registration-form-presentation">Презентация компании (файл не более 20мб)</label>
+        <input id="registration-form-presentation" type="file" name="presentation" maxlength="255" class="form-input" data-rule-maxFileSize='{"unit": "KB", "size": "20000"}'>
+    </div>
+
     <div class="row js-input-region-city">
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">

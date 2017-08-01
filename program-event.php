@@ -14,37 +14,46 @@
 <?php include "blocks/header.php"; ?>
 
 <main class="main-content">
-    <div class="main-heading main-heading-navy">
+    <div class="main-heading main-heading-red program-table-main-heading">
         <div class="wrapper">
-            <h1 class="main-heading-title">
-                <a href="#">
-                    Новости
+            <h1 class="main-heading-title">Программа</h1>
+            <div class="main-heading-tabs">
+                <a href="#" class="main-heading-tabs-item active">
+                    7 сентября
                 </a>
-            </h1>
+                <a href="#" class="main-heading-tabs-item">
+                    8 сентября
+                </a>
+                <a href="#" class="main-heading-tabs-item">
+                    9 сентября
+                </a>
+            </div>
 
-            <form action="#" method="POST" class="main-heading-search-form">
-                <input type="search" name="search" class="main-heading-search-input" placeholder="Поиск">
-                <input type="submit" value="" class="main-heading-search-submit">
-            </form>
+            <div class="main-heading-links">
+                <a href="#" class="no-td">
+                    <?php include "images/icons/icon-program-download.svg"; ?>
+                    <span class="dotted">Скачать программу</span>
+                </a>
+            </div>
         </div>
     </div>
 
-    <nav class="subnav">
+    <nav class="subnav program-table-subnav">
         <div class="wrapper">
-            <ul class="subnav-list subnav-list-wide">
+            <ul class="subnav-list subnav-list-program subnav-list-wide">
                 <li class="subnav-list-item active">
                     <a href="#" class="subnav-link">
-                        <span>Все</span>
+                        <span>Вся программа</span>
                     </a>
                 </li>
                 <li class="subnav-list-item">
                     <a href="#" class="subnav-link">
-                        <span>Фотогалерея</span>
+                        <span>Деловая программа</span>
                     </a>
                 </li>
                 <li class="subnav-list-item">
                     <a href="#" class="subnav-link">
-                        <span>Видео</span>
+                        <span>Специальные мероприятия</span>
                     </a>
                 </li>
             </ul>
@@ -57,6 +66,22 @@
                 <div class="news-item-content">
                     <h1 class="news-item-title">Дискуссии о ключевых трендах развития образования</h1>
                     <p class="text-highlight m-b-xl">Главная дискуссия о ключевых трендах развития образования пройдет 8 сентября на Московском международного форума «Город образования» на ВДНХ.</p>
+
+                    <div class="news-item-meta-2 m-b-lg">
+                        <span class="news-item-meta-2-date">
+                            <?php include "images/icons/icon-news-item-clock.svg"; ?>
+                            16 июня, 12:30 – 13:30
+                        </span>
+                        <span class="news-item-meta-2-place">
+                            <?php include "images/icons/icon-map-mark.svg"; ?>
+                            Зал №1
+                        </span>
+                        <a href="#" class="news-item-meta-2-fav">
+                            <?php include "images/icons/icon-news-item-fav.svg"; ?>
+                            <!--<?php include "images/icons/icon-news-item-fav-active.svg"; ?>-->
+                            Добавить в избранное
+                        </a>
+                    </div>
 
                     <h2>Выступления на международных форумах</h2>
                     <p>В выступлениях на международных форумах Сугата Митра предлагает внести кардинальные изменения в нынешнюю систему образования, чтобы изменить вектор дальнейшего развития науки и культуры для последующих поколений. Его вдохновляющая идея о самоорганизующихся учебных пространствах предполагает создание «Школы в облаках» – своего рода лаборатории, где дети смогут проводить исследования и обучаться друг у друга, используя ресурсы из «облаков».</p>
@@ -122,15 +147,8 @@
                     <div class="news-item-highlight">
                         Участие в Форуме – это отличная возможность представить новейшие разработки заинтересованной аудитории из России и зарубежных стран.
                     </div>
-                </div>
-                <aside class="news-item-sidebar">
-                    <div class="news-item-meta">
-                        <div class="news-item-meta-date">
-                            <span class="news-item-meta-date-day">16</span> июня, 2017
-                        </div>
-                    </div>
 
-                    <div class="news-item-share">
+                    <div class="news-item-share m-t-lg">
                         <div class="news-item-share-title">
                             Поделиться
                         </div>
@@ -146,7 +164,7 @@
                             </a>
                         </div>
                     </div>
-                </aside>
+                </div>
             </div>
         </div>
     </div>
