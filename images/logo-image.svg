@@ -1,0 +1,110 @@
+<svg width="173" height="149" viewBox="0 0 173 149" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Canvas" transform="translate(-3513 -40)">
+        <g id="Group 12">
+            <g id="Fill 77">
+                <use xlink:href="#path0_fill" transform="translate(3575.11 90.4724)" fill="#253871"/>
+            </g>
+            <g id="Fill 78">
+                <use xlink:href="#path1_fill" transform="translate(3575.43 115.619)" fill="#3785BA"/>
+            </g>
+            <g id="Fill 79">
+                <use xlink:href="#path2_fill" transform="translate(3600.11 115.619)" fill="#006A98"/>
+            </g>
+            <g id="Fill 80">
+                <use xlink:href="#path3_fill" transform="translate(3575.11 140.763)" fill="#3785BA"/>
+            </g>
+            <g id="Fill 81">
+                <use xlink:href="#path4_fill" transform="translate(3600.27 140.763)" fill="#3785BA"/>
+            </g>
+            <g id="Fill 82">
+                <use xlink:href="#path5_fill" transform="translate(3600.11 90.415)" fill="#2C2C69"/>
+            </g>
+            <g id="Fill 83">
+                <use xlink:href="#path6_fill" transform="translate(3576.15 165.202)" fill="#81CBD2"/>
+            </g>
+            <g id="Fill 84">
+                <use xlink:href="#path7_fill" transform="translate(3637.3 140.763)" fill="#B6D038"/>
+            </g>
+            <g id="Fill 85">
+                <use xlink:href="#path8_fill" transform="translate(3637.47 65.3262)" fill="#226638"/>
+            </g>
+            <g id="Fill 86">
+                <use xlink:href="#path9_fill" transform="translate(3662.15 65.328)" fill="#369A46"/>
+            </g>
+            <g id="Fill 87">
+                <use xlink:href="#path2_fill" transform="translate(3637.15 90.4724)" fill="#369A46"/>
+            </g>
+            <g id="Fill 88">
+                <use xlink:href="#path1_fill" transform="translate(3662.47 90.4724)" fill="#7EAA40"/>
+            </g>
+            <g id="Fill 89">
+                <use xlink:href="#path4_fill" transform="translate(3637.47 115.619)" fill="#7EAA40"/>
+            </g>
+            <g id="Fill 90">
+                <use xlink:href="#path0_fill" transform="translate(3662.15 115.619)" fill="#B6D038"/>
+            </g>
+            <g id="Fill 91">
+                <use xlink:href="#path4_fill" transform="translate(3662.31 140.763)" fill="#D6DD2D"/>
+            </g>
+            <g id="Fill 92">
+                <use xlink:href="#path10_fill" transform="translate(3662.47 40.1801)" fill="#226638"/>
+            </g>
+            <g id="Fill 93">
+                <use xlink:href="#path11_fill" transform="translate(3638.2 165.202)" fill="#F0E825"/>
+            </g>
+            <g id="Fill 122">
+                <use xlink:href="#path12_fill" transform="translate(3538.23 140.763)" fill="#DC3B2A"/>
+            </g>
+            <g id="Fill 123">
+                <use xlink:href="#path13_fill" transform="translate(3538.07 65.3262)" fill="#7D2633"/>
+            </g>
+            <g id="Fill 124">
+                <use xlink:href="#path14_fill" transform="translate(3513.39 65.328)" fill="#982A35"/>
+            </g>
+            <g id="Fill 125">
+                <use xlink:href="#path15_fill" transform="translate(3538.39 90.4724)" fill="#982A35"/>
+            </g>
+            <g id="Fill 126">
+                <use xlink:href="#path16_fill" transform="translate(3513.07 90.4724)" fill="#C12531"/>
+            </g>
+            <g id="Fill 127">
+                <use xlink:href="#path16_fill" transform="translate(3538.07 115.619)" fill="#C12531"/>
+            </g>
+            <g id="Fill 128">
+                <use xlink:href="#path15_fill" transform="translate(3513.39 115.619)" fill="#DC3B2A"/>
+            </g>
+            <g id="Fill 129">
+                <use xlink:href="#path17_fill" transform="translate(3513.23 140.763)" fill="#EC952D"/>
+            </g>
+            <g id="Fill 130">
+                <use xlink:href="#path18_fill" transform="translate(3513.07 40.1801)" fill="#7D2633"/>
+            </g>
+            <g id="Fill 131">
+                <use xlink:href="#path19_fill" transform="translate(3514.1 165.202)" fill="#F7CD22"/>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <path id="path0_fill" fill-rule="evenodd" d="M 0 0L 23.2241 23.2277L 0 46.4554L 0 0Z"/>
+        <path id="path1_fill" fill-rule="evenodd" d="M 23.2259 46.4554L 0 23.2277L 23.2259 0L 23.2259 46.4554Z"/>
+        <path id="path2_fill" fill-rule="evenodd" d="M 0 0L 23.2259 23.2277L 0 46.4554L 0 0Z"/>
+        <path id="path3_fill" fill-rule="evenodd" d="M 0 0L 23.2241 23.2295L 0 46.4554L 0 0Z"/>
+        <path id="path4_fill" fill-rule="evenodd" d="M 23.2241 46.4554L 0 23.2277L 23.2241 0L 23.2241 46.4554Z"/>
+        <path id="path5_fill" fill-rule="evenodd" d="M 23.2277 46.4536L 0 23.2259L 23.2277 0L 23.2277 46.4536Z"/>
+        <path id="path6_fill" fill-rule="evenodd" d="M 0 23.2277L 23.2241 0L 46.4554 23.2277L 0 23.2277Z"/>
+        <path id="path7_fill" fill-rule="evenodd" d="M 0 0L 23.2277 23.2295L 0 46.4554L 0 0Z"/>
+        <path id="path8_fill" fill-rule="evenodd" d="M 23.2241 46.4554L 0 23.2295L 23.2241 0L 23.2241 46.4554Z"/>
+        <path id="path9_fill" fill-rule="evenodd" d="M 0 0L 23.2241 23.2259L 0 46.4536L 0 0Z"/>
+        <path id="path10_fill" fill-rule="evenodd" d="M 23.2259 46.4572L 0 23.2277L 23.2259 0L 23.2259 46.4572Z"/>
+        <path id="path11_fill" fill-rule="evenodd" d="M 0 23.2277L 23.2277 0L 46.4554 23.2277L 0 23.2277Z"/>
+        <path id="path12_fill" fill-rule="evenodd" d="M 23.2259 0L 0 23.2295L 23.2259 46.4554L 23.2259 0Z"/>
+        <path id="path13_fill" fill-rule="evenodd" d="M 0 46.4554L 23.2277 23.2295L 0 0L 0 46.4554Z"/>
+        <path id="path14_fill" fill-rule="evenodd" d="M 23.2259 0L 0 23.2259L 23.2259 46.4536L 23.2259 0Z"/>
+        <path id="path15_fill" fill-rule="evenodd" d="M 23.2259 0L 0 23.2277L 23.2259 46.4554L 23.2259 0Z"/>
+        <path id="path16_fill" fill-rule="evenodd" d="M 0 46.4554L 23.2277 23.2277L 0 0L 0 46.4554Z"/>
+        <path id="path17_fill" fill-rule="evenodd" d="M 0 46.4554L 23.2259 23.2277L 0 0L 0 46.4554Z"/>
+        <path id="path18_fill" fill-rule="evenodd" d="M 0 46.4572L 23.2277 23.2277L 0 0L 0 46.4572Z"/>
+        <path id="path19_fill" fill-rule="evenodd" d="M 46.4554 23.2277L 23.2295 0L 0 23.2277L 46.4554 23.2277Z"/>
+    </defs>
+</svg>

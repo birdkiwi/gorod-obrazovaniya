@@ -1,0 +1,28 @@
+<svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 4</title>
+    <desc>Created using Figma</desc>
+    <g id="Canvas" transform="translate(-1110 -66)">
+        <g id="Group 4">
+            <g id="Oval 4">
+                <mask id="mask0_outline_ins">
+                    <use xlink:href="#path0_fill" fill="white" transform="translate(1110 66)"/>
+                </mask>
+                <g mask="url(#mask0_outline_ins)">
+                    <use xlink:href="#path1_stroke_2x" transform="translate(1110 66)" fill="#02A7DF"/>
+                </g>
+            </g>
+            <g id="Star">
+                <use xlink:href="#path2_fill" transform="translate(1116 72)" fill="#02A7DF"/>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <path id="path0_fill" fill-rule="evenodd"
+              d="M 12 24C 18.6274 24 24 18.6274 24 12C 24 5.37258 18.6274 0 12 0C 5.37258 0 0 5.37258 0 12C 0 18.6274 5.37258 24 12 24Z"/>
+        <path id="path1_stroke_2x"
+              d="M 12 25C 19.1797 25 25 19.1797 25 12L 23 12C 23 18.0751 18.0751 23 12 23L 12 25ZM 25 12C 25 4.8203 19.1797 -1 12 -1L 12 1C 18.0751 1 23 5.92487 23 12L 25 12ZM 12 -1C 4.8203 -1 -1 4.8203 -1 12L 1 12C 1 5.92487 5.92487 1 12 1L 12 -1ZM -1 12C -1 19.1797 4.8203 25 12 25L 12 23C 5.92487 23 1 18.0751 1 12L -1 12Z"/>
+        <path id="path2_fill" fill-rule="evenodd"
+              d="M 6 9L 2.47329 10.8541L 3.14683 6.92705L 0.293661 4.1459L 4.23664 3.57295L 6 0L 7.76336 3.57295L 11.7063 4.1459L 8.85317 6.92705L 9.52671 10.8541L 6 9Z"/>
+    </defs>
+</svg>

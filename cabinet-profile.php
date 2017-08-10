@@ -28,17 +28,17 @@
         <div class="wrapper">
             <ul class="subnav-list">
                 <li class="subnav-list-item">
-                    <a href="#" class="subnav-link">
+                    <a href="cabinet-ticket.php" class="subnav-link">
                         <span>Мой билет</span>
                     </a>
                 </li>
                 <li class="subnav-list-item">
-                    <a href="#" class="subnav-link">
+                    <a href="cabinet-events.php" class="subnav-link">
                         <span>Мое расписание</span>
                     </a>
                 </li>
                 <li class="subnav-list-item active">
-                    <a href="#" class="subnav-link">
+                    <a href="cabinet-profile.php" class="subnav-link">
                         <span>Мои данные</span>
                     </a>
                 </li>
