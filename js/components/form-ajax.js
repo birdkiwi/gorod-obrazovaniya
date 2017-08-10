@@ -24,7 +24,11 @@
                 }
 
                 function hideOverlay() {
-                    $(formOverlay).removeClass('active').spin(false);
+                    if (formOverlay) {
+                        $(formOverlay).removeClass('active').spin(false);
+                    } else {
+                        $('body').spin(false);
+                    }
                 }
 
                 function submitForm() {

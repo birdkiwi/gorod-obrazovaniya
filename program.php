@@ -342,7 +342,27 @@
                     <div class="program-table-column">
                         <!-- 9:00 — 10:00 -->
                         <div class="program-table-column-hour">
-
+                            <a href="#" class="program-table-event program-table-event-width-2 program-table-event-height-30">
+                                <div class="program-table-event-meta">
+                                    <span class="program-table-event-meta-date">
+                                        9:00 — 9:30
+                                    </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
+                                </div>
+                                <div class="program-table-event-subtitle">
+                                    Christopher Emdin. Учить учителей создавать магию на уроках
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотрудников
+                                    </p>
+                                </div>
+                            </a>
                         </div>
 
                         <!-- 10:00 — 11:00 -->
@@ -607,7 +627,27 @@
                     <div class="program-table-column">
                         <!-- 9:00 — 10:00 -->
                         <div class="program-table-column-hour">
-
+                            <a href="#" class="program-table-event program-table-event-width-3 program-table-event-height-20">
+                                <div class="program-table-event-meta">
+                                    <span class="program-table-event-meta-date">
+                                        9:00 — 9:20
+                                    </span>
+                                    <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
+                                        <?php include "images/icons/icon-program-table-fav.svg"; ?>
+                                    </div>
+                                </div>
+                                <div class="program-table-event-subtitle">
+                                    Christopher Emdin. Учить учителей создавать магию на уроках
+                                </div>
+                                <div class="program-table-event-speakers">
+                                    <p>
+                                        <b>Анне-Берит Кавли</b>, президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </p>
+                                    <p>
+                                        <b>Питер Адамс</b>, старший менеджер проекта PISA Организации экономического сотрудников
+                                    </p>
+                                </div>
+                            </a>
                         </div>
 
                         <!-- 10:00 — 11:00 -->
@@ -871,7 +911,6 @@
                     <div class="program-table-column">
                         <!-- 9:00 — 10:00 -->
                         <div class="program-table-column-hour">
-
                         </div>
 
                         <!-- 10:00 — 11:00 -->
@@ -881,10 +920,10 @@
 
                         <!-- 11:00 — 12:00 -->
                         <div class="program-table-column-hour program-table-column-hour-large">
-                            <a href="#" class="program-table-event program-table-event-height-30">
+                            <a href="#" class="program-table-event program-table-event-height-20">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
-                                        11:00 — 11:30
+                                        11:00 — 11:20
                                     </span>
                                     <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
                                         <?php include "images/icons/icon-program-table-fav.svg"; ?>
@@ -902,10 +941,10 @@
                                     </p>
                                 </div>
                             </a>
-                            <a href="#" class="program-table-event program-table-event-height-30">
+                            <a href="#" class="program-table-event program-table-event-height-40">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
-                                        11:30 — 12:00
+                                        11:20 — 12:00
                                     </span>
                                     <div class="program-table-event-meta-fav" data-program-table-fav="program.php">
                                         <?php include "images/icons/icon-program-table-fav.svg"; ?>
