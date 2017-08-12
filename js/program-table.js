@@ -62,16 +62,20 @@ $(document).ready(function () {
         }
     }
 
-    function setFullEventsWidth() {
-        var eventsViewPortWidth = $('.js-program-table-scrollable').width();
+    function programTableResize() {
+        // Global events width
+        var eventsViewPortWidth = 0;
+        $('.program-table-heading-cell').each(function () {
+            eventsViewPortWidth += $(this).outerWidth();
+        });
         $('.program-table-event-global').css('width', eventsViewPortWidth);
     }
 
     tableHeaderFixed();
-    setFullEventsWidth();
+    programTableResize();
 
     $(window).scroll(tableHeaderFixed);
-    $(window).resize(setFullEventsWidth);
+    $(window).resize(programTableResize);
 
     $('[data-program-table-fav]').click(function (e) {
         e.preventDefault();

@@ -29077,6 +29077,20 @@ $(document).ready(function () {
         });
     }
 })();
+(function( $ ) {
+    $.fn.programEventSearch = function() {
+        return this.each(function() {
+            var $programSearchField = $(this).find('input'),
+                autosuggestURL = $(this).data('program-search');
+
+            $programSearchField.devbridgeAutocomplete({
+                appendTo: $programSearchField.parent(),
+                serviceUrl: autosuggestURL,
+                minChars: 1
+            });
+        });
+    };
+}( jQuery ));
 function initSideModalWrapper(classNames) {
     var $modalWrapper = $(
         '<div class="side-modal-overlay">' +
@@ -29264,6 +29278,7 @@ $(document).ready(function () {
     $('.js-input-photo').inputPhoto();
     $('.js-datepicker').datePicker();
     $('.js-input-region-city').inputRegionCity();
+    $('[data-program-search]').programEventSearch();
     $('[data-form-ajax]').formAjax();
 
     $('.js-smooth-scroll').click(function() {

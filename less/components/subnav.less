@@ -3,12 +3,29 @@
 
 .subnav {
   border-bottom: 1px solid #E8E8E8;
+
+  & > .wrapper {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: @breakpoint-s) {
+      display: block;
+    }
+  }
 }
 
 .subnav-list {
   .ul-reset;
   font-size: 0;
   margin: 0 -10px;
+}
+
+.subnav-list-right {
+  margin-left: auto;
+
+  @media (max-width: @breakpoint-l) {
+    margin-top: 10px;
+  }
 }
 
 .subnav-list-wide {
@@ -80,6 +97,7 @@
 
 .subnav-list-item {
   display: inline-block;
+  vertical-align: middle;
 
   &.active {
     .subnav-link {

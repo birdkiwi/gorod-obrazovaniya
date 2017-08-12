@@ -17,16 +17,21 @@
     <div class="main-heading main-heading-red program-table-main-heading">
         <div class="wrapper">
             <h1 class="main-heading-title">Программа</h1>
-            <div class="main-heading-tabs">
-                <a href="#" class="main-heading-tabs-item active">
-                    7 сентября
-                </a>
-                <a href="#" class="main-heading-tabs-item">
-                    8 сентября
-                </a>
-                <a href="#" class="main-heading-tabs-item">
-                    9 сентября
-                </a>
+
+            <div>
+                <div class="main-heading-tabs">
+                    <a href="#" class="main-heading-tabs-item active">
+                        7 сентября
+                    </a>
+                    <a href="#" class="main-heading-tabs-item">
+                        8 сентября
+                    </a>
+                    <a href="#" class="main-heading-tabs-item">
+                        9 сентября
+                    </a>
+                </div>
+
+
             </div>
 
             <div class="main-heading-links">
@@ -55,6 +60,50 @@
                     <a href="#" class="subnav-link">
                         <span>Специальные мероприятия</span>
                     </a>
+                </li>
+            </ul>
+
+            <ul class="subnav-list subnav-list-program subnav-list-wide subnav-list-right">
+                <li class="subnav-list-item">
+                    <div class="program-table-filter">
+                        <div class="program-table-filter-select">
+                            Все события
+                        </div>
+                        <!--
+                        Пример выбранного события:
+                        <div class="program-table-filter-select program-table-filter-select-red">
+                            Фильтр №1
+                        </div>
+                        -->
+                        <div class="program-table-filter-dropdown-wrapper">
+                            <div class="program-table-filter-dropdown">
+                                <a href="#" class="program-table-filter-item program-table-filter-item-red">
+                                    Фильтр №1
+                                </a>
+                                <a href="#" class="program-table-filter-item program-table-filter-item-orange">
+                                    Фильтр №2
+                                </a>
+                                <a href="#" class="program-table-filter-item program-table-filter-item-blue">
+                                    Фильтр №3
+                                </a>
+                                <a href="#" class="program-table-filter-item program-table-filter-item-navy">
+                                    Фильтр №4
+                                </a>
+                                <a href="#" class="program-table-filter-item program-table-filter-item-green">
+                                    Фильтр №5
+                                </a>
+                                <a href="#" class="program-table-filter-item program-table-filter-item-green-light">
+                                    Фильтр №5
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="subnav-list-item">
+                    <form action="program.php" method="GET" data-program-search="data/program-events.json" class="program-table-search">
+                        <input type="text" class="program-table-search-input" placeholder="Поиск событий" name="search">
+                        <button type="submit" class="program-table-search-button"></button>
+                    </form>
                 </li>
             </ul>
         </div>
@@ -117,42 +166,21 @@
                     </div>
                     <div class="program-table-heading-cell">
                         <div class="program-table-heading-cell-title">Зона 1</div>
-                        <div class="program-table-heading-cell-subtitle">внутри выставки</div>
-                        <div class="program-table-heading-cell-desc">
-                            Инновационная педагогика
-                        </div>
                     </div>
                     <div class="program-table-heading-cell">
                         <div class="program-table-heading-cell-title">Зона 2</div>
-                        <div class="program-table-heading-cell-subtitle">внутри выставки</div>
-                        <div class="program-table-heading-cell-desc">
-                            EdTech-проекты и школы
-                        </div>
                     </div>
                     <div class="program-table-heading-cell">
                         <div class="program-table-heading-cell-title">Зона 3</div>
-                        <div class="program-table-heading-cell-subtitle">внутри выставки</div>
-                        <div class="program-table-heading-cell-desc">
-                            HR для школ, школа 2030: повестка развития, город и школа: единая образовательная среда
-                        </div>
                     </div>
                     <div class="program-table-heading-cell">
                         <div class="program-table-heading-cell-title">Конференц-зал 1</div>
-                        <div class="program-table-heading-cell-desc">
-                            Успех для каждого ребенка, ответственное воспитание
-                        </div>
                     </div>
                     <div class="program-table-heading-cell">
                         <div class="program-table-heading-cell-title">Конференц-зал 2</div>
                     </div>
                     <div class="program-table-heading-cell">
                         <div class="program-table-heading-cell-title">Конференц-зал 3</div>
-                    </div>
-                    <div class="program-table-heading-cell">
-                        <div class="program-table-heading-cell-title">Конференц-зал 4</div>
-                    </div>
-                    <div class="program-table-heading-cell">
-                        <div class="program-table-heading-cell-title">Конференц-зал 5</div>
                     </div>
                 </div>
                 <div class="program-table-scroll">
@@ -184,7 +212,7 @@
 
                         <!-- 10:00 — 11:00 -->
                         <div class="program-table-column-hour">
-                            <a href="#" class="program-table-event program-table-event-global program-table-event-height-60">
+                            <a href="#" class="program-table-event program-table-event-red program-table-event-global program-table-event-height-60">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
                                         10:00 — 11:00
@@ -235,7 +263,7 @@
 
                         <!-- 11:00 — 12:00 -->
                         <div class="program-table-column-hour program-table-column-hour-large">
-                            <a href="#" class="program-table-event program-table-event-height-120">
+                            <a href="#" class="program-table-event program-table-event-green program-table-event-height-120">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
                                         11:00 — 13:00
@@ -260,7 +288,7 @@
 
                         <!-- 12:00 — 13:00 -->
                         <div class="program-table-column-hour program-table-column-hour-large">
-                            <a href="#" class="program-table-event program-table-event-offset-30 program-table-event-height-60">
+                            <a href="#" class="program-table-event program-table-event-orange program-table-event-offset-30 program-table-event-height-60">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
                                         12:30 — 13:30
@@ -285,7 +313,7 @@
 
                         <!-- 13:00 — 14:00 -->
                         <div class="program-table-column-hour program-table-column-hour-large">
-                            <a href="#" class="program-table-event  program-table-event-offset-30 program-table-event-height-60">
+                            <a href="#" class="program-table-event program-table-event-blue program-table-event-offset-30 program-table-event-height-60">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
                                         13:30 — 14:30
@@ -310,7 +338,7 @@
 
                         <!-- 14:00 — 15:00 -->
                         <div class="program-table-column-hour program-table-column-hour-large">
-                            <a href="#" class="program-table-event  program-table-event-offset-30 program-table-event-height-60">
+                            <a href="#" class="program-table-event program-table-event-navy program-table-event-offset-30 program-table-event-height-60">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
                                         14:30 — 15:30
@@ -393,7 +421,7 @@
                                     </p>
                                 </div>
                             </a>
-                            <a href="#" class="program-table-event program-table-event-height-30">
+                            <a href="#" class="program-table-event program-table-event-offset-30 program-table-event-height-30">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
                                         11:30 — 12:00
@@ -505,7 +533,7 @@
 
                         <!-- 11:00 — 12:00 -->
                         <div class="program-table-column-hour program-table-column-hour-large">
-                            <a href="#" class="program-table-event program-table-event-height-30">
+                            <a href="#" class="program-table-event program-table-event-green-light program-table-event-height-30">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
                                         11:00 — 11:30
@@ -526,7 +554,7 @@
                                     </p>
                                 </div>
                             </a>
-                            <a href="#" class="program-table-event program-table-event-height-30">
+                            <a href="#" class="program-table-event program-table-event-offset-30 program-table-event-height-30">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
                                         11:30 — 12:00
@@ -551,7 +579,7 @@
 
                         <!-- 12:00 — 13:00 -->
                         <div class="program-table-column-hour program-table-column-hour-large">
-                            <a href="#" class="program-table-event program-table-event-height-60">
+                            <a href="#" class="program-table-event program-table-event-blue program-table-event-height-60">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
                                         12:00 — 13:00
@@ -627,7 +655,7 @@
                     <div class="program-table-column">
                         <!-- 9:00 — 10:00 -->
                         <div class="program-table-column-hour">
-                            <a href="#" class="program-table-event program-table-event-width-3 program-table-event-height-20">
+                            <a href="#" class="program-table-event program-table-event-green-light program-table-event-width-3 program-table-event-height-20">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
                                         9:00 — 9:20
@@ -678,7 +706,7 @@
                                     </p>
                                 </div>
                             </a>
-                            <a href="#" class="program-table-event program-table-event-height-30">
+                            <a href="#" class="program-table-event program-table-event-offset-30 program-table-event-height-30">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
                                         11:30 — 12:00
@@ -810,7 +838,7 @@
                                     </p>
                                 </div>
                             </a>
-                            <a href="#" class="program-table-event program-table-event-height-30">
+                            <a href="#" class="program-table-event program-table-event-offset-30 program-table-event-height-30">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
                                         11:30 — 12:00
@@ -941,7 +969,7 @@
                                     </p>
                                 </div>
                             </a>
-                            <a href="#" class="program-table-event program-table-event-height-40">
+                            <a href="#" class="program-table-event program-table-event-offset-20 program-table-event-height-40">
                                 <div class="program-table-event-meta">
                                     <span class="program-table-event-meta-date">
                                         11:20 — 12:00
@@ -1041,6 +1069,100 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="program-table-mobile">
+        <div class="program-table-mobile-date">
+            7 сентября
+        </div>
+
+        <div class="program-table-mobile-event">
+            <a href="#" class="program-table-mobile-event-content">
+                <div class="program-table-mobile-event-name">
+                    Christopher Emdin. Учить учителей создавать магию на уроках.
+                </div>
+                <div class="program-table-mobile-event-meta">
+                    <span class="program-table-mobile-event-date">
+                        <?php include "images/icons/icon-news-item-clock.svg"; ?>
+                        12:00 - 12:30
+                    </span>
+                    <span class="program-table-mobile-event-location">
+                        <?php include "images/icons/icon-map-mark.svg"; ?>
+                        Конференц-зал
+                    </span>
+                </div>
+            </a>
+            <a href="#" class="program-table-mobile-event-fav">
+                <?php include "images/icons/icon-news-item-fav.svg"; ?>
+            </a>
+        </div>
+
+        <div class="program-table-mobile-event">
+            <a href="#" class="program-table-mobile-event-content">
+                <div class="program-table-mobile-event-name">
+                    Панельная дискуссия: школа и школьное пространство (представители зарубежных школ)
+                </div>
+                <div class="program-table-mobile-event-meta">
+                    <span class="program-table-mobile-event-date">
+                        <?php include "images/icons/icon-news-item-clock.svg"; ?>
+                        12:30 - 13:00
+                    </span>
+                    <span class="program-table-mobile-event-location">
+                        <?php include "images/icons/icon-map-mark.svg"; ?>
+                        Зона 1
+                    </span>
+                </div>
+            </a>
+            <a href="#" class="program-table-mobile-event-fav">
+                <?php include "images/icons/icon-news-item-fav-active.svg"; ?>
+            </a>
+        </div>
+
+        <div class="program-table-mobile-date">
+            8 сентября
+        </div>
+
+        <div class="program-table-mobile-event">
+            <a href="#" class="program-table-mobile-event-content">
+                <div class="program-table-mobile-event-name">
+                    Christopher Emdin. Учить учителей создавать магию на уроках.
+                </div>
+                <div class="program-table-mobile-event-meta">
+                    <span class="program-table-mobile-event-date">
+                        <?php include "images/icons/icon-news-item-clock.svg"; ?>
+                        12:00 - 12:30
+                    </span>
+                    <span class="program-table-mobile-event-location">
+                        <?php include "images/icons/icon-map-mark.svg"; ?>
+                        Конференц-зал
+                    </span>
+                </div>
+            </a>
+            <a href="#" class="program-table-mobile-event-fav">
+                <?php include "images/icons/icon-news-item-fav.svg"; ?>
+            </a>
+        </div>
+
+        <div class="program-table-mobile-event">
+            <a href="#" class="program-table-mobile-event-content">
+                <div class="program-table-mobile-event-name">
+                    Панельная дискуссия: школа и школьное пространство (представители зарубежных школ)
+                </div>
+                <div class="program-table-mobile-event-meta">
+                    <span class="program-table-mobile-event-date">
+                        <?php include "images/icons/icon-news-item-clock.svg"; ?>
+                        12:30 - 13:00
+                    </span>
+                    <span class="program-table-mobile-event-location">
+                        <?php include "images/icons/icon-map-mark.svg"; ?>
+                        Зона 1
+                    </span>
+                </div>
+            </a>
+            <a href="#" class="program-table-mobile-event-fav">
+                <?php include "images/icons/icon-news-item-fav-active.svg"; ?>
+            </a>
         </div>
     </div>
 </main>
