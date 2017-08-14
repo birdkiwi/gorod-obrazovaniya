@@ -30,8 +30,6 @@
                         9 сентября
                     </a>
                 </div>
-
-
             </div>
 
             <div class="main-heading-links">
@@ -66,15 +64,16 @@
             <ul class="subnav-list subnav-list-program subnav-list-wide subnav-list-right">
                 <li class="subnav-list-item">
                     <div class="program-table-filter">
-                        <div class="program-table-filter-select">
+                        <!--<div class="program-table-filter-select">
                             Все события
-                        </div>
+                        </div>-->
                         <!--
-                        Пример выбранного события:
+                        Пример выбранного события: -->
+
                         <div class="program-table-filter-select program-table-filter-select-red">
-                            Фильтр №1
+                            Очень преочень длинный фильтр
                         </div>
-                        -->
+
                         <div class="program-table-filter-dropdown-wrapper">
                             <div class="program-table-filter-dropdown">
                                 <a href="#" class="program-table-filter-item program-table-filter-item-red">
@@ -93,14 +92,14 @@
                                     Фильтр №5
                                 </a>
                                 <a href="#" class="program-table-filter-item program-table-filter-item-green-light">
-                                    Фильтр №5
+                                    Очень преочень длинный фильтр
                                 </a>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li class="subnav-list-item">
-                    <form action="program.php" method="GET" data-program-search="data/program-events.json" class="program-table-search">
+                    <form action="program.php" method="GET" data-suggest-search="data/program-events.json" class="program-table-search">
                         <input type="text" class="program-table-search-input" placeholder="Поиск событий" name="search">
                         <button type="submit" class="program-table-search-button"></button>
                     </form>
@@ -1077,7 +1076,7 @@
             7 сентября
         </div>
 
-        <div class="program-table-mobile-event">
+        <div class="program-table-mobile-event program-table-mobile-event-red">
             <a href="#" class="program-table-mobile-event-content">
                 <div class="program-table-mobile-event-name">
                     Christopher Emdin. Учить учителей создавать магию на уроках.
@@ -1098,7 +1097,7 @@
             </a>
         </div>
 
-        <div class="program-table-mobile-event">
+        <div class="program-table-mobile-event program-table-mobile-event-orange">
             <a href="#" class="program-table-mobile-event-content">
                 <div class="program-table-mobile-event-name">
                     Панельная дискуссия: школа и школьное пространство (представители зарубежных школ)
@@ -1123,7 +1122,7 @@
             8 сентября
         </div>
 
-        <div class="program-table-mobile-event">
+        <div class="program-table-mobile-event program-table-mobile-event-green">
             <a href="#" class="program-table-mobile-event-content">
                 <div class="program-table-mobile-event-name">
                     Christopher Emdin. Учить учителей создавать магию на уроках.
@@ -1144,7 +1143,7 @@
             </a>
         </div>
 
-        <div class="program-table-mobile-event">
+        <div class="program-table-mobile-event program-table-mobile-event-blue">
             <a href="#" class="program-table-mobile-event-content">
                 <div class="program-table-mobile-event-name">
                     Панельная дискуссия: школа и школьное пространство (представители зарубежных школ)

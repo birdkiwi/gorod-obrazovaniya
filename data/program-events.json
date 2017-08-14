@@ -2,15 +2,15 @@
   "suggestions": [
     {
       "value": "Событие №1",
-      "data": 1000001
+      "data": "/program.php"
     },
     {
       "value": "Событие №2",
-      "data": 1121540
+      "data": "/program.php"
     },
     {
       "value": "Событие №3",
-      "data": 1121829
+      "data": "/program.php"
     }
   ]
 }

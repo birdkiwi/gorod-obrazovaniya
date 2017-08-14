@@ -29077,20 +29077,6 @@ $(document).ready(function () {
         });
     }
 })();
-(function( $ ) {
-    $.fn.programEventSearch = function() {
-        return this.each(function() {
-            var $programSearchField = $(this).find('input'),
-                autosuggestURL = $(this).data('program-search');
-
-            $programSearchField.devbridgeAutocomplete({
-                appendTo: $programSearchField.parent(),
-                serviceUrl: autosuggestURL,
-                minChars: 1
-            });
-        });
-    };
-}( jQuery ));
 function initSideModalWrapper(classNames) {
     var $modalWrapper = $(
         '<div class="side-modal-overlay">' +
@@ -29205,6 +29191,25 @@ $(document).on('click', '[data-side-modal]', function (e) {
 
     return false;
 });
+(function( $ ) {
+    $.fn.suggestSearch = function() {
+        return this.each(function() {
+            var $searchField = $(this).find('input'),
+                autosuggestURL = $(this).data('suggest-search');
+
+            $searchField.devbridgeAutocomplete({
+                appendTo: $searchField.parent(),
+                serviceUrl: autosuggestURL,
+                minChars: 1,
+                onSelect: function (suggestion) {
+                    if (suggestion.url) {
+                        window.location.href = suggestion.url;
+                    }
+                }
+            });
+        });
+    };
+}( jQuery ));
 $(document).ready(function () {
     var sponsorsBlockSwipe = new Swiper('.js-sponsors-swiper', {
         loop: true,
@@ -29278,7 +29283,7 @@ $(document).ready(function () {
     $('.js-input-photo').inputPhoto();
     $('.js-datepicker').datePicker();
     $('.js-input-region-city').inputRegionCity();
-    $('[data-program-search]').programEventSearch();
+    $('[data-suggest-search]').suggestSearch();
     $('[data-form-ajax]').formAjax();
 
     $('.js-smooth-scroll').click(function() {

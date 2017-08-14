@@ -71,7 +71,7 @@ $(document).ready(function () {
     $('.js-input-photo').inputPhoto();
     $('.js-datepicker').datePicker();
     $('.js-input-region-city').inputRegionCity();
-    $('[data-program-search]').programEventSearch();
+    $('[data-suggest-search]').suggestSearch();
     $('[data-form-ajax]').formAjax();
 
     $('.js-smooth-scroll').click(function() {
