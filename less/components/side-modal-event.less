@@ -18,14 +18,10 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 10px;
-  color: @c-blue;
+  color: #999999;
 }
 
-.side-modal-event-meta-date {
-  padding-right: 16px;
-  margin-bottom: 10px;
-}
-
+.side-modal-event-meta-date,
 .side-modal-event-meta-place {
   padding-right: 16px;
   margin-bottom: 10px;
@@ -33,9 +29,13 @@
 
 .side-modal-event-meta-date-icon,
 .side-modal-event-meta-place-icon {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+
   svg {
     * {
-      fill: @c-blue;
+      fill: #999999;
     }
   }
 }
