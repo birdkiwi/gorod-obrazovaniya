@@ -118,45 +118,59 @@
                     </div>
                     <div class="program-table-timeline-hour">
                         <div class="program-table-timeline-hour-title">9:00</div>
-                        <div class="program-table-timeline-hour-quarter">9:15</div>
-                        <div class="program-table-timeline-hour-quarter">9:30</div>
-                        <div class="program-table-timeline-hour-quarter">9:45</div>
+                        <div class="program-table-timeline-hour-sixth">9:10</div>
+                        <div class="program-table-timeline-hour-sixth">9:20</div>
+                        <div class="program-table-timeline-hour-sixth">9:30</div>
+                        <div class="program-table-timeline-hour-sixth">9:40</div>
+                        <div class="program-table-timeline-hour-sixth">9:50</div>
                     </div>
                     <div class="program-table-timeline-hour">
                         <div class="program-table-timeline-hour-title">10:00</div>
-                        <div class="program-table-timeline-hour-quarter">10:15</div>
-                        <div class="program-table-timeline-hour-quarter">10:30</div>
-                        <div class="program-table-timeline-hour-quarter">10:45</div>
+                        <div class="program-table-timeline-hour-sixth">10:10</div>
+                        <div class="program-table-timeline-hour-sixth">10:20</div>
+                        <div class="program-table-timeline-hour-sixth">10:30</div>
+                        <div class="program-table-timeline-hour-sixth">10:40</div>
+                        <div class="program-table-timeline-hour-sixth">10:50</div>
                     </div>
                     <div class="program-table-timeline-hour program-table-timeline-hour-large">
                         <div class="program-table-timeline-hour-title">11:00</div>
-                        <div class="program-table-timeline-hour-quarter">11:15</div>
-                        <div class="program-table-timeline-hour-quarter">11:30</div>
-                        <div class="program-table-timeline-hour-quarter">11:45</div>
+                        <div class="program-table-timeline-hour-sixth">11:10</div>
+                        <div class="program-table-timeline-hour-sixth">11:20</div>
+                        <div class="program-table-timeline-hour-sixth">11:30</div>
+                        <div class="program-table-timeline-hour-sixth">11:40</div>
+                        <div class="program-table-timeline-hour-sixth">11:50</div>
                     </div>
                     <div class="program-table-timeline-hour program-table-timeline-hour-large">
                         <div class="program-table-timeline-hour-title">12:00</div>
-                        <div class="program-table-timeline-hour-quarter">12:15</div>
-                        <div class="program-table-timeline-hour-quarter">12:30</div>
-                        <div class="program-table-timeline-hour-quarter">12:45</div>
+                        <div class="program-table-timeline-hour-sixth">12:10</div>
+                        <div class="program-table-timeline-hour-sixth">12:20</div>
+                        <div class="program-table-timeline-hour-sixth">12:30</div>
+                        <div class="program-table-timeline-hour-sixth">12:40</div>
+                        <div class="program-table-timeline-hour-sixth">12:50</div>
                     </div>
                     <div class="program-table-timeline-hour program-table-timeline-hour-large">
                         <div class="program-table-timeline-hour-title">13:00</div>
-                        <div class="program-table-timeline-hour-quarter">13:15</div>
-                        <div class="program-table-timeline-hour-quarter">13:30</div>
-                        <div class="program-table-timeline-hour-quarter">13:45</div>
+                        <div class="program-table-timeline-hour-sixth">13:10</div>
+                        <div class="program-table-timeline-hour-sixth">13:20</div>
+                        <div class="program-table-timeline-hour-sixth">13:30</div>
+                        <div class="program-table-timeline-hour-sixth">13:40</div>
+                        <div class="program-table-timeline-hour-sixth">13:50</div>
                     </div>
                     <div class="program-table-timeline-hour program-table-timeline-hour-large">
                         <div class="program-table-timeline-hour-title">14:00</div>
-                        <div class="program-table-timeline-hour-quarter">14:15</div>
-                        <div class="program-table-timeline-hour-quarter">14:30</div>
-                        <div class="program-table-timeline-hour-quarter">14:45</div>
+                        <div class="program-table-timeline-hour-sixth">14:10</div>
+                        <div class="program-table-timeline-hour-sixth">14:20</div>
+                        <div class="program-table-timeline-hour-sixth">14:30</div>
+                        <div class="program-table-timeline-hour-sixth">14:40</div>
+                        <div class="program-table-timeline-hour-sixth">14:50</div>
                     </div>
                     <div class="program-table-timeline-hour program-table-timeline-hour-large">
                         <div class="program-table-timeline-hour-title">15:00</div>
-                        <div class="program-table-timeline-hour-quarter">15:15</div>
-                        <div class="program-table-timeline-hour-quarter">15:30</div>
-                        <div class="program-table-timeline-hour-quarter">15:45</div>
+                        <div class="program-table-timeline-hour-sixth">15:10</div>
+                        <div class="program-table-timeline-hour-sixth">15:20</div>
+                        <div class="program-table-timeline-hour-sixth">15:30</div>
+                        <div class="program-table-timeline-hour-sixth">15:40</div>
+                        <div class="program-table-timeline-hour-sixth">15:50</div>
                     </div>
                 </div>
                 <div class="program-table-heading">
