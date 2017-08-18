@@ -108,38 +108,44 @@
                     <div class="m-t-md m-b-md">
                         <ul class="speakers-list">
                             <li class="speakers-list-item">
-                                <a href="#" class="speakers-list-item-photo">
-                                    <img src="images/tmp/speakers/andreas-shlyayher.jpg" alt="">
-                                </a>
-                                <div class="speakers-list-item-text">
-                                    <div class="speakers-list-item-title">
-                                        Сугата Митра
+                                <a href="#" class="speakers-list-item-link">
+                                    <div class="speakers-list-item-photo">
+                                        <img src="images/tmp/speakers/andreas-shlyayher.jpg" alt="">
                                     </div>
-                                    Ученый-просветитель, Профессор образовательных технологий Ньюкаслского
-                                    университета
-                                </div>
+                                    <div class="speakers-list-item-text">
+                                        <div class="speakers-list-item-title">
+                                            Сугата Митра
+                                        </div>
+                                        Ученый-просветитель, Профессор образовательных технологий Ньюкаслского
+                                        университета
+                                    </div>
+                                </a>
                             </li>
                             <li class="speakers-list-item">
-                                <a href="#" class="speakers-list-item-photo">
-                                    <img src="images/tmp/speakers/dirk-hasted.jpg" alt="">
-                                </a>
-                                <div class="speakers-list-item-text">
-                                    <div class="speakers-list-item-title">
-                                        Андреас Шляйхер
+                                <a href="#" class="speakers-list-item-link">
+                                    <div class="speakers-list-item-photo">
+                                        <img src="images/tmp/speakers/dirk-hasted.jpg" alt="">
                                     </div>
-                                    Директор Департамента по образованию Организации экономического сотрудничества и развития
-                                </div>
+                                    <div class="speakers-list-item-text">
+                                        <div class="speakers-list-item-title">
+                                            Андреас Шляйхер
+                                        </div>
+                                        Директор Департамента по образованию Организации экономического сотрудничества и развития
+                                    </div>
+                                </a>
                             </li>
                             <li class="speakers-list-item">
-                                <a href="#" class="speakers-list-item-photo">
-                                    <img src="images/tmp/speakers/issak-kalina.jpg" alt="">
-                                </a>
-                                <div class="speakers-list-item-text">
-                                    <div class="speakers-list-item-title">
-                                        Анне-Берит Кавли
+                                <a href="#" class="speakers-list-item-link">
+                                    <div class="speakers-list-item-photo">
+                                        <img src="images/tmp/speakers/issak-kalina.jpg" alt="">
                                     </div>
-                                    Президент Международной ассоциации по оценке учебных достижений (IEA)
-                                </div>
+                                    <div class="speakers-list-item-text">
+                                        <div class="speakers-list-item-title">
+                                            Анне-Берит Кавли
+                                        </div>
+                                        Президент Международной ассоциации по оценке учебных достижений (IEA)
+                                    </div>
+                                </a>
                             </li>
                         </ul>
                     </div>

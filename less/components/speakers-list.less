@@ -8,6 +8,20 @@
   margin-bottom: 20px;
 }
 
+.speakers-list-item-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    .speakers-list-item-title {
+      color: @c-blue;
+      transition: color 200ms;
+    }
+  }
+}
+
 .speakers-list-item-photo {
   height: 80px;
   flex: 0 0 95px;
@@ -29,4 +43,5 @@
   font-weight: 500;
   margin-bottom: 8px;
   color: @c-main;
+  transition: color 200ms;
 }
