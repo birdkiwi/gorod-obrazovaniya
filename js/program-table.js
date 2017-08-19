@@ -28,9 +28,11 @@ $(document).ready(function () {
             scrollAmount = currentShift ? currentScroll - currentShift : currentScroll - tableCellWidth;
         }
 
+        /*
         console.log('currentShift: ' + currentShift);
         console.log('dir: ' + direction);
         console.log('scrollAmount: ' + scrollAmount);
+        */
 
         $('.js-program-table-scrollable').animate({
             'scrollLeft':  scrollAmount
@@ -41,7 +43,27 @@ $(document).ready(function () {
         .css('height', $('.program-table-heading').height())
         .css('margin-bottom', $('.program-table-scroll').height());
 
-    function tableHeaderFixed() {
+    function programTableMobileFixed() {
+        // Fixed program nav on mobiles
+
+        var $header = $('.main-header'),
+            $heading = $('.main-heading'),
+            $subnavMenu = $('.subnav-list-program-menu'),
+            scrollTop = $(window).scrollTop();
+
+        if (
+            $(window).width() <= 560 &&
+            scrollTop > $header.outerHeight()
+        ) {
+            $heading.css( 'top', scrollTop - $header.outerHeight() );
+            $subnavMenu.css( 'top', scrollTop - $header.outerHeight() );
+        } else {
+            $heading.css( 'top', 0 );
+            $subnavMenu.css( 'top', 0 );
+        }
+    }
+
+    function programTableScroll() {
         var $tableHeading = $('.program-table-heading'),
             $scroller = $('.program-table-scroll'),
             $timelineDate = $('.program-table-timeline-date'),
@@ -60,21 +82,27 @@ $(document).ready(function () {
             $scroller.css('margin-top', 0);
             $timelineDate.css('top', 0);
         }
+
+        programTableMobileFixed();
     }
 
     function programTableResize() {
         // Global events width
         var eventsViewPortWidth = 0;
+
         $('.program-table-heading-cell').each(function () {
             eventsViewPortWidth += $(this).outerWidth();
         });
+
         $('.program-table-event-global').css('width', eventsViewPortWidth);
+
+        programTableMobileFixed();
     }
 
-    tableHeaderFixed();
+    programTableScroll();
     programTableResize();
 
-    $(window).scroll(tableHeaderFixed);
+    $(window).scroll(programTableScroll);
     $(window).resize(programTableResize);
 
     $('[data-program-table-fav]').click(function (e) {

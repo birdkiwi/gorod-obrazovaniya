@@ -43,7 +43,7 @@
 
     <nav class="subnav program-table-subnav">
         <div class="wrapper">
-            <ul class="subnav-list subnav-list-program subnav-list-wide">
+            <ul class="subnav-list subnav-list-program subnav-list-wide subnav-list-program-menu">
                 <li class="subnav-list-item active">
                     <a href="#" class="subnav-link">
                         <span>Вся программа</span>
