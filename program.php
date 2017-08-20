@@ -70,13 +70,15 @@
                         <!--
                         Пример выбранного события: -->
 
-                        <div class="program-table-filter-select program-table-filter-select-red">
-                            Очень преочень длинный фильтр
+                        <div class="program-table-filter-select">
+                            <span class="program-table-filter-select-red"></span>
+                            <span class="program-table-filter-select-orange"></span>
+                            Выбрано: 2
                         </div>
 
                         <div class="program-table-filter-dropdown-wrapper">
                             <div class="program-table-filter-dropdown">
-                                <a href="#" class="program-table-filter-item program-table-filter-item-red">
+                                <a href="#" class="program-table-filter-item active program-table-filter-item-red">
                                     Фильтр №1
                                 </a>
                                 <a href="#" class="program-table-filter-item program-table-filter-item-orange">
@@ -91,7 +93,7 @@
                                 <a href="#" class="program-table-filter-item program-table-filter-item-green">
                                     Фильтр №5
                                 </a>
-                                <a href="#" class="program-table-filter-item program-table-filter-item-green-light">
+                                <a href="#" class="program-table-filter-item active program-table-filter-item-green-light">
                                     Очень преочень длинный фильтр
                                 </a>
                             </div>

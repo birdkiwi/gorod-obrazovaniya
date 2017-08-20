@@ -698,7 +698,7 @@
   left: 0;
   top: 100%;
   width: 100%;
-  min-width: 170px;
+  min-width: 300px;
   padding-top: 10px;
   padding-bottom: 10px;
   opacity: 0;
@@ -727,8 +727,9 @@
 }
 
 .program-table-filter-item {
+  position: relative;
   display: block;
-  padding: 6px 18px;
+  padding: 6px 18px 6px 10px;
   text-decoration: none;
   color: @c-main;
   background-color: #fff;
@@ -750,6 +751,33 @@
     background-color: #cecece;
     margin-right: 5px;
     vertical-align: baseline;
+  }
+
+  &::after {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    margin-top: -6px;
+    content: '';
+    background: url("../images/icons/icon-check.svg") no-repeat center;
+    width: 15px;
+    height: 12px;
+    opacity: 0;
+  }
+
+  &.active {
+    padding-right: 25px;
+
+    &::after {
+      opacity: 1;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        background-image: url("../images/icons/icon-check-white.svg");
+      }
+    }
   }
 }
 
