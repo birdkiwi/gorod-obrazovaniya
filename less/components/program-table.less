@@ -1,6 +1,7 @@
 @import (less) "../../node_modules/baron/baron.css";
 
 @program-table-cell-width: 200px;
+@program-table-cell-width-min: 150px;
 @program-table-hour-height: 200px;
 @program-table-min-height: @program-table-hour-height/60;
 @program-table-hour-height-large: 300px;
@@ -218,6 +219,10 @@
   border-right: 1px solid @program-table-border-color;
   border-bottom: 1px solid @program-table-border-color;
   padding: 15px;
+
+  @media (max-width: @breakpoint-l) {
+    flex-basis: @program-table-cell-width-min
+  }
 }
 
 .program-table-heading-cell-title {
@@ -226,6 +231,10 @@
   color: #666666;
   text-align: center;
   margin-bottom: 3px;
+
+  @media (max-width: @breakpoint-l) {
+    font-size: 0.9rem;
+  }
 }
 
 .program-table-heading-cell-subtitle {
@@ -328,6 +337,10 @@
 .program-table-column {
   flex: 0 0 @program-table-cell-width;
   border-right: 1px solid #E0E0E0;
+
+  @media (max-width: @breakpoint-l) {
+    flex-basis: @program-table-cell-width-min
+  }
 }
 
 .program-table-column-hour {
@@ -501,6 +514,10 @@
   color: @c-main;
   font-size: 1.05rem;
   margin-bottom: 3px;
+
+  @media (max-width: @breakpoint-l) {
+    font-size: 0.9rem;
+  }
 }
 
 .program-table-event-speakers {
@@ -511,6 +528,10 @@
   b {
     color: @c-main;
     font-weight: normal;
+  }
+
+  @media (max-width: @breakpoint-l) {
+    font-size: 0.8rem;
   }
 }
 
@@ -527,26 +548,46 @@
 .program-table-event-width-2 {
   position: absolute;
   width: @program-table-cell-width*2-1;
+
+  @media (max-width: @breakpoint-l) {
+    flex-basis: @program-table-cell-width-min*2-1;
+  }
 }
 
 .program-table-event-width-3 {
   position: absolute;
   width: @program-table-cell-width*3-1;
+
+  @media (max-width: @breakpoint-l) {
+    flex-basis: @program-table-cell-width-min*3-1;
+  }
 }
 
 .program-table-event-width-4 {
   position: absolute;
   width: @program-table-cell-width*4-1;
+
+  @media (max-width: @breakpoint-l) {
+    flex-basis: @program-table-cell-width-min*4-1;
+  }
 }
 
 .program-table-event-width-5 {
   position: absolute;
   width: @program-table-cell-width*5-1;
+
+  @media (max-width: @breakpoint-l) {
+    flex-basis: @program-table-cell-width-min*5-1;
+  }
 }
 
 .program-table-event-width-6 {
   position: absolute;
-  width: @program-table-cell-width*5-1;
+  width: @program-table-cell-width*6-1;
+
+  @media (max-width: @breakpoint-l) {
+    flex-basis: @program-table-cell-width-min*6-1;
+  }
 }
 
 .program-table-search {
