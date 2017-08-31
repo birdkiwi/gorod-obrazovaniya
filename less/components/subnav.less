@@ -149,15 +149,18 @@
     }
   }
 
-  &:hover {
-    color: @subnavActiveLinkColor;
-    transition: color 200ms;
+  //Prevent double tap on iOS
+  @media (pointer: fine) {
+    &:hover {
+      color: @subnavActiveLinkColor;
+      transition: color 200ms;
 
-    span {
-      &::after {
-        width: 100%;
-        background-color: @subnavActiveLinkColor;
-        transition: all ease-in-out 200ms;
+      span {
+        &::after {
+          width: 100%;
+          background-color: @subnavActiveLinkColor;
+          transition: all ease-in-out 200ms;
+        }
       }
     }
   }
