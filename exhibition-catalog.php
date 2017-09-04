@@ -16,7 +16,9 @@
 <main class="main-content">
     <div class="main-heading main-heading-salad">
         <div class="wrapper">
-            <h1 class="main-heading-title">Выставка</h1>
+            <h1 class="main-heading-title">
+                Экспозиция
+            </h1>
 
             <form action="#" method="POST" class="main-heading-search-form">
                 <input type="search" name="search" class="main-heading-search-input" placeholder="Поиск">
@@ -28,14 +30,14 @@
     <nav class="subnav">
         <div class="wrapper">
             <ul class="subnav-list">
-                <li class="subnav-list-item">
-                    <a href="#" class="subnav-link">
-                        <span>Схема</span>
+                <li class="subnav-list-item active">
+                    <a href="exhibition-catalog.php" class="subnav-link">
+                        <span>Каталог компаний</span>
                     </a>
                 </li>
-                <li class="subnav-list-item active">
-                    <a href="#" class="subnav-link">
-                        <span>Каталог компаний</span>
+                <li class="subnav-list-item">
+                    <a href="exhibition-scheme.php" class="subnav-link">
+                        <span>Схема</span>
                     </a>
                 </li>
             </ul>
@@ -114,7 +116,7 @@
             <div class="exhibition-catalog-content">
                 <div class="exhibition-catalog-cards">
                     <div class="exhibition-catalog-card-wrapper">
-                        <a href="#" class="exhibition-catalog-card">
+                        <a href="#" data-side-modal-class="side-modal-wide side-modal-event" data-side-modal="" data-side-modal-url="data/exhibition-items/exhibition-item-1.php" data-side-modal-prevent-mobile="" class="exhibition-catalog-card">
                             <div class="exhibition-catalog-card-logo">
                                 <img src="images/tmp/sponsors/partner-1.png" alt="">
                             </div>

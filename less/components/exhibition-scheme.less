@@ -1,0 +1,70 @@
+.exhibition-scheme {
+  overflow-x: auto;
+
+  & > .wrapper {
+    position: relative;
+  }
+}
+
+.exhibition-scheme-svg {
+  position: relative;
+  min-width: 1060px;
+}
+
+.exhibition-scheme-list {
+  position: absolute;
+  width: 250px;
+  height: 370px;
+  z-index: 10;
+  background-color: #fff;
+
+  &._dragging {
+    .exhibition-scheme-scrollbar {
+      background-color: #1fc2fb;
+    }
+  }
+}
+
+.exhibition-scheme-list-item {
+  display: block;
+  font-size: 0.92rem;
+  line-height: 1.14rem;
+  color: #666;
+  text-decoration: none;
+  padding: 4px 0;
+
+  &.highlight {
+    outline: none;
+    color: @c-blue;
+  }
+}
+
+.exhibition-scheme-list-item-place {
+  display: inline-block;
+  margin-right: 5px;
+  font-family: monospace;
+}
+
+.exhibition-scheme-scroll {
+  width: 8px;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  background: #E3E4E2;
+}
+
+.exhibition-scheme-scroll-track {
+  height: 100%;
+}
+
+.exhibition-scheme-scrollbar {
+  position: relative;
+  background-color: #1FA7DF;
+  min-height: 20px;
+
+  &:hover {
+    background-color: #1fc2fb;
+  }
+}

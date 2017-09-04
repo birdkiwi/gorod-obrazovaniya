@@ -42,7 +42,7 @@
                 <a href="speakers.php">Спикеры</a>
             </li>
             <li>
-                <a href="exhibition-catalog.php">Выставка</a>
+                <a href="exhibition-catalog.php">Экспозиция</a>
             </li>
             <li>
                 <a href="partners.php">Партнеры</a>
