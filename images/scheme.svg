@@ -82,11 +82,11 @@
 
             .highlight {
                 position: relative;
-                outline: 1px solid red;
+                outline: 1px solid blue;
             }
 
             .highlight > * {
-                fill: red;
+                fill: blue;
                 fill-opacity: 0.2;
             }
 
