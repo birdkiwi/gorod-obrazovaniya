@@ -42,6 +42,7 @@ var jsFiles = [
         './node_modules/pikaday/plugins/pikaday.jquery.js',
         './node_modules/devbridge-autocomplete/dist/jquery.autocomplete.js',
         './node_modules/baron/baron.min.js',
+        './node_modules/svg-pan-zoom/dist/svg-pan-zoom.js',
         './js/components/*.js',
         './js/scripts.js'
     ],
