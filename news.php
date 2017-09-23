@@ -55,7 +55,7 @@
         <div class="news-block">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="news-block-item">
+                    <div class="news-block-item news-block-item-presentation">
                         <div class="news-block-item-photo">
                             <a href="#">
                                 <img src="images/tmp/news-page/news-1.jpg" alt="">
